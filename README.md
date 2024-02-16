@@ -2,5 +2,5 @@
 
 
 # Auth Server
-  - run 'json-server --watch db.json'
+  - run `'Isn't this fun?'`   
     
