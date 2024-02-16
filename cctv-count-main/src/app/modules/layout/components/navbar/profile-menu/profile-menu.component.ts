@@ -22,7 +22,7 @@ export class ProfileMenuComponent implements OnInit {
   public isMenuOpen = false;
   currentLanguage: string = 'th';
   translations = this.languageService.translations;
-  userId: string = '';
+  username: string = '';
   userRole: string = '';
 
   constructor(
@@ -41,9 +41,9 @@ export class ProfileMenuComponent implements OnInit {
     const token = localStorage.getItem('token');
     if (token) {
       const tokenPayload = this.jwtService.decodeBase64(token);
-      this.userId = tokenPayload.userId;
+      this.username = tokenPayload.username; // Assign username instead of userId
       this.userRole = tokenPayload.role;
-      console.log(this.userId);
+      console.log(this.username); // Log username instead of userId
       console.log(this.userRole);
     }
   }

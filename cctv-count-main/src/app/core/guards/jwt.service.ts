@@ -15,8 +15,8 @@ export class JwtService {
     try {
       const decodedString = atob(encodedPayload); // Decoding from base64
       const decodedPayload = JSON.parse(decodedString);
-      const userId = decodedPayload.userId; // Retrieve userId from decoded payload
-      return { ...decodedPayload, userId }; // Include userId in the returned object
+      const username = decodedPayload.username; // Retrieve username from decoded payload
+      return { ...decodedPayload, username }; // Include username in the returned object
     } catch (error) {
       console.error('Error decoding JWT token:', error);
       return null; // Return null or handle the error as appropriate
