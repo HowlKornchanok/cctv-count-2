@@ -7,6 +7,9 @@
     
 # Video Feed Server
   - `pip install` require module
+      - `pip install flask`
+      - `pip install imutils`
+      - `pip install opencv-python`
   - Start the video feed server by running `python server.py`.
 # Main App
   - First, install dependencies by running `npm install`
