@@ -2,5 +2,11 @@
 
 
 # Auth Server
-  - run `json-server --watch db.json`   
+  - `json-server --watch db.json`   
     
+# Video Feed Server
+  - run python
+
+# Main App
+  - `npm install`
+  - `ng serve`
