@@ -1,0 +1,55 @@
+<div class="table-container max-h-screen overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+    <table class="flex-col w-full">
+      <thead>
+        <tr class="sticky top-0 bg-white dark:bg-night-700 z-[10] uppercase text-gray-400 dark:text-white text-sm">
+          <th class="p-2">{{ translations[currentLanguage]['Camera No.'] }}</th>
+          <th class="p-2">{{ translations[currentLanguage]['Camera Status'] }}</th>
+          <th class="p-2">{{ translations[currentLanguage]['Actions'] }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <ng-container *ngFor="let location of jsonData; let i = index">
+          <ng-container *ngFor="let camera of location.cameras; let j = index">
+            <!-- Row for each camera -->
+            <tr *ngIf="j === 0 || i > 0" >
+              <td class=""></td>
+              <td class=""></td>
+              <td class=""></td>
+              <td class=""></td>
+
+              <td class=""></td>
+            </tr>
+            <!-- Display location name only for the first camera of each location -->
+            <div class="flex flex-row items-center px-3 text-left font-bold text-gray-900 dark:text-night-50 space-x-2" *ngIf="j === 0">
+                <span>{{ location.location_name }}</span>
+                <button (click)="addCamera(location)" class="bg-blue-500 rounded-md px-4">Add Camera</button>
+            </div>
+            
+                          
+            <tr class="leading-8">
+              <td class="text-center font-bold text-gray-900 dark:text-night-50">
+                {{ camera.camera_no }}
+              </td>
+              <td class="text-center font-bold text-white">
+                <span [ngClass]="{'bg-green-500 rounded-lg px-3 ': camera.status === 'active', 'bg-red-500 rounded-md px-4 ': camera.status === 'inactive'}">
+                  {{ camera.status }}
+                </span>
+              </td>
+              <!-- CRUD actions buttons -->
+              <td class="text-center">
+                <!-- Edit button -->
+                <button (click)="editCamera(camera)">Edit</button>
+                <!-- Delete button -->
+                <button (click)="deleteCamera(camera)">Delete</button>
+              </td>
+            </tr>
+          </ng-container>
+          <!-- Add button to add new camera for this location -->
+          <tr>
+
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  <app-edit-modal *ngIf="showEditModal" [camera]="selectedCamera" (saveChangesAction)="saveChanges($event)" (cancelAction)="closeEditModal()"></app-edit-modal>

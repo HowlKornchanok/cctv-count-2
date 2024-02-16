@@ -1,0 +1,19 @@
+
+  <div class="flex h-screen w-screen " >
+    
+    <div class="auth-bg hidden bg-cover  lg:flex" style="width: 70%; background-image: url('assets/Bard_Generated_Image.jpg');">
+    </div>
+    <div class="flex flex-1 items-center justify-center bg-white dark:bg-night-700" style="width: 30%;">
+      <div class="max-w-md overflow-y-auto px-4 sm:w-[500px]">
+        <!-- logo -->
+        <div class="flex items-center justify-center">
+          <a class="rounded bg-primary-700 p-2">
+            <svg-icon src="assets/icons/logo.svg" [svgClass]="'h-5 w-5'"> </svg-icon>
+          </a>
+          <b class="text-md pl-3 font-bold text-gray-700 dark:text-white"> Smart Traffic Monitor Application 1.0 </b>
+        </div>
+        <!-- Route -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>

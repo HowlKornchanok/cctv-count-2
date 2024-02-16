@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "john_doe",
+      "password": "password123",
+      "role": "user"
+    },
+    {
+      "id": "2",
+      "username": "alice_smith",
+      "password": "pass456",
+      "role": "user"
+    },
+    {
+      "id": "3",
+      "username": "bob_jones",
+      "password": "secure789",
+      "role": "user"
+    },
+    {
+      "id": "4",
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "2579",
+      "username": "a",
+      "password": "a",
+      "role": "user"
+    },
+    {
+      "id": "aeeb",
+      "username": "admin",
+      "password": "admin",
+      "role": "admin"
+    },
+    {
+      "id": "Howl",
+      "username": "howl",
+      "password": "howl",
+      "role": "admin"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<div class="blackdrop-overlay"></div>
+<div class="flex flex-row modal-overlay z-[20]">
+  <div class="modal-container bg-white dark:bg-night-900 grid grid-cols-1 justify-items-between rounded-lg z-[20]">
+    <div class="modal-header sticky top-0 dark:bg-night-900 z-[10] uppercase flex items-center ">
+      <div *ngIf="jsonData.length > 0">
+        <h2 class="text-black dark:text-white">{{ jsonData[locationNumberNum - 1]?.location_name }}</h2>
+      </div>
+      <div>
+        <img src="assets/icons/close.svg" alt="Close" class="close-button py-4" (click)="closeModal()" />
+      </div>
+    </div>
+    <div class="flex-col justify-items-between bg-gray-100 dark:bg-night-800 p-4 scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+      <div class="modal-content grid grid-cols-1 lg:grid-cols-2 gap-2">
+        <div *ngFor="let camera of jsonData[locationNumberNum - 1]?.cameras; let i = index" class="w-full">
+          <h2 class="text-black dark:text-white">{{ translations[currentLanguage]['Camera No.'] }} {{ camera.camera_no }}</h2>
+          <h2 class="text-black dark:text-white">{{ camera.status }}</h2>
+          <div *ngIf="camera.status === 'inactive'; else videoPlayer" class="warning-message">
+            Warning: Camera is inactive
+          </div>
+          <ng-template #videoPlayer>
+            <div class="video-player-wrapper">
+              <img [src]="camera.streaming_link" class="max-h-[300px]">
+            </div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ba0cc104d3d69bf669f97b8d96a4c5d8d9559aa3" datatype="html">
+        <source>I don't output any element</source>
+        <target>Je n'affiche aucun élément</target>
+      </trans-unit>
+
+
+
+      <trans-unit id="profile-menu" datatype="html">
+        <source>Welcome to our website!</source>
+        <target>ยินดีต้อนรับเข้าสู่เว็บไซต์ของเรา!</target>
+      </trans-unit>
+      <trans-unit id="Settings" datatype="html">
+        <source>Settings</source>
+        <target>ตั้งค่า</target>
+      </trans-unit>
+
+      <trans-unit id="SignOut" datatype="html">
+        <source>Sign Out</source>
+        <target>ลงชื่อออก</target>
+      </trans-unit>
+
+      <trans-unit id="translate" datatype="html">
+        <source>Language</source>
+        <target>เปลี่ยนภาษา</target>
+      </trans-unit>
+           <trans-unit id="translate_en" datatype="html">
+        <source>Language</source>
+        <target>Language</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

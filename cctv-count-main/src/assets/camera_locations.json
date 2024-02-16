@@ -1,0 +1,136 @@
+[
+  {
+    "location_no": 1,
+    "location_name": "Intersection 1",
+    "lat": 7.557850154593416,
+    "lon": 99.60437288422958,
+    "cameras": [
+      {
+        "camera_no": 1,
+        "status": "active",
+        "days_after_last_maintenance": 280,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 2,
+        "status": "active",
+        "days_after_last_maintenance": 202,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 3,
+        "status": "active",
+        "days_after_last_maintenance": 202,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 4,
+        "status": "active",
+        "days_after_last_maintenance": 202,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      }
+    ]
+  },
+  {
+    "location_no": 2,
+    "location_name": "Intersection 2",
+    "lat": 7.542618376663331,
+    "lon":  99.61592973867563,
+    "cameras": [
+      {
+        "camera_no": 1,
+        "status": "active",
+        "days_after_last_maintenance": 56,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 2,
+        "status": "active",
+        "days_after_last_maintenance": 46,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 3,
+        "status": "active",
+        "days_after_last_maintenance": 77,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 4,
+        "status": "active",
+        "days_after_last_maintenance": 261,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 5,
+        "status": "inactive",
+        "days_after_last_maintenance": 294,
+        "streaming_link": ""
+      }
+    ]
+  },
+  {
+    "location_no": 3,
+    "location_name": "Intersection 3",
+    "lat": 7.55786961618612,
+    "lon":  99.58297598283431,
+    "cameras": [
+      {
+        "camera_no": 1,
+        "status": "inactive",
+        "days_after_last_maintenance": 310,
+        "streaming_link": ""
+      },
+      {
+        "camera_no": 2,
+        "status": "inactive",
+        "days_after_last_maintenance": 303,
+        "streaming_link": ""
+      },
+      {
+        "camera_no": 3,
+        "status": "active",
+        "days_after_last_maintenance": 136,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 4,
+        "status": "active",
+        "days_after_last_maintenance": 210,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      }
+    ]
+  },
+  {
+    "location_no": 4,
+    "location_name": "Intersection 4",
+    "lat": 7.56889471676959,
+    "lon": 99.65769411474704,
+    "cameras": [
+      {
+        "camera_no": 1,
+        "status": "inactive",
+        "days_after_last_maintenance": 310,
+        "streaming_link": ""
+      },
+      {
+        "camera_no": 2,
+        "status": "active",
+        "days_after_last_maintenance": 13,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 3,
+        "status": "active",
+        "days_after_last_maintenance": 136,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      },
+      {
+        "camera_no": 4,
+        "status": "active",
+        "days_after_last_maintenance": 210,
+        "streaming_link": "http://192.168.0.170:7051/video_feed"
+      }
+    ]
+  }
+]

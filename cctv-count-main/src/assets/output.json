@@ -1,0 +1,5850 @@
+[
+  {
+    "date": "2023-01-01",
+    "sumCar": 41,
+    "sumBus": 86,
+    "sumTruck": 94,
+    "sumMotorcycle": 72,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2023-01-02",
+    "sumCar": 99,
+    "sumBus": 58,
+    "sumTruck": 87,
+    "sumMotorcycle": 41,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2023-01-03",
+    "sumCar": 91,
+    "sumBus": 52,
+    "sumTruck": 68,
+    "sumMotorcycle": 46,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2023-01-04",
+    "sumCar": 70,
+    "sumBus": 97,
+    "sumTruck": 67,
+    "sumMotorcycle": 77,
+    "sumVehicle": 311
+  },
+  {
+    "date": "2023-01-05",
+    "sumCar": 40,
+    "sumBus": 71,
+    "sumTruck": 91,
+    "sumMotorcycle": 86,
+    "sumVehicle": 288
+  },
+  {
+    "date": "2023-01-06",
+    "sumCar": 99,
+    "sumBus": 35,
+    "sumTruck": 62,
+    "sumMotorcycle": 48,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2023-01-07",
+    "sumCar": 50,
+    "sumBus": 74,
+    "sumTruck": 60,
+    "sumMotorcycle": 38,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2023-01-08",
+    "sumCar": 45,
+    "sumBus": 83,
+    "sumTruck": 45,
+    "sumMotorcycle": 99,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2023-01-09",
+    "sumCar": 80,
+    "sumBus": 97,
+    "sumTruck": 94,
+    "sumMotorcycle": 72,
+    "sumVehicle": 343
+  },
+  {
+    "date": "2023-01-10",
+    "sumCar": 39,
+    "sumBus": 99,
+    "sumTruck": 63,
+    "sumMotorcycle": 52,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-01-11",
+    "sumCar": 52,
+    "sumBus": 74,
+    "sumTruck": 96,
+    "sumMotorcycle": 38,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2023-01-12",
+    "sumCar": 54,
+    "sumBus": 53,
+    "sumTruck": 68,
+    "sumMotorcycle": 85,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2023-01-13",
+    "sumCar": 75,
+    "sumBus": 62,
+    "sumTruck": 50,
+    "sumMotorcycle": 64,
+    "sumVehicle": 251
+  },
+  {
+    "date": "2023-01-14",
+    "sumCar": 87,
+    "sumBus": 43,
+    "sumTruck": 96,
+    "sumMotorcycle": 100,
+    "sumVehicle": 326
+  },
+  {
+    "date": "2023-01-15",
+    "sumCar": 39,
+    "sumBus": 96,
+    "sumTruck": 67,
+    "sumMotorcycle": 88,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2023-01-16",
+    "sumCar": 38,
+    "sumBus": 35,
+    "sumTruck": 92,
+    "sumMotorcycle": 47,
+    "sumVehicle": 212
+  },
+  {
+    "date": "2023-01-17",
+    "sumCar": 50,
+    "sumBus": 99,
+    "sumTruck": 59,
+    "sumMotorcycle": 47,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2023-01-18",
+    "sumCar": 98,
+    "sumBus": 99,
+    "sumTruck": 91,
+    "sumMotorcycle": 41,
+    "sumVehicle": 329
+  },
+  {
+    "date": "2023-01-19",
+    "sumCar": 52,
+    "sumBus": 87,
+    "sumTruck": 78,
+    "sumMotorcycle": 86,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2023-01-20",
+    "sumCar": 99,
+    "sumBus": 94,
+    "sumTruck": 75,
+    "sumMotorcycle": 96,
+    "sumVehicle": 364
+  },
+  {
+    "date": "2023-01-21",
+    "sumCar": 49,
+    "sumBus": 47,
+    "sumTruck": 48,
+    "sumMotorcycle": 71,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2023-01-22",
+    "sumCar": 89,
+    "sumBus": 55,
+    "sumTruck": 76,
+    "sumMotorcycle": 71,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2023-01-23",
+    "sumCar": 40,
+    "sumBus": 82,
+    "sumTruck": 51,
+    "sumMotorcycle": 67,
+    "sumVehicle": 240
+  },
+  {
+    "date": "2023-01-24",
+    "sumCar": 94,
+    "sumBus": 64,
+    "sumTruck": 30,
+    "sumMotorcycle": 79,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2023-01-25",
+    "sumCar": 93,
+    "sumBus": 56,
+    "sumTruck": 87,
+    "sumMotorcycle": 60,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2023-01-26",
+    "sumCar": 77,
+    "sumBus": 100,
+    "sumTruck": 47,
+    "sumMotorcycle": 30,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-01-27",
+    "sumCar": 59,
+    "sumBus": 94,
+    "sumTruck": 68,
+    "sumMotorcycle": 61,
+    "sumVehicle": 282
+  },
+  {
+    "date": "2023-01-28",
+    "sumCar": 71,
+    "sumBus": 46,
+    "sumTruck": 88,
+    "sumMotorcycle": 31,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2023-01-29",
+    "sumCar": 88,
+    "sumBus": 33,
+    "sumTruck": 59,
+    "sumMotorcycle": 37,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2023-01-30",
+    "sumCar": 92,
+    "sumBus": 90,
+    "sumTruck": 50,
+    "sumMotorcycle": 98,
+    "sumVehicle": 330
+  },
+  {
+    "date": "2023-01-31",
+    "sumCar": 61,
+    "sumBus": 36,
+    "sumTruck": 33,
+    "sumMotorcycle": 73,
+    "sumVehicle": 203
+  },
+  {
+    "date": "2023-02-01",
+    "sumCar": 54,
+    "sumBus": 40,
+    "sumTruck": 92,
+    "sumMotorcycle": 31,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2023-02-02",
+    "sumCar": 61,
+    "sumBus": 32,
+    "sumTruck": 32,
+    "sumMotorcycle": 74,
+    "sumVehicle": 199
+  },
+  {
+    "date": "2023-02-03",
+    "sumCar": 62,
+    "sumBus": 36,
+    "sumTruck": 75,
+    "sumMotorcycle": 87,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2023-02-04",
+    "sumCar": 55,
+    "sumBus": 83,
+    "sumTruck": 87,
+    "sumMotorcycle": 31,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2023-02-05",
+    "sumCar": 69,
+    "sumBus": 78,
+    "sumTruck": 42,
+    "sumMotorcycle": 67,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2023-02-06",
+    "sumCar": 73,
+    "sumBus": 96,
+    "sumTruck": 35,
+    "sumMotorcycle": 61,
+    "sumVehicle": 265
+  },
+  {
+    "date": "2023-02-07",
+    "sumCar": 42,
+    "sumBus": 86,
+    "sumTruck": 52,
+    "sumMotorcycle": 44,
+    "sumVehicle": 224
+  },
+  {
+    "date": "2023-02-08",
+    "sumCar": 54,
+    "sumBus": 98,
+    "sumTruck": 99,
+    "sumMotorcycle": 60,
+    "sumVehicle": 311
+  },
+  {
+    "date": "2023-02-09",
+    "sumCar": 100,
+    "sumBus": 53,
+    "sumTruck": 87,
+    "sumMotorcycle": 55,
+    "sumVehicle": 295
+  },
+  {
+    "date": "2023-02-10",
+    "sumCar": 67,
+    "sumBus": 90,
+    "sumTruck": 75,
+    "sumMotorcycle": 75,
+    "sumVehicle": 307
+  },
+  {
+    "date": "2023-02-11",
+    "sumCar": 97,
+    "sumBus": 63,
+    "sumTruck": 85,
+    "sumMotorcycle": 74,
+    "sumVehicle": 319
+  },
+  {
+    "date": "2023-02-12",
+    "sumCar": 30,
+    "sumBus": 34,
+    "sumTruck": 73,
+    "sumMotorcycle": 99,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2023-02-13",
+    "sumCar": 32,
+    "sumBus": 67,
+    "sumTruck": 47,
+    "sumMotorcycle": 77,
+    "sumVehicle": 223
+  },
+  {
+    "date": "2023-02-14",
+    "sumCar": 77,
+    "sumBus": 54,
+    "sumTruck": 87,
+    "sumMotorcycle": 69,
+    "sumVehicle": 287
+  },
+  {
+    "date": "2023-02-15",
+    "sumCar": 69,
+    "sumBus": 65,
+    "sumTruck": 50,
+    "sumMotorcycle": 93,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2023-02-16",
+    "sumCar": 59,
+    "sumBus": 85,
+    "sumTruck": 98,
+    "sumMotorcycle": 43,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2023-02-17",
+    "sumCar": 99,
+    "sumBus": 84,
+    "sumTruck": 62,
+    "sumMotorcycle": 83,
+    "sumVehicle": 328
+  },
+  {
+    "date": "2023-02-18",
+    "sumCar": 38,
+    "sumBus": 66,
+    "sumTruck": 97,
+    "sumMotorcycle": 35,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2023-02-19",
+    "sumCar": 70,
+    "sumBus": 36,
+    "sumTruck": 92,
+    "sumMotorcycle": 87,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2023-02-20",
+    "sumCar": 51,
+    "sumBus": 31,
+    "sumTruck": 66,
+    "sumMotorcycle": 33,
+    "sumVehicle": 181
+  },
+  {
+    "date": "2023-02-21",
+    "sumCar": 57,
+    "sumBus": 73,
+    "sumTruck": 38,
+    "sumMotorcycle": 46,
+    "sumVehicle": 214
+  },
+  {
+    "date": "2023-02-22",
+    "sumCar": 56,
+    "sumBus": 87,
+    "sumTruck": 43,
+    "sumMotorcycle": 90,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2023-02-23",
+    "sumCar": 87,
+    "sumBus": 67,
+    "sumTruck": 63,
+    "sumMotorcycle": 67,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2023-02-24",
+    "sumCar": 52,
+    "sumBus": 48,
+    "sumTruck": 30,
+    "sumMotorcycle": 95,
+    "sumVehicle": 225
+  },
+  {
+    "date": "2023-02-25",
+    "sumCar": 84,
+    "sumBus": 47,
+    "sumTruck": 75,
+    "sumMotorcycle": 58,
+    "sumVehicle": 264
+  },
+  {
+    "date": "2023-02-26",
+    "sumCar": 63,
+    "sumBus": 99,
+    "sumTruck": 45,
+    "sumMotorcycle": 73,
+    "sumVehicle": 280
+  },
+  {
+    "date": "2023-02-27",
+    "sumCar": 75,
+    "sumBus": 48,
+    "sumTruck": 63,
+    "sumMotorcycle": 82,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-02-28",
+    "sumCar": 72,
+    "sumBus": 96,
+    "sumTruck": 91,
+    "sumMotorcycle": 90,
+    "sumVehicle": 349
+  },
+  {
+    "date": "2023-03-01",
+    "sumCar": 90,
+    "sumBus": 74,
+    "sumTruck": 76,
+    "sumMotorcycle": 50,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2023-03-02",
+    "sumCar": 46,
+    "sumBus": 63,
+    "sumTruck": 51,
+    "sumMotorcycle": 34,
+    "sumVehicle": 194
+  },
+  {
+    "date": "2023-03-03",
+    "sumCar": 55,
+    "sumBus": 72,
+    "sumTruck": 77,
+    "sumMotorcycle": 96,
+    "sumVehicle": 300
+  },
+  {
+    "date": "2023-03-04",
+    "sumCar": 97,
+    "sumBus": 77,
+    "sumTruck": 92,
+    "sumMotorcycle": 54,
+    "sumVehicle": 320
+  },
+  {
+    "date": "2023-03-05",
+    "sumCar": 36,
+    "sumBus": 95,
+    "sumTruck": 52,
+    "sumMotorcycle": 48,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2023-03-06",
+    "sumCar": 64,
+    "sumBus": 48,
+    "sumTruck": 64,
+    "sumMotorcycle": 92,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-03-07",
+    "sumCar": 46,
+    "sumBus": 82,
+    "sumTruck": 90,
+    "sumMotorcycle": 97,
+    "sumVehicle": 315
+  },
+  {
+    "date": "2023-03-08",
+    "sumCar": 84,
+    "sumBus": 70,
+    "sumTruck": 54,
+    "sumMotorcycle": 36,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2023-03-09",
+    "sumCar": 56,
+    "sumBus": 38,
+    "sumTruck": 64,
+    "sumMotorcycle": 97,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2023-03-10",
+    "sumCar": 90,
+    "sumBus": 51,
+    "sumTruck": 73,
+    "sumMotorcycle": 36,
+    "sumVehicle": 250
+  },
+  {
+    "date": "2023-03-11",
+    "sumCar": 61,
+    "sumBus": 88,
+    "sumTruck": 73,
+    "sumMotorcycle": 52,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-03-12",
+    "sumCar": 48,
+    "sumBus": 30,
+    "sumTruck": 97,
+    "sumMotorcycle": 71,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2023-03-13",
+    "sumCar": 63,
+    "sumBus": 69,
+    "sumTruck": 78,
+    "sumMotorcycle": 86,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2023-03-14",
+    "sumCar": 55,
+    "sumBus": 68,
+    "sumTruck": 62,
+    "sumMotorcycle": 62,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2023-03-15",
+    "sumCar": 63,
+    "sumBus": 51,
+    "sumTruck": 90,
+    "sumMotorcycle": 56,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2023-03-16",
+    "sumCar": 59,
+    "sumBus": 66,
+    "sumTruck": 88,
+    "sumMotorcycle": 91,
+    "sumVehicle": 304
+  },
+  {
+    "date": "2023-03-17",
+    "sumCar": 41,
+    "sumBus": 77,
+    "sumTruck": 49,
+    "sumMotorcycle": 34,
+    "sumVehicle": 201
+  },
+  {
+    "date": "2023-03-18",
+    "sumCar": 32,
+    "sumBus": 74,
+    "sumTruck": 81,
+    "sumMotorcycle": 91,
+    "sumVehicle": 278
+  },
+  {
+    "date": "2023-03-19",
+    "sumCar": 44,
+    "sumBus": 46,
+    "sumTruck": 57,
+    "sumMotorcycle": 31,
+    "sumVehicle": 178
+  },
+  {
+    "date": "2023-03-20",
+    "sumCar": 66,
+    "sumBus": 90,
+    "sumTruck": 55,
+    "sumMotorcycle": 87,
+    "sumVehicle": 298
+  },
+  {
+    "date": "2023-03-21",
+    "sumCar": 74,
+    "sumBus": 96,
+    "sumTruck": 88,
+    "sumMotorcycle": 68,
+    "sumVehicle": 326
+  },
+  {
+    "date": "2023-03-22",
+    "sumCar": 41,
+    "sumBus": 89,
+    "sumTruck": 95,
+    "sumMotorcycle": 96,
+    "sumVehicle": 321
+  },
+  {
+    "date": "2023-03-23",
+    "sumCar": 77,
+    "sumBus": 33,
+    "sumTruck": 59,
+    "sumMotorcycle": 39,
+    "sumVehicle": 208
+  },
+  {
+    "date": "2023-03-24",
+    "sumCar": 81,
+    "sumBus": 51,
+    "sumTruck": 60,
+    "sumMotorcycle": 60,
+    "sumVehicle": 252
+  },
+  {
+    "date": "2023-03-25",
+    "sumCar": 64,
+    "sumBus": 41,
+    "sumTruck": 88,
+    "sumMotorcycle": 34,
+    "sumVehicle": 227
+  },
+  {
+    "date": "2023-03-26",
+    "sumCar": 99,
+    "sumBus": 72,
+    "sumTruck": 94,
+    "sumMotorcycle": 37,
+    "sumVehicle": 302
+  },
+  {
+    "date": "2023-03-27",
+    "sumCar": 65,
+    "sumBus": 99,
+    "sumTruck": 42,
+    "sumMotorcycle": 50,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2023-03-28",
+    "sumCar": 30,
+    "sumBus": 64,
+    "sumTruck": 82,
+    "sumMotorcycle": 55,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2023-03-29",
+    "sumCar": 78,
+    "sumBus": 46,
+    "sumTruck": 68,
+    "sumMotorcycle": 41,
+    "sumVehicle": 233
+  },
+  {
+    "date": "2023-03-30",
+    "sumCar": 66,
+    "sumBus": 46,
+    "sumTruck": 93,
+    "sumMotorcycle": 66,
+    "sumVehicle": 271
+  },
+  {
+    "date": "2023-03-31",
+    "sumCar": 79,
+    "sumBus": 44,
+    "sumTruck": 31,
+    "sumMotorcycle": 54,
+    "sumVehicle": 208
+  },
+  {
+    "date": "2023-04-01",
+    "sumCar": 43,
+    "sumBus": 86,
+    "sumTruck": 73,
+    "sumMotorcycle": 98,
+    "sumVehicle": 300
+  },
+  {
+    "date": "2023-04-02",
+    "sumCar": 41,
+    "sumBus": 42,
+    "sumTruck": 92,
+    "sumMotorcycle": 48,
+    "sumVehicle": 223
+  },
+  {
+    "date": "2023-04-03",
+    "sumCar": 74,
+    "sumBus": 37,
+    "sumTruck": 32,
+    "sumMotorcycle": 75,
+    "sumVehicle": 218
+  },
+  {
+    "date": "2023-04-04",
+    "sumCar": 95,
+    "sumBus": 88,
+    "sumTruck": 45,
+    "sumMotorcycle": 41,
+    "sumVehicle": 269
+  },
+  {
+    "date": "2023-04-05",
+    "sumCar": 83,
+    "sumBus": 94,
+    "sumTruck": 39,
+    "sumMotorcycle": 38,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-04-06",
+    "sumCar": 95,
+    "sumBus": 72,
+    "sumTruck": 82,
+    "sumMotorcycle": 72,
+    "sumVehicle": 321
+  },
+  {
+    "date": "2023-04-07",
+    "sumCar": 34,
+    "sumBus": 71,
+    "sumTruck": 95,
+    "sumMotorcycle": 74,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-04-08",
+    "sumCar": 54,
+    "sumBus": 70,
+    "sumTruck": 85,
+    "sumMotorcycle": 34,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2023-04-09",
+    "sumCar": 61,
+    "sumBus": 46,
+    "sumTruck": 85,
+    "sumMotorcycle": 54,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2023-04-10",
+    "sumCar": 82,
+    "sumBus": 57,
+    "sumTruck": 95,
+    "sumMotorcycle": 75,
+    "sumVehicle": 309
+  },
+  {
+    "date": "2023-04-11",
+    "sumCar": 80,
+    "sumBus": 62,
+    "sumTruck": 80,
+    "sumMotorcycle": 86,
+    "sumVehicle": 308
+  },
+  {
+    "date": "2023-04-12",
+    "sumCar": 86,
+    "sumBus": 90,
+    "sumTruck": 37,
+    "sumMotorcycle": 77,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2023-04-13",
+    "sumCar": 65,
+    "sumBus": 91,
+    "sumTruck": 92,
+    "sumMotorcycle": 76,
+    "sumVehicle": 324
+  },
+  {
+    "date": "2023-04-14",
+    "sumCar": 49,
+    "sumBus": 52,
+    "sumTruck": 93,
+    "sumMotorcycle": 68,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2023-04-15",
+    "sumCar": 66,
+    "sumBus": 32,
+    "sumTruck": 55,
+    "sumMotorcycle": 53,
+    "sumVehicle": 206
+  },
+  {
+    "date": "2023-04-16",
+    "sumCar": 37,
+    "sumBus": 94,
+    "sumTruck": 71,
+    "sumMotorcycle": 41,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2023-04-17",
+    "sumCar": 47,
+    "sumBus": 36,
+    "sumTruck": 74,
+    "sumMotorcycle": 86,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2023-04-18",
+    "sumCar": 57,
+    "sumBus": 48,
+    "sumTruck": 77,
+    "sumMotorcycle": 59,
+    "sumVehicle": 241
+  },
+  {
+    "date": "2023-04-19",
+    "sumCar": 63,
+    "sumBus": 61,
+    "sumTruck": 56,
+    "sumMotorcycle": 97,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2023-04-20",
+    "sumCar": 46,
+    "sumBus": 42,
+    "sumTruck": 91,
+    "sumMotorcycle": 68,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2023-04-21",
+    "sumCar": 51,
+    "sumBus": 68,
+    "sumTruck": 86,
+    "sumMotorcycle": 89,
+    "sumVehicle": 294
+  },
+  {
+    "date": "2023-04-22",
+    "sumCar": 47,
+    "sumBus": 72,
+    "sumTruck": 60,
+    "sumMotorcycle": 70,
+    "sumVehicle": 249
+  },
+  {
+    "date": "2023-04-23",
+    "sumCar": 97,
+    "sumBus": 88,
+    "sumTruck": 55,
+    "sumMotorcycle": 48,
+    "sumVehicle": 288
+  },
+  {
+    "date": "2023-04-24",
+    "sumCar": 57,
+    "sumBus": 87,
+    "sumTruck": 67,
+    "sumMotorcycle": 43,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-04-25",
+    "sumCar": 68,
+    "sumBus": 52,
+    "sumTruck": 47,
+    "sumMotorcycle": 95,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2023-04-26",
+    "sumCar": 59,
+    "sumBus": 66,
+    "sumTruck": 39,
+    "sumMotorcycle": 89,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-04-27",
+    "sumCar": 88,
+    "sumBus": 52,
+    "sumTruck": 54,
+    "sumMotorcycle": 53,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2023-04-28",
+    "sumCar": 91,
+    "sumBus": 57,
+    "sumTruck": 57,
+    "sumMotorcycle": 95,
+    "sumVehicle": 300
+  },
+  {
+    "date": "2023-04-29",
+    "sumCar": 87,
+    "sumBus": 70,
+    "sumTruck": 76,
+    "sumMotorcycle": 46,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2023-04-30",
+    "sumCar": 34,
+    "sumBus": 78,
+    "sumTruck": 100,
+    "sumMotorcycle": 48,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2023-05-01",
+    "sumCar": 47,
+    "sumBus": 57,
+    "sumTruck": 99,
+    "sumMotorcycle": 51,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-05-02",
+    "sumCar": 77,
+    "sumBus": 73,
+    "sumTruck": 65,
+    "sumMotorcycle": 84,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2023-05-03",
+    "sumCar": 63,
+    "sumBus": 53,
+    "sumTruck": 72,
+    "sumMotorcycle": 39,
+    "sumVehicle": 227
+  },
+  {
+    "date": "2023-05-04",
+    "sumCar": 80,
+    "sumBus": 83,
+    "sumTruck": 83,
+    "sumMotorcycle": 79,
+    "sumVehicle": 325
+  },
+  {
+    "date": "2023-05-05",
+    "sumCar": 87,
+    "sumBus": 48,
+    "sumTruck": 81,
+    "sumMotorcycle": 72,
+    "sumVehicle": 288
+  },
+  {
+    "date": "2023-05-06",
+    "sumCar": 64,
+    "sumBus": 99,
+    "sumTruck": 78,
+    "sumMotorcycle": 33,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-05-07",
+    "sumCar": 46,
+    "sumBus": 30,
+    "sumTruck": 41,
+    "sumMotorcycle": 34,
+    "sumVehicle": 151
+  },
+  {
+    "date": "2023-05-08",
+    "sumCar": 85,
+    "sumBus": 60,
+    "sumTruck": 68,
+    "sumMotorcycle": 55,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-05-09",
+    "sumCar": 78,
+    "sumBus": 88,
+    "sumTruck": 83,
+    "sumMotorcycle": 72,
+    "sumVehicle": 321
+  },
+  {
+    "date": "2023-05-10",
+    "sumCar": 74,
+    "sumBus": 63,
+    "sumTruck": 95,
+    "sumMotorcycle": 67,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2023-05-11",
+    "sumCar": 86,
+    "sumBus": 51,
+    "sumTruck": 88,
+    "sumMotorcycle": 59,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2023-05-12",
+    "sumCar": 38,
+    "sumBus": 96,
+    "sumTruck": 62,
+    "sumMotorcycle": 87,
+    "sumVehicle": 283
+  },
+  {
+    "date": "2023-05-13",
+    "sumCar": 44,
+    "sumBus": 89,
+    "sumTruck": 48,
+    "sumMotorcycle": 52,
+    "sumVehicle": 233
+  },
+  {
+    "date": "2023-05-14",
+    "sumCar": 80,
+    "sumBus": 45,
+    "sumTruck": 41,
+    "sumMotorcycle": 45,
+    "sumVehicle": 211
+  },
+  {
+    "date": "2023-05-15",
+    "sumCar": 81,
+    "sumBus": 30,
+    "sumTruck": 58,
+    "sumMotorcycle": 92,
+    "sumVehicle": 261
+  },
+  {
+    "date": "2023-05-16",
+    "sumCar": 72,
+    "sumBus": 48,
+    "sumTruck": 51,
+    "sumMotorcycle": 38,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2023-05-17",
+    "sumCar": 91,
+    "sumBus": 56,
+    "sumTruck": 76,
+    "sumMotorcycle": 48,
+    "sumVehicle": 271
+  },
+  {
+    "date": "2023-05-18",
+    "sumCar": 79,
+    "sumBus": 88,
+    "sumTruck": 64,
+    "sumMotorcycle": 47,
+    "sumVehicle": 278
+  },
+  {
+    "date": "2023-05-19",
+    "sumCar": 64,
+    "sumBus": 61,
+    "sumTruck": 65,
+    "sumMotorcycle": 66,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2023-05-20",
+    "sumCar": 87,
+    "sumBus": 32,
+    "sumTruck": 68,
+    "sumMotorcycle": 100,
+    "sumVehicle": 287
+  },
+  {
+    "date": "2023-05-21",
+    "sumCar": 55,
+    "sumBus": 61,
+    "sumTruck": 72,
+    "sumMotorcycle": 37,
+    "sumVehicle": 225
+  },
+  {
+    "date": "2023-05-22",
+    "sumCar": 76,
+    "sumBus": 75,
+    "sumTruck": 64,
+    "sumMotorcycle": 94,
+    "sumVehicle": 309
+  },
+  {
+    "date": "2023-05-23",
+    "sumCar": 48,
+    "sumBus": 64,
+    "sumTruck": 80,
+    "sumMotorcycle": 80,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2023-05-24",
+    "sumCar": 71,
+    "sumBus": 95,
+    "sumTruck": 69,
+    "sumMotorcycle": 91,
+    "sumVehicle": 326
+  },
+  {
+    "date": "2023-05-25",
+    "sumCar": 80,
+    "sumBus": 40,
+    "sumTruck": 73,
+    "sumMotorcycle": 64,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2023-05-26",
+    "sumCar": 53,
+    "sumBus": 91,
+    "sumTruck": 51,
+    "sumMotorcycle": 52,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2023-05-27",
+    "sumCar": 55,
+    "sumBus": 69,
+    "sumTruck": 92,
+    "sumMotorcycle": 92,
+    "sumVehicle": 308
+  },
+  {
+    "date": "2023-05-28",
+    "sumCar": 43,
+    "sumBus": 78,
+    "sumTruck": 46,
+    "sumMotorcycle": 86,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-05-29",
+    "sumCar": 80,
+    "sumBus": 88,
+    "sumTruck": 74,
+    "sumMotorcycle": 93,
+    "sumVehicle": 335
+  },
+  {
+    "date": "2023-05-30",
+    "sumCar": 81,
+    "sumBus": 49,
+    "sumTruck": 47,
+    "sumMotorcycle": 61,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2023-05-31",
+    "sumCar": 81,
+    "sumBus": 70,
+    "sumTruck": 62,
+    "sumMotorcycle": 88,
+    "sumVehicle": 301
+  },
+  {
+    "date": "2023-06-01",
+    "sumCar": 54,
+    "sumBus": 60,
+    "sumTruck": 84,
+    "sumMotorcycle": 39,
+    "sumVehicle": 237
+  },
+  {
+    "date": "2023-06-02",
+    "sumCar": 77,
+    "sumBus": 95,
+    "sumTruck": 47,
+    "sumMotorcycle": 82,
+    "sumVehicle": 301
+  },
+  {
+    "date": "2023-06-03",
+    "sumCar": 32,
+    "sumBus": 34,
+    "sumTruck": 65,
+    "sumMotorcycle": 33,
+    "sumVehicle": 164
+  },
+  {
+    "date": "2023-06-04",
+    "sumCar": 46,
+    "sumBus": 40,
+    "sumTruck": 88,
+    "sumMotorcycle": 89,
+    "sumVehicle": 263
+  },
+  {
+    "date": "2023-06-05",
+    "sumCar": 31,
+    "sumBus": 71,
+    "sumTruck": 90,
+    "sumMotorcycle": 52,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2023-06-06",
+    "sumCar": 94,
+    "sumBus": 34,
+    "sumTruck": 40,
+    "sumMotorcycle": 85,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-06-07",
+    "sumCar": 98,
+    "sumBus": 63,
+    "sumTruck": 88,
+    "sumMotorcycle": 37,
+    "sumVehicle": 286
+  },
+  {
+    "date": "2023-06-08",
+    "sumCar": 95,
+    "sumBus": 58,
+    "sumTruck": 46,
+    "sumMotorcycle": 50,
+    "sumVehicle": 249
+  },
+  {
+    "date": "2023-06-09",
+    "sumCar": 44,
+    "sumBus": 79,
+    "sumTruck": 53,
+    "sumMotorcycle": 73,
+    "sumVehicle": 249
+  },
+  {
+    "date": "2023-06-10",
+    "sumCar": 42,
+    "sumBus": 55,
+    "sumTruck": 91,
+    "sumMotorcycle": 74,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2023-06-11",
+    "sumCar": 92,
+    "sumBus": 73,
+    "sumTruck": 68,
+    "sumMotorcycle": 45,
+    "sumVehicle": 278
+  },
+  {
+    "date": "2023-06-12",
+    "sumCar": 71,
+    "sumBus": 99,
+    "sumTruck": 68,
+    "sumMotorcycle": 34,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2023-06-13",
+    "sumCar": 54,
+    "sumBus": 65,
+    "sumTruck": 94,
+    "sumMotorcycle": 84,
+    "sumVehicle": 297
+  },
+  {
+    "date": "2023-06-14",
+    "sumCar": 57,
+    "sumBus": 84,
+    "sumTruck": 78,
+    "sumMotorcycle": 83,
+    "sumVehicle": 302
+  },
+  {
+    "date": "2023-06-15",
+    "sumCar": 49,
+    "sumBus": 92,
+    "sumTruck": 72,
+    "sumMotorcycle": 82,
+    "sumVehicle": 295
+  },
+  {
+    "date": "2023-06-16",
+    "sumCar": 90,
+    "sumBus": 92,
+    "sumTruck": 72,
+    "sumMotorcycle": 56,
+    "sumVehicle": 310
+  },
+  {
+    "date": "2023-06-17",
+    "sumCar": 41,
+    "sumBus": 70,
+    "sumTruck": 49,
+    "sumMotorcycle": 56,
+    "sumVehicle": 216
+  },
+  {
+    "date": "2023-06-18",
+    "sumCar": 34,
+    "sumBus": 66,
+    "sumTruck": 100,
+    "sumMotorcycle": 57,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2023-06-19",
+    "sumCar": 97,
+    "sumBus": 72,
+    "sumTruck": 91,
+    "sumMotorcycle": 62,
+    "sumVehicle": 322
+  },
+  {
+    "date": "2023-06-20",
+    "sumCar": 54,
+    "sumBus": 39,
+    "sumTruck": 65,
+    "sumMotorcycle": 42,
+    "sumVehicle": 200
+  },
+  {
+    "date": "2023-06-21",
+    "sumCar": 43,
+    "sumBus": 33,
+    "sumTruck": 71,
+    "sumMotorcycle": 75,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2023-06-22",
+    "sumCar": 46,
+    "sumBus": 54,
+    "sumTruck": 38,
+    "sumMotorcycle": 42,
+    "sumVehicle": 180
+  },
+  {
+    "date": "2023-06-23",
+    "sumCar": 73,
+    "sumBus": 96,
+    "sumTruck": 85,
+    "sumMotorcycle": 60,
+    "sumVehicle": 314
+  },
+  {
+    "date": "2023-06-24",
+    "sumCar": 87,
+    "sumBus": 100,
+    "sumTruck": 59,
+    "sumMotorcycle": 77,
+    "sumVehicle": 323
+  },
+  {
+    "date": "2023-06-25",
+    "sumCar": 75,
+    "sumBus": 73,
+    "sumTruck": 100,
+    "sumMotorcycle": 64,
+    "sumVehicle": 312
+  },
+  {
+    "date": "2023-06-26",
+    "sumCar": 93,
+    "sumBus": 49,
+    "sumTruck": 95,
+    "sumMotorcycle": 75,
+    "sumVehicle": 312
+  },
+  {
+    "date": "2023-06-27",
+    "sumCar": 96,
+    "sumBus": 74,
+    "sumTruck": 64,
+    "sumMotorcycle": 40,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-06-28",
+    "sumCar": 34,
+    "sumBus": 90,
+    "sumTruck": 51,
+    "sumMotorcycle": 51,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2023-06-29",
+    "sumCar": 75,
+    "sumBus": 32,
+    "sumTruck": 38,
+    "sumMotorcycle": 76,
+    "sumVehicle": 221
+  },
+  {
+    "date": "2023-06-30",
+    "sumCar": 49,
+    "sumBus": 97,
+    "sumTruck": 92,
+    "sumMotorcycle": 46,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2023-07-01",
+    "sumCar": 36,
+    "sumBus": 39,
+    "sumTruck": 68,
+    "sumMotorcycle": 47,
+    "sumVehicle": 190
+  },
+  {
+    "date": "2023-07-02",
+    "sumCar": 96,
+    "sumBus": 78,
+    "sumTruck": 88,
+    "sumMotorcycle": 86,
+    "sumVehicle": 348
+  },
+  {
+    "date": "2023-07-03",
+    "sumCar": 84,
+    "sumBus": 63,
+    "sumTruck": 96,
+    "sumMotorcycle": 54,
+    "sumVehicle": 297
+  },
+  {
+    "date": "2023-07-04",
+    "sumCar": 62,
+    "sumBus": 75,
+    "sumTruck": 30,
+    "sumMotorcycle": 97,
+    "sumVehicle": 264
+  },
+  {
+    "date": "2023-07-05",
+    "sumCar": 38,
+    "sumBus": 32,
+    "sumTruck": 49,
+    "sumMotorcycle": 86,
+    "sumVehicle": 205
+  },
+  {
+    "date": "2023-07-06",
+    "sumCar": 43,
+    "sumBus": 94,
+    "sumTruck": 73,
+    "sumMotorcycle": 44,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-07-07",
+    "sumCar": 32,
+    "sumBus": 73,
+    "sumTruck": 60,
+    "sumMotorcycle": 44,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2023-07-08",
+    "sumCar": 81,
+    "sumBus": 58,
+    "sumTruck": 34,
+    "sumMotorcycle": 58,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2023-07-09",
+    "sumCar": 42,
+    "sumBus": 37,
+    "sumTruck": 65,
+    "sumMotorcycle": 42,
+    "sumVehicle": 186
+  },
+  {
+    "date": "2023-07-10",
+    "sumCar": 97,
+    "sumBus": 85,
+    "sumTruck": 38,
+    "sumMotorcycle": 44,
+    "sumVehicle": 264
+  },
+  {
+    "date": "2023-07-11",
+    "sumCar": 30,
+    "sumBus": 74,
+    "sumTruck": 51,
+    "sumMotorcycle": 40,
+    "sumVehicle": 195
+  },
+  {
+    "date": "2023-07-12",
+    "sumCar": 59,
+    "sumBus": 65,
+    "sumTruck": 71,
+    "sumMotorcycle": 32,
+    "sumVehicle": 227
+  },
+  {
+    "date": "2023-07-13",
+    "sumCar": 77,
+    "sumBus": 96,
+    "sumTruck": 95,
+    "sumMotorcycle": 59,
+    "sumVehicle": 327
+  },
+  {
+    "date": "2023-07-14",
+    "sumCar": 48,
+    "sumBus": 90,
+    "sumTruck": 71,
+    "sumMotorcycle": 74,
+    "sumVehicle": 283
+  },
+  {
+    "date": "2023-07-15",
+    "sumCar": 72,
+    "sumBus": 84,
+    "sumTruck": 39,
+    "sumMotorcycle": 79,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-07-16",
+    "sumCar": 46,
+    "sumBus": 98,
+    "sumTruck": 77,
+    "sumMotorcycle": 33,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-07-17",
+    "sumCar": 76,
+    "sumBus": 97,
+    "sumTruck": 79,
+    "sumMotorcycle": 42,
+    "sumVehicle": 294
+  },
+  {
+    "date": "2023-07-18",
+    "sumCar": 35,
+    "sumBus": 39,
+    "sumTruck": 31,
+    "sumMotorcycle": 45,
+    "sumVehicle": 150
+  },
+  {
+    "date": "2023-07-19",
+    "sumCar": 62,
+    "sumBus": 66,
+    "sumTruck": 54,
+    "sumMotorcycle": 44,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2023-07-20",
+    "sumCar": 93,
+    "sumBus": 60,
+    "sumTruck": 60,
+    "sumMotorcycle": 68,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2023-07-21",
+    "sumCar": 90,
+    "sumBus": 64,
+    "sumTruck": 58,
+    "sumMotorcycle": 94,
+    "sumVehicle": 306
+  },
+  {
+    "date": "2023-07-22",
+    "sumCar": 72,
+    "sumBus": 57,
+    "sumTruck": 43,
+    "sumMotorcycle": 32,
+    "sumVehicle": 204
+  },
+  {
+    "date": "2023-07-23",
+    "sumCar": 76,
+    "sumBus": 86,
+    "sumTruck": 42,
+    "sumMotorcycle": 49,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-07-24",
+    "sumCar": 78,
+    "sumBus": 91,
+    "sumTruck": 54,
+    "sumMotorcycle": 43,
+    "sumVehicle": 266
+  },
+  {
+    "date": "2023-07-25",
+    "sumCar": 54,
+    "sumBus": 94,
+    "sumTruck": 50,
+    "sumMotorcycle": 58,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2023-07-26",
+    "sumCar": 45,
+    "sumBus": 46,
+    "sumTruck": 96,
+    "sumMotorcycle": 76,
+    "sumVehicle": 263
+  },
+  {
+    "date": "2023-07-27",
+    "sumCar": 32,
+    "sumBus": 56,
+    "sumTruck": 99,
+    "sumMotorcycle": 57,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2023-07-28",
+    "sumCar": 50,
+    "sumBus": 64,
+    "sumTruck": 98,
+    "sumMotorcycle": 61,
+    "sumVehicle": 273
+  },
+  {
+    "date": "2023-07-29",
+    "sumCar": 62,
+    "sumBus": 84,
+    "sumTruck": 57,
+    "sumMotorcycle": 64,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2023-07-30",
+    "sumCar": 32,
+    "sumBus": 74,
+    "sumTruck": 57,
+    "sumMotorcycle": 94,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2023-07-31",
+    "sumCar": 72,
+    "sumBus": 62,
+    "sumTruck": 53,
+    "sumMotorcycle": 33,
+    "sumVehicle": 220
+  },
+  {
+    "date": "2023-08-01",
+    "sumCar": 72,
+    "sumBus": 99,
+    "sumTruck": 93,
+    "sumMotorcycle": 99,
+    "sumVehicle": 363
+  },
+  {
+    "date": "2023-08-02",
+    "sumCar": 89,
+    "sumBus": 69,
+    "sumTruck": 96,
+    "sumMotorcycle": 88,
+    "sumVehicle": 342
+  },
+  {
+    "date": "2023-08-03",
+    "sumCar": 95,
+    "sumBus": 45,
+    "sumTruck": 31,
+    "sumMotorcycle": 51,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2023-08-04",
+    "sumCar": 73,
+    "sumBus": 61,
+    "sumTruck": 89,
+    "sumMotorcycle": 49,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2023-08-05",
+    "sumCar": 34,
+    "sumBus": 99,
+    "sumTruck": 47,
+    "sumMotorcycle": 99,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2023-08-06",
+    "sumCar": 36,
+    "sumBus": 42,
+    "sumTruck": 81,
+    "sumMotorcycle": 31,
+    "sumVehicle": 190
+  },
+  {
+    "date": "2023-08-07",
+    "sumCar": 76,
+    "sumBus": 34,
+    "sumTruck": 40,
+    "sumMotorcycle": 57,
+    "sumVehicle": 207
+  },
+  {
+    "date": "2023-08-08",
+    "sumCar": 56,
+    "sumBus": 56,
+    "sumTruck": 99,
+    "sumMotorcycle": 31,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2023-08-09",
+    "sumCar": 82,
+    "sumBus": 60,
+    "sumTruck": 75,
+    "sumMotorcycle": 91,
+    "sumVehicle": 308
+  },
+  {
+    "date": "2023-08-10",
+    "sumCar": 55,
+    "sumBus": 97,
+    "sumTruck": 56,
+    "sumMotorcycle": 87,
+    "sumVehicle": 295
+  },
+  {
+    "date": "2023-08-11",
+    "sumCar": 69,
+    "sumBus": 47,
+    "sumTruck": 85,
+    "sumMotorcycle": 67,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-08-12",
+    "sumCar": 36,
+    "sumBus": 77,
+    "sumTruck": 45,
+    "sumMotorcycle": 91,
+    "sumVehicle": 249
+  },
+  {
+    "date": "2023-08-13",
+    "sumCar": 75,
+    "sumBus": 85,
+    "sumTruck": 62,
+    "sumMotorcycle": 59,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2023-08-14",
+    "sumCar": 45,
+    "sumBus": 95,
+    "sumTruck": 51,
+    "sumMotorcycle": 31,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2023-08-15",
+    "sumCar": 45,
+    "sumBus": 91,
+    "sumTruck": 49,
+    "sumMotorcycle": 35,
+    "sumVehicle": 220
+  },
+  {
+    "date": "2023-08-16",
+    "sumCar": 61,
+    "sumBus": 46,
+    "sumTruck": 41,
+    "sumMotorcycle": 90,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2023-08-17",
+    "sumCar": 52,
+    "sumBus": 87,
+    "sumTruck": 66,
+    "sumMotorcycle": 39,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2023-08-18",
+    "sumCar": 89,
+    "sumBus": 83,
+    "sumTruck": 96,
+    "sumMotorcycle": 35,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2023-08-19",
+    "sumCar": 32,
+    "sumBus": 49,
+    "sumTruck": 79,
+    "sumMotorcycle": 36,
+    "sumVehicle": 196
+  },
+  {
+    "date": "2023-08-20",
+    "sumCar": 38,
+    "sumBus": 41,
+    "sumTruck": 72,
+    "sumMotorcycle": 37,
+    "sumVehicle": 188
+  },
+  {
+    "date": "2023-08-21",
+    "sumCar": 37,
+    "sumBus": 75,
+    "sumTruck": 94,
+    "sumMotorcycle": 38,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2023-08-22",
+    "sumCar": 67,
+    "sumBus": 50,
+    "sumTruck": 40,
+    "sumMotorcycle": 72,
+    "sumVehicle": 229
+  },
+  {
+    "date": "2023-08-23",
+    "sumCar": 58,
+    "sumBus": 92,
+    "sumTruck": 100,
+    "sumMotorcycle": 41,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2023-08-24",
+    "sumCar": 99,
+    "sumBus": 70,
+    "sumTruck": 44,
+    "sumMotorcycle": 44,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2023-08-25",
+    "sumCar": 88,
+    "sumBus": 34,
+    "sumTruck": 59,
+    "sumMotorcycle": 81,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2023-08-26",
+    "sumCar": 59,
+    "sumBus": 95,
+    "sumTruck": 54,
+    "sumMotorcycle": 55,
+    "sumVehicle": 263
+  },
+  {
+    "date": "2023-08-27",
+    "sumCar": 36,
+    "sumBus": 79,
+    "sumTruck": 84,
+    "sumMotorcycle": 72,
+    "sumVehicle": 271
+  },
+  {
+    "date": "2023-08-28",
+    "sumCar": 97,
+    "sumBus": 60,
+    "sumTruck": 54,
+    "sumMotorcycle": 68,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2023-08-29",
+    "sumCar": 54,
+    "sumBus": 39,
+    "sumTruck": 91,
+    "sumMotorcycle": 38,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2023-08-30",
+    "sumCar": 37,
+    "sumBus": 97,
+    "sumTruck": 55,
+    "sumMotorcycle": 65,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-08-31",
+    "sumCar": 87,
+    "sumBus": 49,
+    "sumTruck": 76,
+    "sumMotorcycle": 34,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2023-09-01",
+    "sumCar": 69,
+    "sumBus": 31,
+    "sumTruck": 41,
+    "sumMotorcycle": 98,
+    "sumVehicle": 239
+  },
+  {
+    "date": "2023-09-02",
+    "sumCar": 34,
+    "sumBus": 96,
+    "sumTruck": 82,
+    "sumMotorcycle": 58,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2023-09-03",
+    "sumCar": 61,
+    "sumBus": 73,
+    "sumTruck": 61,
+    "sumMotorcycle": 38,
+    "sumVehicle": 233
+  },
+  {
+    "date": "2023-09-04",
+    "sumCar": 77,
+    "sumBus": 33,
+    "sumTruck": 58,
+    "sumMotorcycle": 84,
+    "sumVehicle": 252
+  },
+  {
+    "date": "2023-09-05",
+    "sumCar": 33,
+    "sumBus": 40,
+    "sumTruck": 86,
+    "sumMotorcycle": 49,
+    "sumVehicle": 208
+  },
+  {
+    "date": "2023-09-06",
+    "sumCar": 72,
+    "sumBus": 37,
+    "sumTruck": 38,
+    "sumMotorcycle": 72,
+    "sumVehicle": 219
+  },
+  {
+    "date": "2023-09-07",
+    "sumCar": 90,
+    "sumBus": 78,
+    "sumTruck": 93,
+    "sumMotorcycle": 40,
+    "sumVehicle": 301
+  },
+  {
+    "date": "2023-09-08",
+    "sumCar": 61,
+    "sumBus": 40,
+    "sumTruck": 95,
+    "sumMotorcycle": 71,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2023-09-09",
+    "sumCar": 81,
+    "sumBus": 92,
+    "sumTruck": 46,
+    "sumMotorcycle": 86,
+    "sumVehicle": 305
+  },
+  {
+    "date": "2023-09-10",
+    "sumCar": 38,
+    "sumBus": 86,
+    "sumTruck": 75,
+    "sumMotorcycle": 36,
+    "sumVehicle": 235
+  },
+  {
+    "date": "2023-09-11",
+    "sumCar": 48,
+    "sumBus": 71,
+    "sumTruck": 99,
+    "sumMotorcycle": 97,
+    "sumVehicle": 315
+  },
+  {
+    "date": "2023-09-12",
+    "sumCar": 37,
+    "sumBus": 87,
+    "sumTruck": 66,
+    "sumMotorcycle": 61,
+    "sumVehicle": 251
+  },
+  {
+    "date": "2023-09-13",
+    "sumCar": 80,
+    "sumBus": 34,
+    "sumTruck": 30,
+    "sumMotorcycle": 70,
+    "sumVehicle": 214
+  },
+  {
+    "date": "2023-09-14",
+    "sumCar": 45,
+    "sumBus": 40,
+    "sumTruck": 85,
+    "sumMotorcycle": 66,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2023-09-15",
+    "sumCar": 35,
+    "sumBus": 94,
+    "sumTruck": 75,
+    "sumMotorcycle": 92,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2023-09-16",
+    "sumCar": 70,
+    "sumBus": 70,
+    "sumTruck": 93,
+    "sumMotorcycle": 88,
+    "sumVehicle": 321
+  },
+  {
+    "date": "2023-09-17",
+    "sumCar": 59,
+    "sumBus": 77,
+    "sumTruck": 37,
+    "sumMotorcycle": 95,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-09-18",
+    "sumCar": 80,
+    "sumBus": 85,
+    "sumTruck": 32,
+    "sumMotorcycle": 38,
+    "sumVehicle": 235
+  },
+  {
+    "date": "2023-09-19",
+    "sumCar": 77,
+    "sumBus": 92,
+    "sumTruck": 55,
+    "sumMotorcycle": 56,
+    "sumVehicle": 280
+  },
+  {
+    "date": "2023-09-20",
+    "sumCar": 66,
+    "sumBus": 55,
+    "sumTruck": 68,
+    "sumMotorcycle": 42,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2023-09-21",
+    "sumCar": 63,
+    "sumBus": 99,
+    "sumTruck": 42,
+    "sumMotorcycle": 65,
+    "sumVehicle": 269
+  },
+  {
+    "date": "2023-09-22",
+    "sumCar": 65,
+    "sumBus": 72,
+    "sumTruck": 84,
+    "sumMotorcycle": 82,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2023-09-23",
+    "sumCar": 75,
+    "sumBus": 77,
+    "sumTruck": 57,
+    "sumMotorcycle": 44,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-09-24",
+    "sumCar": 36,
+    "sumBus": 96,
+    "sumTruck": 77,
+    "sumMotorcycle": 52,
+    "sumVehicle": 261
+  },
+  {
+    "date": "2023-09-25",
+    "sumCar": 70,
+    "sumBus": 82,
+    "sumTruck": 89,
+    "sumMotorcycle": 79,
+    "sumVehicle": 320
+  },
+  {
+    "date": "2023-09-26",
+    "sumCar": 30,
+    "sumBus": 86,
+    "sumTruck": 61,
+    "sumMotorcycle": 82,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2023-09-27",
+    "sumCar": 88,
+    "sumBus": 37,
+    "sumTruck": 98,
+    "sumMotorcycle": 43,
+    "sumVehicle": 266
+  },
+  {
+    "date": "2023-09-28",
+    "sumCar": 45,
+    "sumBus": 55,
+    "sumTruck": 53,
+    "sumMotorcycle": 63,
+    "sumVehicle": 216
+  },
+  {
+    "date": "2023-09-29",
+    "sumCar": 90,
+    "sumBus": 71,
+    "sumTruck": 62,
+    "sumMotorcycle": 70,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2023-09-30",
+    "sumCar": 72,
+    "sumBus": 95,
+    "sumTruck": 94,
+    "sumMotorcycle": 48,
+    "sumVehicle": 309
+  },
+  {
+    "date": "2023-10-01",
+    "sumCar": 79,
+    "sumBus": 67,
+    "sumTruck": 43,
+    "sumMotorcycle": 84,
+    "sumVehicle": 273
+  },
+  {
+    "date": "2023-10-02",
+    "sumCar": 74,
+    "sumBus": 49,
+    "sumTruck": 46,
+    "sumMotorcycle": 67,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2023-10-03",
+    "sumCar": 69,
+    "sumBus": 38,
+    "sumTruck": 58,
+    "sumMotorcycle": 97,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2023-10-04",
+    "sumCar": 67,
+    "sumBus": 86,
+    "sumTruck": 42,
+    "sumMotorcycle": 43,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2023-10-05",
+    "sumCar": 63,
+    "sumBus": 90,
+    "sumTruck": 54,
+    "sumMotorcycle": 75,
+    "sumVehicle": 282
+  },
+  {
+    "date": "2023-10-06",
+    "sumCar": 52,
+    "sumBus": 65,
+    "sumTruck": 70,
+    "sumMotorcycle": 81,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-10-07",
+    "sumCar": 30,
+    "sumBus": 62,
+    "sumTruck": 37,
+    "sumMotorcycle": 81,
+    "sumVehicle": 210
+  },
+  {
+    "date": "2023-10-08",
+    "sumCar": 43,
+    "sumBus": 94,
+    "sumTruck": 84,
+    "sumMotorcycle": 100,
+    "sumVehicle": 321
+  },
+  {
+    "date": "2023-10-09",
+    "sumCar": 80,
+    "sumBus": 31,
+    "sumTruck": 35,
+    "sumMotorcycle": 47,
+    "sumVehicle": 193
+  },
+  {
+    "date": "2023-10-10",
+    "sumCar": 94,
+    "sumBus": 84,
+    "sumTruck": 87,
+    "sumMotorcycle": 32,
+    "sumVehicle": 297
+  },
+  {
+    "date": "2023-10-11",
+    "sumCar": 87,
+    "sumBus": 98,
+    "sumTruck": 72,
+    "sumMotorcycle": 32,
+    "sumVehicle": 289
+  },
+  {
+    "date": "2023-10-12",
+    "sumCar": 54,
+    "sumBus": 87,
+    "sumTruck": 90,
+    "sumMotorcycle": 93,
+    "sumVehicle": 324
+  },
+  {
+    "date": "2023-10-13",
+    "sumCar": 97,
+    "sumBus": 93,
+    "sumTruck": 99,
+    "sumMotorcycle": 56,
+    "sumVehicle": 345
+  },
+  {
+    "date": "2023-10-14",
+    "sumCar": 75,
+    "sumBus": 38,
+    "sumTruck": 48,
+    "sumMotorcycle": 75,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2023-10-15",
+    "sumCar": 67,
+    "sumBus": 46,
+    "sumTruck": 56,
+    "sumMotorcycle": 100,
+    "sumVehicle": 269
+  },
+  {
+    "date": "2023-10-16",
+    "sumCar": 81,
+    "sumBus": 97,
+    "sumTruck": 43,
+    "sumMotorcycle": 45,
+    "sumVehicle": 266
+  },
+  {
+    "date": "2023-10-17",
+    "sumCar": 71,
+    "sumBus": 97,
+    "sumTruck": 50,
+    "sumMotorcycle": 42,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2023-10-18",
+    "sumCar": 74,
+    "sumBus": 38,
+    "sumTruck": 36,
+    "sumMotorcycle": 62,
+    "sumVehicle": 210
+  },
+  {
+    "date": "2023-10-19",
+    "sumCar": 87,
+    "sumBus": 80,
+    "sumTruck": 33,
+    "sumMotorcycle": 48,
+    "sumVehicle": 248
+  },
+  {
+    "date": "2023-10-20",
+    "sumCar": 35,
+    "sumBus": 85,
+    "sumTruck": 38,
+    "sumMotorcycle": 96,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2023-10-21",
+    "sumCar": 79,
+    "sumBus": 79,
+    "sumTruck": 97,
+    "sumMotorcycle": 33,
+    "sumVehicle": 288
+  },
+  {
+    "date": "2023-10-22",
+    "sumCar": 49,
+    "sumBus": 70,
+    "sumTruck": 38,
+    "sumMotorcycle": 95,
+    "sumVehicle": 252
+  },
+  {
+    "date": "2023-10-23",
+    "sumCar": 91,
+    "sumBus": 77,
+    "sumTruck": 93,
+    "sumMotorcycle": 97,
+    "sumVehicle": 358
+  },
+  {
+    "date": "2023-10-24",
+    "sumCar": 38,
+    "sumBus": 54,
+    "sumTruck": 72,
+    "sumMotorcycle": 97,
+    "sumVehicle": 261
+  },
+  {
+    "date": "2023-10-25",
+    "sumCar": 31,
+    "sumBus": 50,
+    "sumTruck": 58,
+    "sumMotorcycle": 75,
+    "sumVehicle": 214
+  },
+  {
+    "date": "2023-10-26",
+    "sumCar": 62,
+    "sumBus": 81,
+    "sumTruck": 86,
+    "sumMotorcycle": 62,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2023-10-27",
+    "sumCar": 30,
+    "sumBus": 77,
+    "sumTruck": 87,
+    "sumMotorcycle": 82,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2023-10-28",
+    "sumCar": 47,
+    "sumBus": 74,
+    "sumTruck": 99,
+    "sumMotorcycle": 48,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2023-10-29",
+    "sumCar": 30,
+    "sumBus": 48,
+    "sumTruck": 67,
+    "sumMotorcycle": 89,
+    "sumVehicle": 234
+  },
+  {
+    "date": "2023-10-30",
+    "sumCar": 100,
+    "sumBus": 66,
+    "sumTruck": 36,
+    "sumMotorcycle": 74,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2023-10-31",
+    "sumCar": 76,
+    "sumBus": 66,
+    "sumTruck": 77,
+    "sumMotorcycle": 91,
+    "sumVehicle": 310
+  },
+  {
+    "date": "2023-11-01",
+    "sumCar": 43,
+    "sumBus": 55,
+    "sumTruck": 95,
+    "sumMotorcycle": 32,
+    "sumVehicle": 225
+  },
+  {
+    "date": "2023-11-02",
+    "sumCar": 67,
+    "sumBus": 71,
+    "sumTruck": 88,
+    "sumMotorcycle": 58,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2023-11-03",
+    "sumCar": 69,
+    "sumBus": 51,
+    "sumTruck": 37,
+    "sumMotorcycle": 58,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2023-11-04",
+    "sumCar": 75,
+    "sumBus": 86,
+    "sumTruck": 40,
+    "sumMotorcycle": 94,
+    "sumVehicle": 295
+  },
+  {
+    "date": "2023-11-05",
+    "sumCar": 62,
+    "sumBus": 80,
+    "sumTruck": 85,
+    "sumMotorcycle": 43,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2023-11-06",
+    "sumCar": 66,
+    "sumBus": 81,
+    "sumTruck": 46,
+    "sumMotorcycle": 100,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2023-11-07",
+    "sumCar": 41,
+    "sumBus": 97,
+    "sumTruck": 35,
+    "sumMotorcycle": 89,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2023-11-08",
+    "sumCar": 79,
+    "sumBus": 57,
+    "sumTruck": 70,
+    "sumMotorcycle": 64,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2023-11-09",
+    "sumCar": 96,
+    "sumBus": 89,
+    "sumTruck": 60,
+    "sumMotorcycle": 100,
+    "sumVehicle": 345
+  },
+  {
+    "date": "2023-11-10",
+    "sumCar": 34,
+    "sumBus": 64,
+    "sumTruck": 40,
+    "sumMotorcycle": 41,
+    "sumVehicle": 179
+  },
+  {
+    "date": "2023-11-11",
+    "sumCar": 97,
+    "sumBus": 43,
+    "sumTruck": 38,
+    "sumMotorcycle": 48,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2023-11-12",
+    "sumCar": 85,
+    "sumBus": 34,
+    "sumTruck": 78,
+    "sumMotorcycle": 80,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2023-11-13",
+    "sumCar": 80,
+    "sumBus": 35,
+    "sumTruck": 46,
+    "sumMotorcycle": 65,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2023-11-14",
+    "sumCar": 77,
+    "sumBus": 44,
+    "sumTruck": 41,
+    "sumMotorcycle": 81,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2023-11-15",
+    "sumCar": 33,
+    "sumBus": 51,
+    "sumTruck": 73,
+    "sumMotorcycle": 39,
+    "sumVehicle": 196
+  },
+  {
+    "date": "2023-11-16",
+    "sumCar": 32,
+    "sumBus": 70,
+    "sumTruck": 92,
+    "sumMotorcycle": 87,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2023-11-17",
+    "sumCar": 41,
+    "sumBus": 47,
+    "sumTruck": 77,
+    "sumMotorcycle": 88,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-11-18",
+    "sumCar": 60,
+    "sumBus": 52,
+    "sumTruck": 80,
+    "sumMotorcycle": 36,
+    "sumVehicle": 228
+  },
+  {
+    "date": "2023-11-19",
+    "sumCar": 38,
+    "sumBus": 91,
+    "sumTruck": 73,
+    "sumMotorcycle": 32,
+    "sumVehicle": 234
+  },
+  {
+    "date": "2023-11-20",
+    "sumCar": 53,
+    "sumBus": 40,
+    "sumTruck": 52,
+    "sumMotorcycle": 38,
+    "sumVehicle": 183
+  },
+  {
+    "date": "2023-11-21",
+    "sumCar": 47,
+    "sumBus": 65,
+    "sumTruck": 67,
+    "sumMotorcycle": 71,
+    "sumVehicle": 250
+  },
+  {
+    "date": "2023-11-22",
+    "sumCar": 57,
+    "sumBus": 47,
+    "sumTruck": 91,
+    "sumMotorcycle": 72,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2023-11-23",
+    "sumCar": 62,
+    "sumBus": 97,
+    "sumTruck": 56,
+    "sumMotorcycle": 65,
+    "sumVehicle": 280
+  },
+  {
+    "date": "2023-11-24",
+    "sumCar": 36,
+    "sumBus": 84,
+    "sumTruck": 96,
+    "sumMotorcycle": 69,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2023-11-25",
+    "sumCar": 67,
+    "sumBus": 80,
+    "sumTruck": 38,
+    "sumMotorcycle": 50,
+    "sumVehicle": 235
+  },
+  {
+    "date": "2023-11-26",
+    "sumCar": 39,
+    "sumBus": 41,
+    "sumTruck": 84,
+    "sumMotorcycle": 38,
+    "sumVehicle": 202
+  },
+  {
+    "date": "2023-11-27",
+    "sumCar": 30,
+    "sumBus": 51,
+    "sumTruck": 81,
+    "sumMotorcycle": 93,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2023-11-28",
+    "sumCar": 98,
+    "sumBus": 34,
+    "sumTruck": 40,
+    "sumMotorcycle": 81,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-11-29",
+    "sumCar": 97,
+    "sumBus": 97,
+    "sumTruck": 66,
+    "sumMotorcycle": 66,
+    "sumVehicle": 326
+  },
+  {
+    "date": "2023-11-30",
+    "sumCar": 69,
+    "sumBus": 94,
+    "sumTruck": 54,
+    "sumMotorcycle": 36,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2023-12-01",
+    "sumCar": 79,
+    "sumBus": 55,
+    "sumTruck": 85,
+    "sumMotorcycle": 95,
+    "sumVehicle": 314
+  },
+  {
+    "date": "2023-12-02",
+    "sumCar": 97,
+    "sumBus": 74,
+    "sumTruck": 74,
+    "sumMotorcycle": 74,
+    "sumVehicle": 319
+  },
+  {
+    "date": "2023-12-03",
+    "sumCar": 78,
+    "sumBus": 65,
+    "sumTruck": 84,
+    "sumMotorcycle": 67,
+    "sumVehicle": 294
+  },
+  {
+    "date": "2023-12-04",
+    "sumCar": 90,
+    "sumBus": 38,
+    "sumTruck": 90,
+    "sumMotorcycle": 75,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2023-12-05",
+    "sumCar": 58,
+    "sumBus": 73,
+    "sumTruck": 47,
+    "sumMotorcycle": 98,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2023-12-06",
+    "sumCar": 71,
+    "sumBus": 48,
+    "sumTruck": 43,
+    "sumMotorcycle": 95,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2023-12-07",
+    "sumCar": 33,
+    "sumBus": 38,
+    "sumTruck": 77,
+    "sumMotorcycle": 58,
+    "sumVehicle": 206
+  },
+  {
+    "date": "2023-12-08",
+    "sumCar": 86,
+    "sumBus": 33,
+    "sumTruck": 66,
+    "sumMotorcycle": 80,
+    "sumVehicle": 265
+  },
+  {
+    "date": "2023-12-09",
+    "sumCar": 85,
+    "sumBus": 44,
+    "sumTruck": 81,
+    "sumMotorcycle": 74,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2023-12-10",
+    "sumCar": 55,
+    "sumBus": 83,
+    "sumTruck": 81,
+    "sumMotorcycle": 55,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-12-11",
+    "sumCar": 31,
+    "sumBus": 64,
+    "sumTruck": 82,
+    "sumMotorcycle": 69,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2023-12-12",
+    "sumCar": 80,
+    "sumBus": 74,
+    "sumTruck": 61,
+    "sumMotorcycle": 50,
+    "sumVehicle": 265
+  },
+  {
+    "date": "2023-12-13",
+    "sumCar": 87,
+    "sumBus": 90,
+    "sumTruck": 31,
+    "sumMotorcycle": 69,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2023-12-14",
+    "sumCar": 47,
+    "sumBus": 48,
+    "sumTruck": 42,
+    "sumMotorcycle": 40,
+    "sumVehicle": 177
+  },
+  {
+    "date": "2023-12-15",
+    "sumCar": 42,
+    "sumBus": 86,
+    "sumTruck": 42,
+    "sumMotorcycle": 78,
+    "sumVehicle": 248
+  },
+  {
+    "date": "2023-12-16",
+    "sumCar": 77,
+    "sumBus": 86,
+    "sumTruck": 51,
+    "sumMotorcycle": 77,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2023-12-17",
+    "sumCar": 87,
+    "sumBus": 79,
+    "sumTruck": 72,
+    "sumMotorcycle": 36,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2023-12-18",
+    "sumCar": 40,
+    "sumBus": 59,
+    "sumTruck": 32,
+    "sumMotorcycle": 78,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2023-12-19",
+    "sumCar": 91,
+    "sumBus": 55,
+    "sumTruck": 97,
+    "sumMotorcycle": 64,
+    "sumVehicle": 307
+  },
+  {
+    "date": "2023-12-20",
+    "sumCar": 83,
+    "sumBus": 39,
+    "sumTruck": 42,
+    "sumMotorcycle": 49,
+    "sumVehicle": 213
+  },
+  {
+    "date": "2023-12-21",
+    "sumCar": 60,
+    "sumBus": 38,
+    "sumTruck": 55,
+    "sumMotorcycle": 41,
+    "sumVehicle": 194
+  },
+  {
+    "date": "2023-12-22",
+    "sumCar": 41,
+    "sumBus": 34,
+    "sumTruck": 57,
+    "sumMotorcycle": 77,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2023-12-23",
+    "sumCar": 55,
+    "sumBus": 81,
+    "sumTruck": 67,
+    "sumMotorcycle": 56,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2023-12-24",
+    "sumCar": 71,
+    "sumBus": 96,
+    "sumTruck": 36,
+    "sumMotorcycle": 72,
+    "sumVehicle": 275
+  },
+  {
+    "date": "2023-12-25",
+    "sumCar": 39,
+    "sumBus": 84,
+    "sumTruck": 69,
+    "sumMotorcycle": 88,
+    "sumVehicle": 280
+  },
+  {
+    "date": "2023-12-26",
+    "sumCar": 100,
+    "sumBus": 60,
+    "sumTruck": 93,
+    "sumMotorcycle": 99,
+    "sumVehicle": 352
+  },
+  {
+    "date": "2023-12-27",
+    "sumCar": 32,
+    "sumBus": 70,
+    "sumTruck": 70,
+    "sumMotorcycle": 35,
+    "sumVehicle": 207
+  },
+  {
+    "date": "2023-12-28",
+    "sumCar": 82,
+    "sumBus": 71,
+    "sumTruck": 30,
+    "sumMotorcycle": 58,
+    "sumVehicle": 241
+  },
+  {
+    "date": "2023-12-29",
+    "sumCar": 83,
+    "sumBus": 40,
+    "sumTruck": 39,
+    "sumMotorcycle": 83,
+    "sumVehicle": 245
+  },
+  {
+    "date": "2023-12-30",
+    "sumCar": 37,
+    "sumBus": 66,
+    "sumTruck": 31,
+    "sumMotorcycle": 52,
+    "sumVehicle": 186
+  },
+  {
+    "date": "2023-12-31",
+    "sumCar": 90,
+    "sumBus": 59,
+    "sumTruck": 83,
+    "sumMotorcycle": 50,
+    "sumVehicle": 282
+  },
+  {
+    "date": "2024-01-01",
+    "sumCar": 62,
+    "sumBus": 87,
+    "sumTruck": 74,
+    "sumMotorcycle": 52,
+    "sumVehicle": 275
+  },
+  {
+    "date": "2024-01-02",
+    "sumCar": 100,
+    "sumBus": 49,
+    "sumTruck": 67,
+    "sumMotorcycle": 84,
+    "sumVehicle": 300
+  },
+  {
+    "date": "2024-01-03",
+    "sumCar": 75,
+    "sumBus": 40,
+    "sumTruck": 96,
+    "sumMotorcycle": 40,
+    "sumVehicle": 251
+  },
+  {
+    "date": "2024-01-04",
+    "sumCar": 60,
+    "sumBus": 96,
+    "sumTruck": 90,
+    "sumMotorcycle": 58,
+    "sumVehicle": 304
+  },
+  {
+    "date": "2024-01-05",
+    "sumCar": 66,
+    "sumBus": 77,
+    "sumTruck": 85,
+    "sumMotorcycle": 40,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2024-01-06",
+    "sumCar": 77,
+    "sumBus": 81,
+    "sumTruck": 85,
+    "sumMotorcycle": 63,
+    "sumVehicle": 306
+  },
+  {
+    "date": "2024-01-07",
+    "sumCar": 82,
+    "sumBus": 59,
+    "sumTruck": 77,
+    "sumMotorcycle": 50,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2024-01-08",
+    "sumCar": 72,
+    "sumBus": 70,
+    "sumTruck": 53,
+    "sumMotorcycle": 64,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2024-01-09",
+    "sumCar": 88,
+    "sumBus": 64,
+    "sumTruck": 76,
+    "sumMotorcycle": 97,
+    "sumVehicle": 325
+  },
+  {
+    "date": "2024-01-10",
+    "sumCar": 67,
+    "sumBus": 59,
+    "sumTruck": 94,
+    "sumMotorcycle": 47,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2024-01-11",
+    "sumCar": 98,
+    "sumBus": 86,
+    "sumTruck": 72,
+    "sumMotorcycle": 74,
+    "sumVehicle": 330
+  },
+  {
+    "date": "2024-01-12",
+    "sumCar": 64,
+    "sumBus": 61,
+    "sumTruck": 80,
+    "sumMotorcycle": 59,
+    "sumVehicle": 264
+  },
+  {
+    "date": "2024-01-13",
+    "sumCar": 68,
+    "sumBus": 36,
+    "sumTruck": 100,
+    "sumMotorcycle": 69,
+    "sumVehicle": 273
+  },
+  {
+    "date": "2024-01-14",
+    "sumCar": 59,
+    "sumBus": 84,
+    "sumTruck": 88,
+    "sumMotorcycle": 50,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2024-01-15",
+    "sumCar": 37,
+    "sumBus": 86,
+    "sumTruck": 37,
+    "sumMotorcycle": 71,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2024-01-16",
+    "sumCar": 67,
+    "sumBus": 71,
+    "sumTruck": 99,
+    "sumMotorcycle": 61,
+    "sumVehicle": 298
+  },
+  {
+    "date": "2024-01-17",
+    "sumCar": 81,
+    "sumBus": 57,
+    "sumTruck": 68,
+    "sumMotorcycle": 47,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2024-01-18",
+    "sumCar": 69,
+    "sumBus": 91,
+    "sumTruck": 47,
+    "sumMotorcycle": 40,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-01-19",
+    "sumCar": 99,
+    "sumBus": 66,
+    "sumTruck": 72,
+    "sumMotorcycle": 35,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-01-20",
+    "sumCar": 43,
+    "sumBus": 95,
+    "sumTruck": 31,
+    "sumMotorcycle": 85,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2024-01-21",
+    "sumCar": 74,
+    "sumBus": 63,
+    "sumTruck": 61,
+    "sumMotorcycle": 40,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2024-01-22",
+    "sumCar": 56,
+    "sumBus": 44,
+    "sumTruck": 80,
+    "sumMotorcycle": 92,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-01-23",
+    "sumCar": 55,
+    "sumBus": 70,
+    "sumTruck": 64,
+    "sumMotorcycle": 68,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2024-01-24",
+    "sumCar": 46,
+    "sumBus": 68,
+    "sumTruck": 64,
+    "sumMotorcycle": 56,
+    "sumVehicle": 234
+  },
+  {
+    "date": "2024-01-25",
+    "sumCar": 42,
+    "sumBus": 76,
+    "sumTruck": 41,
+    "sumMotorcycle": 57,
+    "sumVehicle": 216
+  },
+  {
+    "date": "2024-01-26",
+    "sumCar": 40,
+    "sumBus": 34,
+    "sumTruck": 70,
+    "sumMotorcycle": 84,
+    "sumVehicle": 228
+  },
+  {
+    "date": "2024-01-27",
+    "sumCar": 63,
+    "sumBus": 56,
+    "sumTruck": 56,
+    "sumMotorcycle": 58,
+    "sumVehicle": 233
+  },
+  {
+    "date": "2024-01-28",
+    "sumCar": 78,
+    "sumBus": 76,
+    "sumTruck": 37,
+    "sumMotorcycle": 58,
+    "sumVehicle": 249
+  },
+  {
+    "date": "2024-01-29",
+    "sumCar": 85,
+    "sumBus": 77,
+    "sumTruck": 79,
+    "sumMotorcycle": 97,
+    "sumVehicle": 338
+  },
+  {
+    "date": "2024-01-30",
+    "sumCar": 68,
+    "sumBus": 63,
+    "sumTruck": 59,
+    "sumMotorcycle": 44,
+    "sumVehicle": 234
+  },
+  {
+    "date": "2024-01-31",
+    "sumCar": 70,
+    "sumBus": 38,
+    "sumTruck": 56,
+    "sumMotorcycle": 93,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2024-02-01",
+    "sumCar": 43,
+    "sumBus": 39,
+    "sumTruck": 98,
+    "sumMotorcycle": 60,
+    "sumVehicle": 240
+  },
+  {
+    "date": "2024-02-02",
+    "sumCar": 37,
+    "sumBus": 70,
+    "sumTruck": 65,
+    "sumMotorcycle": 52,
+    "sumVehicle": 224
+  },
+  {
+    "date": "2024-02-03",
+    "sumCar": 50,
+    "sumBus": 71,
+    "sumTruck": 74,
+    "sumMotorcycle": 67,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2024-02-04",
+    "sumCar": 86,
+    "sumBus": 94,
+    "sumTruck": 60,
+    "sumMotorcycle": 94,
+    "sumVehicle": 334
+  },
+  {
+    "date": "2024-02-05",
+    "sumCar": 31,
+    "sumBus": 52,
+    "sumTruck": 73,
+    "sumMotorcycle": 34,
+    "sumVehicle": 190
+  },
+  {
+    "date": "2024-02-06",
+    "sumCar": 74,
+    "sumBus": 45,
+    "sumTruck": 67,
+    "sumMotorcycle": 31,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2024-02-07",
+    "sumCar": 31,
+    "sumBus": 60,
+    "sumTruck": 54,
+    "sumMotorcycle": 52,
+    "sumVehicle": 197
+  },
+  {
+    "date": "2024-02-08",
+    "sumCar": 35,
+    "sumBus": 93,
+    "sumTruck": 32,
+    "sumMotorcycle": 70,
+    "sumVehicle": 230
+  },
+  {
+    "date": "2024-02-09",
+    "sumCar": 40,
+    "sumBus": 32,
+    "sumTruck": 92,
+    "sumMotorcycle": 31,
+    "sumVehicle": 195
+  },
+  {
+    "date": "2024-02-10",
+    "sumCar": 66,
+    "sumBus": 77,
+    "sumTruck": 80,
+    "sumMotorcycle": 36,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2024-02-11",
+    "sumCar": 70,
+    "sumBus": 76,
+    "sumTruck": 57,
+    "sumMotorcycle": 47,
+    "sumVehicle": 250
+  },
+  {
+    "date": "2024-02-12",
+    "sumCar": 47,
+    "sumBus": 34,
+    "sumTruck": 92,
+    "sumMotorcycle": 34,
+    "sumVehicle": 207
+  },
+  {
+    "date": "2024-02-13",
+    "sumCar": 35,
+    "sumBus": 32,
+    "sumTruck": 66,
+    "sumMotorcycle": 98,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2024-02-14",
+    "sumCar": 60,
+    "sumBus": 88,
+    "sumTruck": 80,
+    "sumMotorcycle": 34,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2024-02-15",
+    "sumCar": 86,
+    "sumBus": 88,
+    "sumTruck": 79,
+    "sumMotorcycle": 88,
+    "sumVehicle": 341
+  },
+  {
+    "date": "2024-02-16",
+    "sumCar": 93,
+    "sumBus": 99,
+    "sumTruck": 95,
+    "sumMotorcycle": 43,
+    "sumVehicle": 330
+  },
+  {
+    "date": "2024-02-17",
+    "sumCar": 91,
+    "sumBus": 56,
+    "sumTruck": 54,
+    "sumMotorcycle": 98,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2024-02-18",
+    "sumCar": 89,
+    "sumBus": 39,
+    "sumTruck": 93,
+    "sumMotorcycle": 49,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-02-19",
+    "sumCar": 43,
+    "sumBus": 43,
+    "sumTruck": 53,
+    "sumMotorcycle": 33,
+    "sumVehicle": 172
+  },
+  {
+    "date": "2024-02-20",
+    "sumCar": 82,
+    "sumBus": 57,
+    "sumTruck": 74,
+    "sumMotorcycle": 40,
+    "sumVehicle": 253
+  },
+  {
+    "date": "2024-02-21",
+    "sumCar": 39,
+    "sumBus": 32,
+    "sumTruck": 57,
+    "sumMotorcycle": 91,
+    "sumVehicle": 219
+  },
+  {
+    "date": "2024-02-22",
+    "sumCar": 80,
+    "sumBus": 77,
+    "sumTruck": 53,
+    "sumMotorcycle": 62,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-02-23",
+    "sumCar": 53,
+    "sumBus": 65,
+    "sumTruck": 70,
+    "sumMotorcycle": 66,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2024-02-24",
+    "sumCar": 36,
+    "sumBus": 88,
+    "sumTruck": 34,
+    "sumMotorcycle": 87,
+    "sumVehicle": 245
+  },
+  {
+    "date": "2024-02-25",
+    "sumCar": 34,
+    "sumBus": 38,
+    "sumTruck": 91,
+    "sumMotorcycle": 63,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2024-02-26",
+    "sumCar": 40,
+    "sumBus": 72,
+    "sumTruck": 76,
+    "sumMotorcycle": 79,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2024-02-27",
+    "sumCar": 82,
+    "sumBus": 83,
+    "sumTruck": 58,
+    "sumMotorcycle": 49,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-02-28",
+    "sumCar": 50,
+    "sumBus": 55,
+    "sumTruck": 89,
+    "sumMotorcycle": 66,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2024-02-29",
+    "sumCar": 97,
+    "sumBus": 74,
+    "sumTruck": 65,
+    "sumMotorcycle": 42,
+    "sumVehicle": 278
+  },
+  {
+    "date": "2024-03-01",
+    "sumCar": 46,
+    "sumBus": 45,
+    "sumTruck": 41,
+    "sumMotorcycle": 77,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2024-03-02",
+    "sumCar": 65,
+    "sumBus": 64,
+    "sumTruck": 77,
+    "sumMotorcycle": 33,
+    "sumVehicle": 239
+  },
+  {
+    "date": "2024-03-03",
+    "sumCar": 86,
+    "sumBus": 35,
+    "sumTruck": 85,
+    "sumMotorcycle": 79,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2024-03-04",
+    "sumCar": 84,
+    "sumBus": 99,
+    "sumTruck": 40,
+    "sumMotorcycle": 50,
+    "sumVehicle": 273
+  },
+  {
+    "date": "2024-03-05",
+    "sumCar": 31,
+    "sumBus": 87,
+    "sumTruck": 99,
+    "sumMotorcycle": 53,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-03-06",
+    "sumCar": 36,
+    "sumBus": 84,
+    "sumTruck": 54,
+    "sumMotorcycle": 53,
+    "sumVehicle": 227
+  },
+  {
+    "date": "2024-03-07",
+    "sumCar": 32,
+    "sumBus": 71,
+    "sumTruck": 91,
+    "sumMotorcycle": 48,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-03-08",
+    "sumCar": 70,
+    "sumBus": 66,
+    "sumTruck": 98,
+    "sumMotorcycle": 55,
+    "sumVehicle": 289
+  },
+  {
+    "date": "2024-03-09",
+    "sumCar": 36,
+    "sumBus": 53,
+    "sumTruck": 88,
+    "sumMotorcycle": 48,
+    "sumVehicle": 225
+  },
+  {
+    "date": "2024-03-10",
+    "sumCar": 62,
+    "sumBus": 41,
+    "sumTruck": 76,
+    "sumMotorcycle": 76,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2024-03-11",
+    "sumCar": 77,
+    "sumBus": 43,
+    "sumTruck": 56,
+    "sumMotorcycle": 39,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2024-03-12",
+    "sumCar": 49,
+    "sumBus": 100,
+    "sumTruck": 52,
+    "sumMotorcycle": 76,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2024-03-13",
+    "sumCar": 31,
+    "sumBus": 37,
+    "sumTruck": 79,
+    "sumMotorcycle": 74,
+    "sumVehicle": 221
+  },
+  {
+    "date": "2024-03-14",
+    "sumCar": 94,
+    "sumBus": 52,
+    "sumTruck": 60,
+    "sumMotorcycle": 87,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2024-03-15",
+    "sumCar": 37,
+    "sumBus": 38,
+    "sumTruck": 53,
+    "sumMotorcycle": 46,
+    "sumVehicle": 174
+  },
+  {
+    "date": "2024-03-16",
+    "sumCar": 84,
+    "sumBus": 61,
+    "sumTruck": 87,
+    "sumMotorcycle": 91,
+    "sumVehicle": 323
+  },
+  {
+    "date": "2024-03-17",
+    "sumCar": 99,
+    "sumBus": 91,
+    "sumTruck": 87,
+    "sumMotorcycle": 40,
+    "sumVehicle": 317
+  },
+  {
+    "date": "2024-03-18",
+    "sumCar": 60,
+    "sumBus": 99,
+    "sumTruck": 31,
+    "sumMotorcycle": 49,
+    "sumVehicle": 239
+  },
+  {
+    "date": "2024-03-19",
+    "sumCar": 67,
+    "sumBus": 53,
+    "sumTruck": 72,
+    "sumMotorcycle": 40,
+    "sumVehicle": 232
+  },
+  {
+    "date": "2024-03-20",
+    "sumCar": 32,
+    "sumBus": 95,
+    "sumTruck": 69,
+    "sumMotorcycle": 76,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-03-21",
+    "sumCar": 90,
+    "sumBus": 87,
+    "sumTruck": 37,
+    "sumMotorcycle": 54,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2024-03-22",
+    "sumCar": 40,
+    "sumBus": 86,
+    "sumTruck": 74,
+    "sumMotorcycle": 55,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2024-03-23",
+    "sumCar": 34,
+    "sumBus": 38,
+    "sumTruck": 92,
+    "sumMotorcycle": 34,
+    "sumVehicle": 198
+  },
+  {
+    "date": "2024-03-24",
+    "sumCar": 44,
+    "sumBus": 99,
+    "sumTruck": 73,
+    "sumMotorcycle": 67,
+    "sumVehicle": 283
+  },
+  {
+    "date": "2024-03-25",
+    "sumCar": 33,
+    "sumBus": 66,
+    "sumTruck": 99,
+    "sumMotorcycle": 43,
+    "sumVehicle": 241
+  },
+  {
+    "date": "2024-03-26",
+    "sumCar": 70,
+    "sumBus": 59,
+    "sumTruck": 41,
+    "sumMotorcycle": 71,
+    "sumVehicle": 241
+  },
+  {
+    "date": "2024-03-27",
+    "sumCar": 38,
+    "sumBus": 85,
+    "sumTruck": 57,
+    "sumMotorcycle": 39,
+    "sumVehicle": 219
+  },
+  {
+    "date": "2024-03-28",
+    "sumCar": 92,
+    "sumBus": 58,
+    "sumTruck": 87,
+    "sumMotorcycle": 91,
+    "sumVehicle": 328
+  },
+  {
+    "date": "2024-03-29",
+    "sumCar": 40,
+    "sumBus": 97,
+    "sumTruck": 61,
+    "sumMotorcycle": 32,
+    "sumVehicle": 230
+  },
+  {
+    "date": "2024-03-30",
+    "sumCar": 83,
+    "sumBus": 41,
+    "sumTruck": 87,
+    "sumMotorcycle": 36,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-03-31",
+    "sumCar": 35,
+    "sumBus": 46,
+    "sumTruck": 82,
+    "sumMotorcycle": 67,
+    "sumVehicle": 230
+  },
+  {
+    "date": "2024-04-01",
+    "sumCar": 45,
+    "sumBus": 67,
+    "sumTruck": 78,
+    "sumMotorcycle": 93,
+    "sumVehicle": 283
+  },
+  {
+    "date": "2024-04-02",
+    "sumCar": 64,
+    "sumBus": 88,
+    "sumTruck": 51,
+    "sumMotorcycle": 100,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2024-04-03",
+    "sumCar": 30,
+    "sumBus": 80,
+    "sumTruck": 90,
+    "sumMotorcycle": 48,
+    "sumVehicle": 248
+  },
+  {
+    "date": "2024-04-04",
+    "sumCar": 31,
+    "sumBus": 99,
+    "sumTruck": 36,
+    "sumMotorcycle": 80,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2024-04-05",
+    "sumCar": 53,
+    "sumBus": 52,
+    "sumTruck": 61,
+    "sumMotorcycle": 40,
+    "sumVehicle": 206
+  },
+  {
+    "date": "2024-04-06",
+    "sumCar": 75,
+    "sumBus": 81,
+    "sumTruck": 32,
+    "sumMotorcycle": 40,
+    "sumVehicle": 228
+  },
+  {
+    "date": "2024-04-07",
+    "sumCar": 99,
+    "sumBus": 99,
+    "sumTruck": 39,
+    "sumMotorcycle": 56,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2024-04-08",
+    "sumCar": 46,
+    "sumBus": 88,
+    "sumTruck": 72,
+    "sumMotorcycle": 90,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2024-04-09",
+    "sumCar": 66,
+    "sumBus": 85,
+    "sumTruck": 51,
+    "sumMotorcycle": 65,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2024-04-10",
+    "sumCar": 85,
+    "sumBus": 31,
+    "sumTruck": 46,
+    "sumMotorcycle": 68,
+    "sumVehicle": 230
+  },
+  {
+    "date": "2024-04-11",
+    "sumCar": 38,
+    "sumBus": 33,
+    "sumTruck": 88,
+    "sumMotorcycle": 38,
+    "sumVehicle": 197
+  },
+  {
+    "date": "2024-04-12",
+    "sumCar": 70,
+    "sumBus": 90,
+    "sumTruck": 30,
+    "sumMotorcycle": 57,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-04-13",
+    "sumCar": 60,
+    "sumBus": 51,
+    "sumTruck": 31,
+    "sumMotorcycle": 78,
+    "sumVehicle": 220
+  },
+  {
+    "date": "2024-04-14",
+    "sumCar": 55,
+    "sumBus": 61,
+    "sumTruck": 67,
+    "sumMotorcycle": 98,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2024-04-15",
+    "sumCar": 75,
+    "sumBus": 85,
+    "sumTruck": 83,
+    "sumMotorcycle": 83,
+    "sumVehicle": 326
+  },
+  {
+    "date": "2024-04-16",
+    "sumCar": 85,
+    "sumBus": 71,
+    "sumTruck": 95,
+    "sumMotorcycle": 71,
+    "sumVehicle": 322
+  },
+  {
+    "date": "2024-04-17",
+    "sumCar": 97,
+    "sumBus": 85,
+    "sumTruck": 88,
+    "sumMotorcycle": 35,
+    "sumVehicle": 305
+  },
+  {
+    "date": "2024-04-18",
+    "sumCar": 80,
+    "sumBus": 87,
+    "sumTruck": 76,
+    "sumMotorcycle": 53,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2024-04-19",
+    "sumCar": 72,
+    "sumBus": 92,
+    "sumTruck": 76,
+    "sumMotorcycle": 39,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2024-04-20",
+    "sumCar": 65,
+    "sumBus": 43,
+    "sumTruck": 73,
+    "sumMotorcycle": 65,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2024-04-21",
+    "sumCar": 85,
+    "sumBus": 42,
+    "sumTruck": 75,
+    "sumMotorcycle": 100,
+    "sumVehicle": 302
+  },
+  {
+    "date": "2024-04-22",
+    "sumCar": 58,
+    "sumBus": 80,
+    "sumTruck": 45,
+    "sumMotorcycle": 91,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2024-04-23",
+    "sumCar": 65,
+    "sumBus": 49,
+    "sumTruck": 39,
+    "sumMotorcycle": 39,
+    "sumVehicle": 192
+  },
+  {
+    "date": "2024-04-24",
+    "sumCar": 75,
+    "sumBus": 56,
+    "sumTruck": 42,
+    "sumMotorcycle": 60,
+    "sumVehicle": 233
+  },
+  {
+    "date": "2024-04-25",
+    "sumCar": 89,
+    "sumBus": 46,
+    "sumTruck": 41,
+    "sumMotorcycle": 84,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2024-04-26",
+    "sumCar": 71,
+    "sumBus": 46,
+    "sumTruck": 37,
+    "sumMotorcycle": 35,
+    "sumVehicle": 189
+  },
+  {
+    "date": "2024-04-27",
+    "sumCar": 100,
+    "sumBus": 42,
+    "sumTruck": 53,
+    "sumMotorcycle": 59,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2024-04-28",
+    "sumCar": 94,
+    "sumBus": 97,
+    "sumTruck": 77,
+    "sumMotorcycle": 97,
+    "sumVehicle": 365
+  },
+  {
+    "date": "2024-04-29",
+    "sumCar": 45,
+    "sumBus": 58,
+    "sumTruck": 88,
+    "sumMotorcycle": 77,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2024-04-30",
+    "sumCar": 75,
+    "sumBus": 80,
+    "sumTruck": 65,
+    "sumMotorcycle": 56,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2024-05-01",
+    "sumCar": 78,
+    "sumBus": 52,
+    "sumTruck": 53,
+    "sumMotorcycle": 38,
+    "sumVehicle": 221
+  },
+  {
+    "date": "2024-05-02",
+    "sumCar": 91,
+    "sumBus": 95,
+    "sumTruck": 32,
+    "sumMotorcycle": 85,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2024-05-03",
+    "sumCar": 37,
+    "sumBus": 74,
+    "sumTruck": 43,
+    "sumMotorcycle": 93,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-05-04",
+    "sumCar": 32,
+    "sumBus": 73,
+    "sumTruck": 86,
+    "sumMotorcycle": 33,
+    "sumVehicle": 224
+  },
+  {
+    "date": "2024-05-05",
+    "sumCar": 79,
+    "sumBus": 74,
+    "sumTruck": 52,
+    "sumMotorcycle": 31,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2024-05-06",
+    "sumCar": 43,
+    "sumBus": 56,
+    "sumTruck": 81,
+    "sumMotorcycle": 40,
+    "sumVehicle": 220
+  },
+  {
+    "date": "2024-05-07",
+    "sumCar": 95,
+    "sumBus": 32,
+    "sumTruck": 63,
+    "sumMotorcycle": 100,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2024-05-08",
+    "sumCar": 30,
+    "sumBus": 36,
+    "sumTruck": 78,
+    "sumMotorcycle": 97,
+    "sumVehicle": 241
+  },
+  {
+    "date": "2024-05-09",
+    "sumCar": 84,
+    "sumBus": 39,
+    "sumTruck": 49,
+    "sumMotorcycle": 60,
+    "sumVehicle": 232
+  },
+  {
+    "date": "2024-05-10",
+    "sumCar": 52,
+    "sumBus": 94,
+    "sumTruck": 47,
+    "sumMotorcycle": 43,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2024-05-11",
+    "sumCar": 31,
+    "sumBus": 95,
+    "sumTruck": 32,
+    "sumMotorcycle": 64,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2024-05-12",
+    "sumCar": 100,
+    "sumBus": 97,
+    "sumTruck": 99,
+    "sumMotorcycle": 86,
+    "sumVehicle": 382
+  },
+  {
+    "date": "2024-05-13",
+    "sumCar": 41,
+    "sumBus": 55,
+    "sumTruck": 53,
+    "sumMotorcycle": 93,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-05-14",
+    "sumCar": 53,
+    "sumBus": 38,
+    "sumTruck": 74,
+    "sumMotorcycle": 55,
+    "sumVehicle": 220
+  },
+  {
+    "date": "2024-05-15",
+    "sumCar": 90,
+    "sumBus": 61,
+    "sumTruck": 37,
+    "sumMotorcycle": 91,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2024-05-16",
+    "sumCar": 45,
+    "sumBus": 49,
+    "sumTruck": 81,
+    "sumMotorcycle": 94,
+    "sumVehicle": 269
+  },
+  {
+    "date": "2024-05-17",
+    "sumCar": 53,
+    "sumBus": 82,
+    "sumTruck": 55,
+    "sumMotorcycle": 65,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2024-05-18",
+    "sumCar": 72,
+    "sumBus": 66,
+    "sumTruck": 79,
+    "sumMotorcycle": 82,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2024-05-19",
+    "sumCar": 55,
+    "sumBus": 61,
+    "sumTruck": 51,
+    "sumMotorcycle": 81,
+    "sumVehicle": 248
+  },
+  {
+    "date": "2024-05-20",
+    "sumCar": 92,
+    "sumBus": 44,
+    "sumTruck": 99,
+    "sumMotorcycle": 47,
+    "sumVehicle": 282
+  },
+  {
+    "date": "2024-05-21",
+    "sumCar": 69,
+    "sumBus": 100,
+    "sumTruck": 44,
+    "sumMotorcycle": 69,
+    "sumVehicle": 282
+  },
+  {
+    "date": "2024-05-22",
+    "sumCar": 89,
+    "sumBus": 85,
+    "sumTruck": 87,
+    "sumMotorcycle": 49,
+    "sumVehicle": 310
+  },
+  {
+    "date": "2024-05-23",
+    "sumCar": 52,
+    "sumBus": 36,
+    "sumTruck": 70,
+    "sumMotorcycle": 63,
+    "sumVehicle": 221
+  },
+  {
+    "date": "2024-05-24",
+    "sumCar": 76,
+    "sumBus": 75,
+    "sumTruck": 74,
+    "sumMotorcycle": 30,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2024-05-25",
+    "sumCar": 85,
+    "sumBus": 30,
+    "sumTruck": 37,
+    "sumMotorcycle": 90,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-05-26",
+    "sumCar": 87,
+    "sumBus": 72,
+    "sumTruck": 74,
+    "sumMotorcycle": 39,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-05-27",
+    "sumCar": 59,
+    "sumBus": 85,
+    "sumTruck": 96,
+    "sumMotorcycle": 66,
+    "sumVehicle": 306
+  },
+  {
+    "date": "2024-05-28",
+    "sumCar": 75,
+    "sumBus": 84,
+    "sumTruck": 30,
+    "sumMotorcycle": 47,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2024-05-29",
+    "sumCar": 55,
+    "sumBus": 74,
+    "sumTruck": 66,
+    "sumMotorcycle": 66,
+    "sumVehicle": 261
+  },
+  {
+    "date": "2024-05-30",
+    "sumCar": 37,
+    "sumBus": 93,
+    "sumTruck": 62,
+    "sumMotorcycle": 53,
+    "sumVehicle": 245
+  },
+  {
+    "date": "2024-05-31",
+    "sumCar": 77,
+    "sumBus": 94,
+    "sumTruck": 56,
+    "sumMotorcycle": 93,
+    "sumVehicle": 320
+  },
+  {
+    "date": "2024-06-01",
+    "sumCar": 83,
+    "sumBus": 69,
+    "sumTruck": 47,
+    "sumMotorcycle": 82,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2024-06-02",
+    "sumCar": 81,
+    "sumBus": 56,
+    "sumTruck": 71,
+    "sumMotorcycle": 95,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2024-06-03",
+    "sumCar": 99,
+    "sumBus": 30,
+    "sumTruck": 31,
+    "sumMotorcycle": 30,
+    "sumVehicle": 190
+  },
+  {
+    "date": "2024-06-04",
+    "sumCar": 99,
+    "sumBus": 81,
+    "sumTruck": 36,
+    "sumMotorcycle": 68,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2024-06-05",
+    "sumCar": 68,
+    "sumBus": 87,
+    "sumTruck": 45,
+    "sumMotorcycle": 44,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2024-06-06",
+    "sumCar": 51,
+    "sumBus": 98,
+    "sumTruck": 50,
+    "sumMotorcycle": 92,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2024-06-07",
+    "sumCar": 32,
+    "sumBus": 54,
+    "sumTruck": 63,
+    "sumMotorcycle": 37,
+    "sumVehicle": 186
+  },
+  {
+    "date": "2024-06-08",
+    "sumCar": 95,
+    "sumBus": 93,
+    "sumTruck": 91,
+    "sumMotorcycle": 36,
+    "sumVehicle": 315
+  },
+  {
+    "date": "2024-06-09",
+    "sumCar": 60,
+    "sumBus": 59,
+    "sumTruck": 58,
+    "sumMotorcycle": 44,
+    "sumVehicle": 221
+  },
+  {
+    "date": "2024-06-10",
+    "sumCar": 55,
+    "sumBus": 66,
+    "sumTruck": 46,
+    "sumMotorcycle": 95,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2024-06-11",
+    "sumCar": 37,
+    "sumBus": 79,
+    "sumTruck": 77,
+    "sumMotorcycle": 70,
+    "sumVehicle": 263
+  },
+  {
+    "date": "2024-06-12",
+    "sumCar": 100,
+    "sumBus": 42,
+    "sumTruck": 94,
+    "sumMotorcycle": 70,
+    "sumVehicle": 306
+  },
+  {
+    "date": "2024-06-13",
+    "sumCar": 98,
+    "sumBus": 45,
+    "sumTruck": 71,
+    "sumMotorcycle": 88,
+    "sumVehicle": 302
+  },
+  {
+    "date": "2024-06-14",
+    "sumCar": 75,
+    "sumBus": 55,
+    "sumTruck": 43,
+    "sumMotorcycle": 36,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2024-06-15",
+    "sumCar": 45,
+    "sumBus": 80,
+    "sumTruck": 81,
+    "sumMotorcycle": 68,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2024-06-16",
+    "sumCar": 100,
+    "sumBus": 51,
+    "sumTruck": 73,
+    "sumMotorcycle": 91,
+    "sumVehicle": 315
+  },
+  {
+    "date": "2024-06-17",
+    "sumCar": 33,
+    "sumBus": 91,
+    "sumTruck": 67,
+    "sumMotorcycle": 93,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2024-06-18",
+    "sumCar": 93,
+    "sumBus": 74,
+    "sumTruck": 65,
+    "sumMotorcycle": 53,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2024-06-19",
+    "sumCar": 87,
+    "sumBus": 81,
+    "sumTruck": 100,
+    "sumMotorcycle": 49,
+    "sumVehicle": 317
+  },
+  {
+    "date": "2024-06-20",
+    "sumCar": 53,
+    "sumBus": 73,
+    "sumTruck": 51,
+    "sumMotorcycle": 62,
+    "sumVehicle": 239
+  },
+  {
+    "date": "2024-06-21",
+    "sumCar": 38,
+    "sumBus": 33,
+    "sumTruck": 61,
+    "sumMotorcycle": 74,
+    "sumVehicle": 206
+  },
+  {
+    "date": "2024-06-22",
+    "sumCar": 49,
+    "sumBus": 61,
+    "sumTruck": 89,
+    "sumMotorcycle": 78,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2024-06-23",
+    "sumCar": 50,
+    "sumBus": 46,
+    "sumTruck": 62,
+    "sumMotorcycle": 33,
+    "sumVehicle": 191
+  },
+  {
+    "date": "2024-06-24",
+    "sumCar": 76,
+    "sumBus": 41,
+    "sumTruck": 36,
+    "sumMotorcycle": 83,
+    "sumVehicle": 236
+  },
+  {
+    "date": "2024-06-25",
+    "sumCar": 57,
+    "sumBus": 80,
+    "sumTruck": 35,
+    "sumMotorcycle": 98,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-06-26",
+    "sumCar": 67,
+    "sumBus": 67,
+    "sumTruck": 82,
+    "sumMotorcycle": 54,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-06-27",
+    "sumCar": 68,
+    "sumBus": 79,
+    "sumTruck": 65,
+    "sumMotorcycle": 84,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2024-06-28",
+    "sumCar": 51,
+    "sumBus": 91,
+    "sumTruck": 89,
+    "sumMotorcycle": 39,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-06-29",
+    "sumCar": 41,
+    "sumBus": 73,
+    "sumTruck": 55,
+    "sumMotorcycle": 79,
+    "sumVehicle": 248
+  },
+  {
+    "date": "2024-06-30",
+    "sumCar": 93,
+    "sumBus": 43,
+    "sumTruck": 40,
+    "sumMotorcycle": 42,
+    "sumVehicle": 218
+  },
+  {
+    "date": "2024-07-01",
+    "sumCar": 66,
+    "sumBus": 48,
+    "sumTruck": 43,
+    "sumMotorcycle": 31,
+    "sumVehicle": 188
+  },
+  {
+    "date": "2024-07-02",
+    "sumCar": 95,
+    "sumBus": 30,
+    "sumTruck": 61,
+    "sumMotorcycle": 49,
+    "sumVehicle": 235
+  },
+  {
+    "date": "2024-07-03",
+    "sumCar": 84,
+    "sumBus": 93,
+    "sumTruck": 45,
+    "sumMotorcycle": 65,
+    "sumVehicle": 287
+  },
+  {
+    "date": "2024-07-04",
+    "sumCar": 54,
+    "sumBus": 57,
+    "sumTruck": 82,
+    "sumMotorcycle": 74,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2024-07-05",
+    "sumCar": 58,
+    "sumBus": 94,
+    "sumTruck": 70,
+    "sumMotorcycle": 73,
+    "sumVehicle": 295
+  },
+  {
+    "date": "2024-07-06",
+    "sumCar": 61,
+    "sumBus": 32,
+    "sumTruck": 33,
+    "sumMotorcycle": 70,
+    "sumVehicle": 196
+  },
+  {
+    "date": "2024-07-07",
+    "sumCar": 84,
+    "sumBus": 80,
+    "sumTruck": 80,
+    "sumMotorcycle": 82,
+    "sumVehicle": 326
+  },
+  {
+    "date": "2024-07-08",
+    "sumCar": 54,
+    "sumBus": 75,
+    "sumTruck": 77,
+    "sumMotorcycle": 34,
+    "sumVehicle": 240
+  },
+  {
+    "date": "2024-07-09",
+    "sumCar": 70,
+    "sumBus": 87,
+    "sumTruck": 72,
+    "sumMotorcycle": 58,
+    "sumVehicle": 287
+  },
+  {
+    "date": "2024-07-10",
+    "sumCar": 71,
+    "sumBus": 99,
+    "sumTruck": 58,
+    "sumMotorcycle": 83,
+    "sumVehicle": 311
+  },
+  {
+    "date": "2024-07-11",
+    "sumCar": 40,
+    "sumBus": 85,
+    "sumTruck": 61,
+    "sumMotorcycle": 91,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2024-07-12",
+    "sumCar": 73,
+    "sumBus": 73,
+    "sumTruck": 76,
+    "sumMotorcycle": 98,
+    "sumVehicle": 320
+  },
+  {
+    "date": "2024-07-13",
+    "sumCar": 54,
+    "sumBus": 83,
+    "sumTruck": 75,
+    "sumMotorcycle": 31,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2024-07-14",
+    "sumCar": 49,
+    "sumBus": 57,
+    "sumTruck": 31,
+    "sumMotorcycle": 78,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2024-07-15",
+    "sumCar": 59,
+    "sumBus": 93,
+    "sumTruck": 53,
+    "sumMotorcycle": 60,
+    "sumVehicle": 265
+  },
+  {
+    "date": "2024-07-16",
+    "sumCar": 62,
+    "sumBus": 99,
+    "sumTruck": 73,
+    "sumMotorcycle": 41,
+    "sumVehicle": 275
+  },
+  {
+    "date": "2024-07-17",
+    "sumCar": 99,
+    "sumBus": 93,
+    "sumTruck": 90,
+    "sumMotorcycle": 64,
+    "sumVehicle": 346
+  },
+  {
+    "date": "2024-07-18",
+    "sumCar": 34,
+    "sumBus": 74,
+    "sumTruck": 97,
+    "sumMotorcycle": 35,
+    "sumVehicle": 240
+  },
+  {
+    "date": "2024-07-19",
+    "sumCar": 86,
+    "sumBus": 33,
+    "sumTruck": 90,
+    "sumMotorcycle": 75,
+    "sumVehicle": 284
+  },
+  {
+    "date": "2024-07-20",
+    "sumCar": 82,
+    "sumBus": 80,
+    "sumTruck": 45,
+    "sumMotorcycle": 93,
+    "sumVehicle": 300
+  },
+  {
+    "date": "2024-07-21",
+    "sumCar": 30,
+    "sumBus": 87,
+    "sumTruck": 46,
+    "sumMotorcycle": 54,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2024-07-22",
+    "sumCar": 72,
+    "sumBus": 40,
+    "sumTruck": 55,
+    "sumMotorcycle": 47,
+    "sumVehicle": 214
+  },
+  {
+    "date": "2024-07-23",
+    "sumCar": 74,
+    "sumBus": 62,
+    "sumTruck": 41,
+    "sumMotorcycle": 65,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-07-24",
+    "sumCar": 62,
+    "sumBus": 71,
+    "sumTruck": 89,
+    "sumMotorcycle": 97,
+    "sumVehicle": 319
+  },
+  {
+    "date": "2024-07-25",
+    "sumCar": 84,
+    "sumBus": 34,
+    "sumTruck": 91,
+    "sumMotorcycle": 52,
+    "sumVehicle": 261
+  },
+  {
+    "date": "2024-07-26",
+    "sumCar": 73,
+    "sumBus": 95,
+    "sumTruck": 60,
+    "sumMotorcycle": 85,
+    "sumVehicle": 313
+  },
+  {
+    "date": "2024-07-27",
+    "sumCar": 92,
+    "sumBus": 68,
+    "sumTruck": 53,
+    "sumMotorcycle": 46,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2024-07-28",
+    "sumCar": 43,
+    "sumBus": 87,
+    "sumTruck": 88,
+    "sumMotorcycle": 85,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2024-07-29",
+    "sumCar": 90,
+    "sumBus": 97,
+    "sumTruck": 53,
+    "sumMotorcycle": 37,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2024-07-30",
+    "sumCar": 39,
+    "sumBus": 57,
+    "sumTruck": 32,
+    "sumMotorcycle": 80,
+    "sumVehicle": 208
+  },
+  {
+    "date": "2024-07-31",
+    "sumCar": 95,
+    "sumBus": 93,
+    "sumTruck": 76,
+    "sumMotorcycle": 80,
+    "sumVehicle": 344
+  },
+  {
+    "date": "2024-08-01",
+    "sumCar": 85,
+    "sumBus": 61,
+    "sumTruck": 95,
+    "sumMotorcycle": 40,
+    "sumVehicle": 281
+  },
+  {
+    "date": "2024-08-02",
+    "sumCar": 75,
+    "sumBus": 43,
+    "sumTruck": 90,
+    "sumMotorcycle": 98,
+    "sumVehicle": 306
+  },
+  {
+    "date": "2024-08-03",
+    "sumCar": 96,
+    "sumBus": 30,
+    "sumTruck": 93,
+    "sumMotorcycle": 90,
+    "sumVehicle": 309
+  },
+  {
+    "date": "2024-08-04",
+    "sumCar": 47,
+    "sumBus": 83,
+    "sumTruck": 61,
+    "sumMotorcycle": 68,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2024-08-05",
+    "sumCar": 51,
+    "sumBus": 66,
+    "sumTruck": 53,
+    "sumMotorcycle": 68,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2024-08-06",
+    "sumCar": 44,
+    "sumBus": 30,
+    "sumTruck": 47,
+    "sumMotorcycle": 30,
+    "sumVehicle": 151
+  },
+  {
+    "date": "2024-08-07",
+    "sumCar": 46,
+    "sumBus": 56,
+    "sumTruck": 100,
+    "sumMotorcycle": 33,
+    "sumVehicle": 235
+  },
+  {
+    "date": "2024-08-08",
+    "sumCar": 75,
+    "sumBus": 47,
+    "sumTruck": 41,
+    "sumMotorcycle": 47,
+    "sumVehicle": 210
+  },
+  {
+    "date": "2024-08-09",
+    "sumCar": 87,
+    "sumBus": 35,
+    "sumTruck": 47,
+    "sumMotorcycle": 49,
+    "sumVehicle": 218
+  },
+  {
+    "date": "2024-08-10",
+    "sumCar": 58,
+    "sumBus": 87,
+    "sumTruck": 48,
+    "sumMotorcycle": 99,
+    "sumVehicle": 292
+  },
+  {
+    "date": "2024-08-11",
+    "sumCar": 60,
+    "sumBus": 68,
+    "sumTruck": 48,
+    "sumMotorcycle": 41,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2024-08-12",
+    "sumCar": 46,
+    "sumBus": 69,
+    "sumTruck": 100,
+    "sumMotorcycle": 32,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-08-13",
+    "sumCar": 45,
+    "sumBus": 51,
+    "sumTruck": 38,
+    "sumMotorcycle": 60,
+    "sumVehicle": 194
+  },
+  {
+    "date": "2024-08-14",
+    "sumCar": 38,
+    "sumBus": 31,
+    "sumTruck": 88,
+    "sumMotorcycle": 77,
+    "sumVehicle": 234
+  },
+  {
+    "date": "2024-08-15",
+    "sumCar": 59,
+    "sumBus": 85,
+    "sumTruck": 62,
+    "sumMotorcycle": 37,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2024-08-16",
+    "sumCar": 36,
+    "sumBus": 51,
+    "sumTruck": 45,
+    "sumMotorcycle": 83,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2024-08-17",
+    "sumCar": 47,
+    "sumBus": 31,
+    "sumTruck": 36,
+    "sumMotorcycle": 95,
+    "sumVehicle": 209
+  },
+  {
+    "date": "2024-08-18",
+    "sumCar": 80,
+    "sumBus": 59,
+    "sumTruck": 32,
+    "sumMotorcycle": 52,
+    "sumVehicle": 223
+  },
+  {
+    "date": "2024-08-19",
+    "sumCar": 70,
+    "sumBus": 49,
+    "sumTruck": 39,
+    "sumMotorcycle": 96,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2024-08-20",
+    "sumCar": 92,
+    "sumBus": 54,
+    "sumTruck": 33,
+    "sumMotorcycle": 76,
+    "sumVehicle": 255
+  },
+  {
+    "date": "2024-08-21",
+    "sumCar": 35,
+    "sumBus": 46,
+    "sumTruck": 74,
+    "sumMotorcycle": 52,
+    "sumVehicle": 207
+  },
+  {
+    "date": "2024-08-22",
+    "sumCar": 84,
+    "sumBus": 99,
+    "sumTruck": 97,
+    "sumMotorcycle": 88,
+    "sumVehicle": 368
+  },
+  {
+    "date": "2024-08-23",
+    "sumCar": 63,
+    "sumBus": 88,
+    "sumTruck": 92,
+    "sumMotorcycle": 95,
+    "sumVehicle": 338
+  },
+  {
+    "date": "2024-08-24",
+    "sumCar": 99,
+    "sumBus": 40,
+    "sumTruck": 39,
+    "sumMotorcycle": 34,
+    "sumVehicle": 212
+  },
+  {
+    "date": "2024-08-25",
+    "sumCar": 97,
+    "sumBus": 84,
+    "sumTruck": 30,
+    "sumMotorcycle": 64,
+    "sumVehicle": 275
+  },
+  {
+    "date": "2024-08-26",
+    "sumCar": 87,
+    "sumBus": 72,
+    "sumTruck": 53,
+    "sumMotorcycle": 92,
+    "sumVehicle": 304
+  },
+  {
+    "date": "2024-08-27",
+    "sumCar": 30,
+    "sumBus": 76,
+    "sumTruck": 81,
+    "sumMotorcycle": 42,
+    "sumVehicle": 229
+  },
+  {
+    "date": "2024-08-28",
+    "sumCar": 74,
+    "sumBus": 96,
+    "sumTruck": 50,
+    "sumMotorcycle": 54,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2024-08-29",
+    "sumCar": 80,
+    "sumBus": 99,
+    "sumTruck": 68,
+    "sumMotorcycle": 30,
+    "sumVehicle": 277
+  },
+  {
+    "date": "2024-08-30",
+    "sumCar": 65,
+    "sumBus": 90,
+    "sumTruck": 61,
+    "sumMotorcycle": 69,
+    "sumVehicle": 285
+  },
+  {
+    "date": "2024-08-31",
+    "sumCar": 87,
+    "sumBus": 92,
+    "sumTruck": 39,
+    "sumMotorcycle": 83,
+    "sumVehicle": 301
+  },
+  {
+    "date": "2024-09-01",
+    "sumCar": 93,
+    "sumBus": 77,
+    "sumTruck": 65,
+    "sumMotorcycle": 60,
+    "sumVehicle": 295
+  },
+  {
+    "date": "2024-09-02",
+    "sumCar": 35,
+    "sumBus": 73,
+    "sumTruck": 99,
+    "sumMotorcycle": 35,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-09-03",
+    "sumCar": 76,
+    "sumBus": 44,
+    "sumTruck": 89,
+    "sumMotorcycle": 77,
+    "sumVehicle": 286
+  },
+  {
+    "date": "2024-09-04",
+    "sumCar": 38,
+    "sumBus": 41,
+    "sumTruck": 43,
+    "sumMotorcycle": 68,
+    "sumVehicle": 190
+  },
+  {
+    "date": "2024-09-05",
+    "sumCar": 42,
+    "sumBus": 77,
+    "sumTruck": 83,
+    "sumMotorcycle": 30,
+    "sumVehicle": 232
+  },
+  {
+    "date": "2024-09-06",
+    "sumCar": 72,
+    "sumBus": 31,
+    "sumTruck": 36,
+    "sumMotorcycle": 62,
+    "sumVehicle": 201
+  },
+  {
+    "date": "2024-09-07",
+    "sumCar": 37,
+    "sumBus": 45,
+    "sumTruck": 88,
+    "sumMotorcycle": 74,
+    "sumVehicle": 244
+  },
+  {
+    "date": "2024-09-08",
+    "sumCar": 52,
+    "sumBus": 34,
+    "sumTruck": 30,
+    "sumMotorcycle": 57,
+    "sumVehicle": 173
+  },
+  {
+    "date": "2024-09-09",
+    "sumCar": 45,
+    "sumBus": 73,
+    "sumTruck": 83,
+    "sumMotorcycle": 64,
+    "sumVehicle": 265
+  },
+  {
+    "date": "2024-09-10",
+    "sumCar": 43,
+    "sumBus": 58,
+    "sumTruck": 95,
+    "sumMotorcycle": 90,
+    "sumVehicle": 286
+  },
+  {
+    "date": "2024-09-11",
+    "sumCar": 43,
+    "sumBus": 58,
+    "sumTruck": 79,
+    "sumMotorcycle": 63,
+    "sumVehicle": 243
+  },
+  {
+    "date": "2024-09-12",
+    "sumCar": 74,
+    "sumBus": 86,
+    "sumTruck": 76,
+    "sumMotorcycle": 30,
+    "sumVehicle": 266
+  },
+  {
+    "date": "2024-09-13",
+    "sumCar": 75,
+    "sumBus": 95,
+    "sumTruck": 93,
+    "sumMotorcycle": 81,
+    "sumVehicle": 344
+  },
+  {
+    "date": "2024-09-14",
+    "sumCar": 42,
+    "sumBus": 80,
+    "sumTruck": 38,
+    "sumMotorcycle": 57,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2024-09-15",
+    "sumCar": 31,
+    "sumBus": 57,
+    "sumTruck": 74,
+    "sumMotorcycle": 52,
+    "sumVehicle": 214
+  },
+  {
+    "date": "2024-09-16",
+    "sumCar": 50,
+    "sumBus": 40,
+    "sumTruck": 96,
+    "sumMotorcycle": 45,
+    "sumVehicle": 231
+  },
+  {
+    "date": "2024-09-17",
+    "sumCar": 82,
+    "sumBus": 35,
+    "sumTruck": 96,
+    "sumMotorcycle": 67,
+    "sumVehicle": 280
+  },
+  {
+    "date": "2024-09-18",
+    "sumCar": 46,
+    "sumBus": 53,
+    "sumTruck": 63,
+    "sumMotorcycle": 83,
+    "sumVehicle": 245
+  },
+  {
+    "date": "2024-09-19",
+    "sumCar": 47,
+    "sumBus": 40,
+    "sumTruck": 43,
+    "sumMotorcycle": 41,
+    "sumVehicle": 171
+  },
+  {
+    "date": "2024-09-20",
+    "sumCar": 73,
+    "sumBus": 92,
+    "sumTruck": 70,
+    "sumMotorcycle": 30,
+    "sumVehicle": 265
+  },
+  {
+    "date": "2024-09-21",
+    "sumCar": 40,
+    "sumBus": 86,
+    "sumTruck": 63,
+    "sumMotorcycle": 87,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2024-09-22",
+    "sumCar": 47,
+    "sumBus": 47,
+    "sumTruck": 36,
+    "sumMotorcycle": 55,
+    "sumVehicle": 185
+  },
+  {
+    "date": "2024-09-23",
+    "sumCar": 83,
+    "sumBus": 52,
+    "sumTruck": 90,
+    "sumMotorcycle": 84,
+    "sumVehicle": 309
+  },
+  {
+    "date": "2024-09-24",
+    "sumCar": 64,
+    "sumBus": 35,
+    "sumTruck": 90,
+    "sumMotorcycle": 81,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-09-25",
+    "sumCar": 78,
+    "sumBus": 86,
+    "sumTruck": 84,
+    "sumMotorcycle": 95,
+    "sumVehicle": 343
+  },
+  {
+    "date": "2024-09-26",
+    "sumCar": 82,
+    "sumBus": 93,
+    "sumTruck": 50,
+    "sumMotorcycle": 68,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2024-09-27",
+    "sumCar": 76,
+    "sumBus": 47,
+    "sumTruck": 96,
+    "sumMotorcycle": 56,
+    "sumVehicle": 275
+  },
+  {
+    "date": "2024-09-28",
+    "sumCar": 60,
+    "sumBus": 72,
+    "sumTruck": 41,
+    "sumMotorcycle": 48,
+    "sumVehicle": 221
+  },
+  {
+    "date": "2024-09-29",
+    "sumCar": 68,
+    "sumBus": 72,
+    "sumTruck": 83,
+    "sumMotorcycle": 100,
+    "sumVehicle": 323
+  },
+  {
+    "date": "2024-09-30",
+    "sumCar": 62,
+    "sumBus": 31,
+    "sumTruck": 75,
+    "sumMotorcycle": 56,
+    "sumVehicle": 224
+  },
+  {
+    "date": "2024-10-01",
+    "sumCar": 89,
+    "sumBus": 76,
+    "sumTruck": 65,
+    "sumMotorcycle": 32,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2024-10-02",
+    "sumCar": 62,
+    "sumBus": 96,
+    "sumTruck": 74,
+    "sumMotorcycle": 92,
+    "sumVehicle": 324
+  },
+  {
+    "date": "2024-10-03",
+    "sumCar": 86,
+    "sumBus": 57,
+    "sumTruck": 87,
+    "sumMotorcycle": 60,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2024-10-04",
+    "sumCar": 86,
+    "sumBus": 46,
+    "sumTruck": 54,
+    "sumMotorcycle": 90,
+    "sumVehicle": 276
+  },
+  {
+    "date": "2024-10-05",
+    "sumCar": 94,
+    "sumBus": 86,
+    "sumTruck": 34,
+    "sumMotorcycle": 56,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-10-06",
+    "sumCar": 69,
+    "sumBus": 85,
+    "sumTruck": 48,
+    "sumMotorcycle": 97,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2024-10-07",
+    "sumCar": 91,
+    "sumBus": 83,
+    "sumTruck": 81,
+    "sumMotorcycle": 80,
+    "sumVehicle": 335
+  },
+  {
+    "date": "2024-10-08",
+    "sumCar": 83,
+    "sumBus": 57,
+    "sumTruck": 80,
+    "sumMotorcycle": 36,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2024-10-09",
+    "sumCar": 93,
+    "sumBus": 81,
+    "sumTruck": 57,
+    "sumMotorcycle": 59,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2024-10-10",
+    "sumCar": 61,
+    "sumBus": 39,
+    "sumTruck": 59,
+    "sumMotorcycle": 45,
+    "sumVehicle": 204
+  },
+  {
+    "date": "2024-10-11",
+    "sumCar": 50,
+    "sumBus": 91,
+    "sumTruck": 98,
+    "sumMotorcycle": 32,
+    "sumVehicle": 271
+  },
+  {
+    "date": "2024-10-12",
+    "sumCar": 40,
+    "sumBus": 36,
+    "sumTruck": 54,
+    "sumMotorcycle": 47,
+    "sumVehicle": 177
+  },
+  {
+    "date": "2024-10-13",
+    "sumCar": 74,
+    "sumBus": 38,
+    "sumTruck": 44,
+    "sumMotorcycle": 45,
+    "sumVehicle": 201
+  },
+  {
+    "date": "2024-10-14",
+    "sumCar": 94,
+    "sumBus": 82,
+    "sumTruck": 74,
+    "sumMotorcycle": 64,
+    "sumVehicle": 314
+  },
+  {
+    "date": "2024-10-15",
+    "sumCar": 45,
+    "sumBus": 63,
+    "sumTruck": 57,
+    "sumMotorcycle": 50,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2024-10-16",
+    "sumCar": 42,
+    "sumBus": 54,
+    "sumTruck": 81,
+    "sumMotorcycle": 81,
+    "sumVehicle": 258
+  },
+  {
+    "date": "2024-10-17",
+    "sumCar": 33,
+    "sumBus": 31,
+    "sumTruck": 100,
+    "sumMotorcycle": 40,
+    "sumVehicle": 204
+  },
+  {
+    "date": "2024-10-18",
+    "sumCar": 74,
+    "sumBus": 55,
+    "sumTruck": 56,
+    "sumMotorcycle": 41,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2024-10-19",
+    "sumCar": 50,
+    "sumBus": 79,
+    "sumTruck": 81,
+    "sumMotorcycle": 94,
+    "sumVehicle": 304
+  },
+  {
+    "date": "2024-10-20",
+    "sumCar": 89,
+    "sumBus": 37,
+    "sumTruck": 32,
+    "sumMotorcycle": 53,
+    "sumVehicle": 211
+  },
+  {
+    "date": "2024-10-21",
+    "sumCar": 81,
+    "sumBus": 94,
+    "sumTruck": 49,
+    "sumMotorcycle": 92,
+    "sumVehicle": 316
+  },
+  {
+    "date": "2024-10-22",
+    "sumCar": 56,
+    "sumBus": 48,
+    "sumTruck": 39,
+    "sumMotorcycle": 63,
+    "sumVehicle": 206
+  },
+  {
+    "date": "2024-10-23",
+    "sumCar": 61,
+    "sumBus": 48,
+    "sumTruck": 60,
+    "sumMotorcycle": 91,
+    "sumVehicle": 260
+  },
+  {
+    "date": "2024-10-24",
+    "sumCar": 92,
+    "sumBus": 50,
+    "sumTruck": 71,
+    "sumMotorcycle": 55,
+    "sumVehicle": 268
+  },
+  {
+    "date": "2024-10-25",
+    "sumCar": 50,
+    "sumBus": 91,
+    "sumTruck": 100,
+    "sumMotorcycle": 57,
+    "sumVehicle": 298
+  },
+  {
+    "date": "2024-10-26",
+    "sumCar": 32,
+    "sumBus": 69,
+    "sumTruck": 92,
+    "sumMotorcycle": 100,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2024-10-27",
+    "sumCar": 88,
+    "sumBus": 51,
+    "sumTruck": 68,
+    "sumMotorcycle": 65,
+    "sumVehicle": 272
+  },
+  {
+    "date": "2024-10-28",
+    "sumCar": 44,
+    "sumBus": 76,
+    "sumTruck": 52,
+    "sumMotorcycle": 90,
+    "sumVehicle": 262
+  },
+  {
+    "date": "2024-10-29",
+    "sumCar": 52,
+    "sumBus": 52,
+    "sumTruck": 51,
+    "sumMotorcycle": 68,
+    "sumVehicle": 223
+  },
+  {
+    "date": "2024-10-30",
+    "sumCar": 81,
+    "sumBus": 96,
+    "sumTruck": 92,
+    "sumMotorcycle": 55,
+    "sumVehicle": 324
+  },
+  {
+    "date": "2024-10-31",
+    "sumCar": 77,
+    "sumBus": 32,
+    "sumTruck": 70,
+    "sumMotorcycle": 91,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-11-01",
+    "sumCar": 31,
+    "sumBus": 35,
+    "sumTruck": 81,
+    "sumMotorcycle": 50,
+    "sumVehicle": 197
+  },
+  {
+    "date": "2024-11-02",
+    "sumCar": 80,
+    "sumBus": 68,
+    "sumTruck": 75,
+    "sumMotorcycle": 89,
+    "sumVehicle": 312
+  },
+  {
+    "date": "2024-11-03",
+    "sumCar": 91,
+    "sumBus": 44,
+    "sumTruck": 52,
+    "sumMotorcycle": 67,
+    "sumVehicle": 254
+  },
+  {
+    "date": "2024-11-04",
+    "sumCar": 63,
+    "sumBus": 41,
+    "sumTruck": 63,
+    "sumMotorcycle": 72,
+    "sumVehicle": 239
+  },
+  {
+    "date": "2024-11-05",
+    "sumCar": 83,
+    "sumBus": 85,
+    "sumTruck": 44,
+    "sumMotorcycle": 79,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2024-11-06",
+    "sumCar": 45,
+    "sumBus": 74,
+    "sumTruck": 57,
+    "sumMotorcycle": 74,
+    "sumVehicle": 250
+  },
+  {
+    "date": "2024-11-07",
+    "sumCar": 85,
+    "sumBus": 83,
+    "sumTruck": 39,
+    "sumMotorcycle": 73,
+    "sumVehicle": 280
+  },
+  {
+    "date": "2024-11-08",
+    "sumCar": 66,
+    "sumBus": 99,
+    "sumTruck": 36,
+    "sumMotorcycle": 98,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2024-11-09",
+    "sumCar": 77,
+    "sumBus": 81,
+    "sumTruck": 72,
+    "sumMotorcycle": 44,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2024-11-10",
+    "sumCar": 61,
+    "sumBus": 47,
+    "sumTruck": 80,
+    "sumMotorcycle": 85,
+    "sumVehicle": 273
+  },
+  {
+    "date": "2024-11-11",
+    "sumCar": 62,
+    "sumBus": 78,
+    "sumTruck": 100,
+    "sumMotorcycle": 93,
+    "sumVehicle": 333
+  },
+  {
+    "date": "2024-11-12",
+    "sumCar": 35,
+    "sumBus": 54,
+    "sumTruck": 90,
+    "sumMotorcycle": 32,
+    "sumVehicle": 211
+  },
+  {
+    "date": "2024-11-13",
+    "sumCar": 47,
+    "sumBus": 44,
+    "sumTruck": 53,
+    "sumMotorcycle": 71,
+    "sumVehicle": 215
+  },
+  {
+    "date": "2024-11-14",
+    "sumCar": 69,
+    "sumBus": 85,
+    "sumTruck": 72,
+    "sumMotorcycle": 71,
+    "sumVehicle": 297
+  },
+  {
+    "date": "2024-11-15",
+    "sumCar": 100,
+    "sumBus": 98,
+    "sumTruck": 54,
+    "sumMotorcycle": 75,
+    "sumVehicle": 327
+  },
+  {
+    "date": "2024-11-16",
+    "sumCar": 55,
+    "sumBus": 75,
+    "sumTruck": 74,
+    "sumMotorcycle": 79,
+    "sumVehicle": 283
+  },
+  {
+    "date": "2024-11-17",
+    "sumCar": 93,
+    "sumBus": 83,
+    "sumTruck": 41,
+    "sumMotorcycle": 82,
+    "sumVehicle": 299
+  },
+  {
+    "date": "2024-11-18",
+    "sumCar": 50,
+    "sumBus": 56,
+    "sumTruck": 73,
+    "sumMotorcycle": 68,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-11-19",
+    "sumCar": 70,
+    "sumBus": 80,
+    "sumTruck": 57,
+    "sumMotorcycle": 63,
+    "sumVehicle": 270
+  },
+  {
+    "date": "2024-11-20",
+    "sumCar": 55,
+    "sumBus": 35,
+    "sumTruck": 37,
+    "sumMotorcycle": 59,
+    "sumVehicle": 186
+  },
+  {
+    "date": "2024-11-21",
+    "sumCar": 73,
+    "sumBus": 83,
+    "sumTruck": 95,
+    "sumMotorcycle": 35,
+    "sumVehicle": 286
+  },
+  {
+    "date": "2024-11-22",
+    "sumCar": 52,
+    "sumBus": 91,
+    "sumTruck": 53,
+    "sumMotorcycle": 100,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2024-11-23",
+    "sumCar": 78,
+    "sumBus": 59,
+    "sumTruck": 71,
+    "sumMotorcycle": 38,
+    "sumVehicle": 246
+  },
+  {
+    "date": "2024-11-24",
+    "sumCar": 80,
+    "sumBus": 91,
+    "sumTruck": 90,
+    "sumMotorcycle": 55,
+    "sumVehicle": 316
+  },
+  {
+    "date": "2024-11-25",
+    "sumCar": 63,
+    "sumBus": 51,
+    "sumTruck": 52,
+    "sumMotorcycle": 90,
+    "sumVehicle": 256
+  },
+  {
+    "date": "2024-11-26",
+    "sumCar": 84,
+    "sumBus": 60,
+    "sumTruck": 31,
+    "sumMotorcycle": 63,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2024-11-27",
+    "sumCar": 96,
+    "sumBus": 40,
+    "sumTruck": 73,
+    "sumMotorcycle": 55,
+    "sumVehicle": 264
+  },
+  {
+    "date": "2024-11-28",
+    "sumCar": 41,
+    "sumBus": 86,
+    "sumTruck": 51,
+    "sumMotorcycle": 64,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-11-29",
+    "sumCar": 50,
+    "sumBus": 45,
+    "sumTruck": 83,
+    "sumMotorcycle": 79,
+    "sumVehicle": 257
+  },
+  {
+    "date": "2024-11-30",
+    "sumCar": 70,
+    "sumBus": 45,
+    "sumTruck": 65,
+    "sumMotorcycle": 99,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2024-12-01",
+    "sumCar": 75,
+    "sumBus": 47,
+    "sumTruck": 41,
+    "sumMotorcycle": 55,
+    "sumVehicle": 218
+  },
+  {
+    "date": "2024-12-02",
+    "sumCar": 30,
+    "sumBus": 56,
+    "sumTruck": 97,
+    "sumMotorcycle": 47,
+    "sumVehicle": 230
+  },
+  {
+    "date": "2024-12-03",
+    "sumCar": 44,
+    "sumBus": 93,
+    "sumTruck": 73,
+    "sumMotorcycle": 57,
+    "sumVehicle": 267
+  },
+  {
+    "date": "2024-12-04",
+    "sumCar": 89,
+    "sumBus": 61,
+    "sumTruck": 38,
+    "sumMotorcycle": 86,
+    "sumVehicle": 274
+  },
+  {
+    "date": "2024-12-05",
+    "sumCar": 62,
+    "sumBus": 99,
+    "sumTruck": 83,
+    "sumMotorcycle": 66,
+    "sumVehicle": 310
+  },
+  {
+    "date": "2024-12-06",
+    "sumCar": 63,
+    "sumBus": 45,
+    "sumTruck": 31,
+    "sumMotorcycle": 46,
+    "sumVehicle": 185
+  },
+  {
+    "date": "2024-12-07",
+    "sumCar": 30,
+    "sumBus": 65,
+    "sumTruck": 73,
+    "sumMotorcycle": 54,
+    "sumVehicle": 222
+  },
+  {
+    "date": "2024-12-08",
+    "sumCar": 46,
+    "sumBus": 57,
+    "sumTruck": 90,
+    "sumMotorcycle": 57,
+    "sumVehicle": 250
+  },
+  {
+    "date": "2024-12-09",
+    "sumCar": 79,
+    "sumBus": 49,
+    "sumTruck": 77,
+    "sumMotorcycle": 44,
+    "sumVehicle": 249
+  },
+  {
+    "date": "2024-12-10",
+    "sumCar": 70,
+    "sumBus": 85,
+    "sumTruck": 56,
+    "sumMotorcycle": 34,
+    "sumVehicle": 245
+  },
+  {
+    "date": "2024-12-11",
+    "sumCar": 77,
+    "sumBus": 76,
+    "sumTruck": 58,
+    "sumMotorcycle": 92,
+    "sumVehicle": 303
+  },
+  {
+    "date": "2024-12-12",
+    "sumCar": 98,
+    "sumBus": 80,
+    "sumTruck": 48,
+    "sumMotorcycle": 67,
+    "sumVehicle": 293
+  },
+  {
+    "date": "2024-12-13",
+    "sumCar": 59,
+    "sumBus": 36,
+    "sumTruck": 61,
+    "sumMotorcycle": 51,
+    "sumVehicle": 207
+  },
+  {
+    "date": "2024-12-14",
+    "sumCar": 72,
+    "sumBus": 74,
+    "sumTruck": 43,
+    "sumMotorcycle": 49,
+    "sumVehicle": 238
+  },
+  {
+    "date": "2024-12-15",
+    "sumCar": 63,
+    "sumBus": 58,
+    "sumTruck": 56,
+    "sumMotorcycle": 40,
+    "sumVehicle": 217
+  },
+  {
+    "date": "2024-12-16",
+    "sumCar": 45,
+    "sumBus": 49,
+    "sumTruck": 70,
+    "sumMotorcycle": 47,
+    "sumVehicle": 211
+  },
+  {
+    "date": "2024-12-17",
+    "sumCar": 37,
+    "sumBus": 50,
+    "sumTruck": 44,
+    "sumMotorcycle": 46,
+    "sumVehicle": 177
+  },
+  {
+    "date": "2024-12-18",
+    "sumCar": 77,
+    "sumBus": 48,
+    "sumTruck": 65,
+    "sumMotorcycle": 57,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-12-19",
+    "sumCar": 71,
+    "sumBus": 30,
+    "sumTruck": 98,
+    "sumMotorcycle": 92,
+    "sumVehicle": 291
+  },
+  {
+    "date": "2024-12-20",
+    "sumCar": 59,
+    "sumBus": 67,
+    "sumTruck": 90,
+    "sumMotorcycle": 80,
+    "sumVehicle": 296
+  },
+  {
+    "date": "2024-12-21",
+    "sumCar": 85,
+    "sumBus": 40,
+    "sumTruck": 76,
+    "sumMotorcycle": 46,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-12-22",
+    "sumCar": 68,
+    "sumBus": 33,
+    "sumTruck": 30,
+    "sumMotorcycle": 65,
+    "sumVehicle": 196
+  },
+  {
+    "date": "2024-12-23",
+    "sumCar": 97,
+    "sumBus": 67,
+    "sumTruck": 82,
+    "sumMotorcycle": 44,
+    "sumVehicle": 290
+  },
+  {
+    "date": "2024-12-24",
+    "sumCar": 40,
+    "sumBus": 36,
+    "sumTruck": 46,
+    "sumMotorcycle": 50,
+    "sumVehicle": 172
+  },
+  {
+    "date": "2024-12-25",
+    "sumCar": 59,
+    "sumBus": 35,
+    "sumTruck": 70,
+    "sumMotorcycle": 33,
+    "sumVehicle": 197
+  },
+  {
+    "date": "2024-12-26",
+    "sumCar": 74,
+    "sumBus": 42,
+    "sumTruck": 54,
+    "sumMotorcycle": 56,
+    "sumVehicle": 226
+  },
+  {
+    "date": "2024-12-27",
+    "sumCar": 86,
+    "sumBus": 78,
+    "sumTruck": 71,
+    "sumMotorcycle": 62,
+    "sumVehicle": 297
+  },
+  {
+    "date": "2024-12-28",
+    "sumCar": 75,
+    "sumBus": 73,
+    "sumTruck": 36,
+    "sumMotorcycle": 75,
+    "sumVehicle": 259
+  },
+  {
+    "date": "2024-12-29",
+    "sumCar": 47,
+    "sumBus": 46,
+    "sumTruck": 80,
+    "sumMotorcycle": 37,
+    "sumVehicle": 210
+  },
+  {
+    "date": "2024-12-30",
+    "sumCar": 53,
+    "sumBus": 90,
+    "sumTruck": 96,
+    "sumMotorcycle": 71,
+    "sumVehicle": 310
+  },
+  {
+    "date": "2024-12-31",
+    "sumCar": 84,
+    "sumBus": 58,
+    "sumTruck": 57,
+    "sumMotorcycle": 87,
+    "sumVehicle": 286
+  }
+]

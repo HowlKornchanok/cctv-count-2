@@ -1,0 +1,171 @@
+<div class="mb-4 flex items-center justify-between">
+  <div class="flex-col col-span-7 items-center">
+    <h3 class="text-md font-bold text-gray-900 dark:text-night-50">{{ translations[currentLanguage]['Chart'] }}</h3>
+    <span class="text-sm text-gray-400 dark:text-night-300">{{ translations[currentLanguage]['Stacked Column from API'] }}</span>
+  </div>
+  <div class="flex-none rounded-md px-4 py-2.5 text-xs font-semibold text-gray-500">
+    <label for="timeRange" class="flex-none rounded-md px-4 py-2.5 text-xs font-semibold text-gray-500">{{ translations[currentLanguage]['Select Time Range'] }}</label>
+    <select id="timeRange" class="rounded-md p-2 text-left col-1 text-gray-900 dark:text-night-50" (change)="changeFilter($event)">
+      <option value="1day">{{ translations[currentLanguage]['Last 1 Day'] }}</option>
+      <option value="7days">{{ translations[currentLanguage]['Last 7 Days'] }}</option>
+      <option value="1month">{{ translations[currentLanguage]['Last 1 Month'] }}</option>
+    </select>
+  </div>
+</div>
+
+<div class="flex flex-row-7 justify-center">
+  
+      <apx-chart class="col-span-1 "
+        [series]="chartOptionsCar.nonaxisseries!"
+        [chart]="chartOptionsCar.chart!"
+        [legend]="chartOptionsCar.legend!"
+        [dataLabels]="chartOptionsCar.dataLabels!"
+        [fill]="chartOptionsCar.fill!"
+        [stroke]="chartOptionsCar.stroke!"
+        [xaxis]="chartOptionsCar.xaxis!"
+        [yaxis]="chartOptionsCar.yaxis!"
+        [responsive]="chartOptionsCar.responsive!"
+        [states]="chartOptionsCar.states!"
+        [tooltip]="chartOptionsCar.tooltip!"
+        [colors]="chartOptionsCar.colors!"
+        [grid]="chartOptionsCar.grid!"
+        [title]="chartOptionsCar.title!"
+        [theme]="chartOptionsCar.theme!"
+        [plotOptions]="chartOptionsCar.plotOptions!"
+        [labels]="chartOptionsCar.labels"
+      ></apx-chart>
+
+  
+
+  
+      <apx-chart class="col-span-1"
+        [series]="chartOptionsMotorcycle.nonaxisseries!"
+        [chart]="chartOptionsMotorcycle.chart!"
+        [legend]="chartOptionsMotorcycle.legend!"
+        [dataLabels]="chartOptionsMotorcycle.dataLabels!"
+        [fill]="chartOptionsMotorcycle.fill!"
+        [stroke]="chartOptionsMotorcycle.stroke!"
+        [xaxis]="chartOptionsMotorcycle.xaxis!"
+        [yaxis]="chartOptionsMotorcycle.yaxis!"
+        [responsive]="chartOptionsMotorcycle.responsive!"
+        [states]="chartOptionsMotorcycle.states!"
+        [tooltip]="chartOptionsMotorcycle.tooltip!"
+        [colors]="chartOptionsMotorcycle.colors!"
+        [grid]="chartOptionsMotorcycle.grid!"
+        [title]="chartOptionsMotorcycle.title!"
+        [theme]="chartOptionsMotorcycle.theme!"
+        [plotOptions]="chartOptionsMotorcycle.plotOptions!"
+        [labels]="chartOptionsMotorcycle.labels"
+      ></apx-chart>
+
+  
+
+  
+      <apx-chart class="col-span-1"
+        [series]="chartOptionsTruck.nonaxisseries!"
+        [chart]="chartOptionsTruck.chart!"
+        [legend]="chartOptionsTruck.legend!"
+        [dataLabels]="chartOptionsTruck.dataLabels!"
+        [fill]="chartOptionsTruck.fill!"
+        [stroke]="chartOptionsTruck.stroke!"
+        [xaxis]="chartOptionsTruck.xaxis!"
+        [yaxis]="chartOptionsTruck.yaxis!"
+        [responsive]="chartOptionsTruck.responsive!"
+        [states]="chartOptionsTruck.states!"
+        [tooltip]="chartOptionsTruck.tooltip!"
+        [colors]="chartOptionsTruck.colors!"
+        [grid]="chartOptionsTruck.grid!"
+        [title]="chartOptionsTruck.title!"
+        [theme]="chartOptionsTruck.theme!"
+        [plotOptions]="chartOptionsTruck.plotOptions!"
+        [labels]="chartOptionsTruck.labels"
+      ></apx-chart>
+
+</div>
+<div class="flex flex-row-7 justify-center">
+      <apx-chart class="col-span-1"
+      [series]="chartOptionsCar.nonaxisseries!"
+      [chart]="chartOptionsCar.chart!"
+      [legend]="chartOptionsCar.legend!"
+      [dataLabels]="chartOptionsCar.dataLabels!"
+      [fill]="chartOptionsCar.fill!"
+      [stroke]="chartOptionsCar.stroke!"
+      [xaxis]="chartOptionsCar.xaxis!"
+      [yaxis]="chartOptionsCar.yaxis!"
+      [responsive]="chartOptionsCar.responsive!"
+      [states]="chartOptionsCar.states!"
+      [tooltip]="chartOptionsCar.tooltip!"
+      [colors]="chartOptionsCar.colors!"
+      [grid]="chartOptionsCar.grid!"
+      [title]="chartOptionsCar.title!"
+      [theme]="chartOptionsCar.theme!"
+      [plotOptions]="chartOptionsCar.plotOptions!"
+      [labels]="chartOptionsCar.labels"
+    ></apx-chart>
+
+
+
+
+    <apx-chart class="col-span-1"
+      [series]="chartOptionsMotorcycle.nonaxisseries!"
+      [chart]="chartOptionsMotorcycle.chart!"
+      [legend]="chartOptionsMotorcycle.legend!"
+      [dataLabels]="chartOptionsMotorcycle.dataLabels!"
+      [fill]="chartOptionsMotorcycle.fill!"
+      [stroke]="chartOptionsMotorcycle.stroke!"
+      [xaxis]="chartOptionsMotorcycle.xaxis!"
+      [yaxis]="chartOptionsMotorcycle.yaxis!"
+      [responsive]="chartOptionsMotorcycle.responsive!"
+      [states]="chartOptionsMotorcycle.states!"
+      [tooltip]="chartOptionsMotorcycle.tooltip!"
+      [colors]="chartOptionsMotorcycle.colors!"
+      [grid]="chartOptionsMotorcycle.grid!"
+      [title]="chartOptionsMotorcycle.title!"
+      [theme]="chartOptionsMotorcycle.theme!"
+      [plotOptions]="chartOptionsMotorcycle.plotOptions!"
+      [labels]="chartOptionsMotorcycle.labels"
+    ></apx-chart>
+
+
+
+
+    <apx-chart class="col-span-1"
+      [series]="chartOptionsTruck.nonaxisseries!"
+      [chart]="chartOptionsTruck.chart!"
+      [legend]="chartOptionsTruck.legend!"
+      [dataLabels]="chartOptionsTruck.dataLabels!"
+      [fill]="chartOptionsTruck.fill!"
+      [stroke]="chartOptionsTruck.stroke!"
+      [xaxis]="chartOptionsTruck.xaxis!"
+      [yaxis]="chartOptionsTruck.yaxis!"
+      [responsive]="chartOptionsTruck.responsive!"
+      [states]="chartOptionsTruck.states!"
+      [tooltip]="chartOptionsTruck.tooltip!"
+      [colors]="chartOptionsTruck.colors!"
+      [grid]="chartOptionsTruck.grid!"
+      [title]="chartOptionsTruck.title!"
+      [theme]="chartOptionsTruck.theme!"
+      [plotOptions]="chartOptionsTruck.plotOptions!"
+      [labels]="chartOptionsTruck.labels"
+    ></apx-chart> 
+
+    <apx-chart class="col-span-1"
+    [series]="chartOptionsTruck.nonaxisseries!"
+    [chart]="chartOptionsTruck.chart!"
+    [legend]="chartOptionsTruck.legend!"
+    [dataLabels]="chartOptionsTruck.dataLabels!"
+    [fill]="chartOptionsTruck.fill!"
+    [stroke]="chartOptionsTruck.stroke!"
+    [xaxis]="chartOptionsTruck.xaxis!"
+    [yaxis]="chartOptionsTruck.yaxis!"
+    [responsive]="chartOptionsTruck.responsive!"
+    [states]="chartOptionsTruck.states!"
+    [tooltip]="chartOptionsTruck.tooltip!"
+    [colors]="chartOptionsTruck.colors!"
+    [grid]="chartOptionsTruck.grid!"
+    [title]="chartOptionsTruck.title!"
+    [theme]="chartOptionsTruck.theme!"
+    [plotOptions]="chartOptionsTruck.plotOptions!"
+    [labels]="chartOptionsTruck.labels"
+  ></apx-chart> 
+  </div>

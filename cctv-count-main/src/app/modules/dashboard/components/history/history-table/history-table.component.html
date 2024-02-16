@@ -1,0 +1,45 @@
+<div class="flex-col rounded-lg bg-white px-8 py-8 dark:bg-night-800 sm:flex-row">
+  <div class="mb-4 flex items-center justify-between">
+    <div class="flex-col col-span-1 items-center">
+      <h3 class="text-md font-bold text-gray-900 dark:text-night-50">{{ translations[currentLanguage]['History Table'] }}</h3>
+      <span class="text-sm text-gray-400 dark:text-night-300">{{ translations[currentLanguage]['From JSON'] }}</span>
+    </div>
+    <div class="flex-none rounded-md py-2.5 text-xs font-semibold text-gray-500 dark:text-night-200">
+      <label for="timeRange" class="flex-none rounded-md px-4 py-2.5 text-xs font-semibold text-gray-500 hover:0 dark:text-night-50">
+        {{ translations[currentLanguage]['Select Time Range'] }}
+      </label>
+      <select id="timeRange" class="rounded-md p-2 text-left col-1 text-gray-900 dark:text-night-50" (change)="changeFilter($event)">
+        <option value="1day">{{ translations[currentLanguage]['Last 1 Day'] }}</option>
+        <option value="7days">{{ translations[currentLanguage]['Last 7 Days'] }}</option>
+        <option value="1month">{{ translations[currentLanguage]['Last 1 Month'] }}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="pagination-controls">
+    <button class="bg-primary-500" (click)="prevPage()" [disabled]="currentPage === 1">{{ translations[currentLanguage]['Previous'] }}</button>
+    <span class="text-gray-900 dark:text-night-50">{{ translations[currentLanguage]['Page'] }} {{ currentPage }} {{ translations[currentLanguage]['of'] }} {{ totalPages }}</span>
+    <button class="bg-primary-500" (click)="nextPage()" [disabled]="currentPage === totalPages">{{ translations[currentLanguage]['Next'] }}</button>
+  </div>
+
+  <div class="relative overflow-x-auto">
+    <table class="w-full table-auto">
+      <thead class="text-xs uppercase text-gray-400 dark:text-night-50">
+        <tr>
+          <th class="py-3 text-left">{{ translations[currentLanguage]['Date'] }}</th>
+          <th class="py-3 text-left">{{ translations[currentLanguage]['Time'] }}</th>
+          <th class="py-3 text-right">{{ translations[currentLanguage]['Speed'] }}</th>
+          <th class="py-3 text-right">{{ translations[currentLanguage]['Vehicle Type'] }}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of jsonData.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)" class="border-b border-dashed border-gray-200 hover:bg-gray-100 dark:border-night-50 dark:hover:bg-night-600">
+          <td class="text-gray-900 dark:text-night-50">{{ item.date }}</td>
+          <td class="text-gray-900 dark:text-night-50">{{ item.time }}</td>
+          <td class="py-3 text-right font-bold text-gray-900 dark:text-night-50">{{ item.speed }}</td>
+          <td class="py-3 text-right font-bold text-gray-900 dark:text-night-50">{{ item.vehicleType }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
