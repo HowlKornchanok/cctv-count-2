@@ -6,6 +6,7 @@ import { MainComponent } from './pages/main/main.component';
 import { HistoryComponent } from './pages/history/history.component';
 import { SettingComponent } from './pages/setting/setting.component';
 import { AuthGuardService } from 'src/app/core/guards/auth-guard.service';
+import { CamerasComponent } from './pages/cameras/cameras.component';
 
 const routes: Routes = [
   
@@ -22,6 +23,7 @@ const routes: Routes = [
         canActivate: [AuthGuardService], 
         data: { roles: ['admin'] } 
       },
+      { path: 'cameras', component:CamerasComponent},
       { path: '**', redirectTo: 'error/404' },
     ],
   },

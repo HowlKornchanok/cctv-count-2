@@ -33,7 +33,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let item of jsonData.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)" class="border-b border-dashed border-gray-200 hover:bg-gray-100 dark:border-night-50 dark:hover:bg-night-600">
+        <tr *ngFor="let item of jsonData.slice((currentPage-1)*itemsPerPage, currentPage*itemsPerPage)" class="border-b border-dashed border-gray-200 hover:bg-gray-100 dark:border-night-50 dark:hover:bg-night-900">
           <td class="text-gray-900 dark:text-night-50">{{ item.date }}</td>
           <td class="text-gray-900 dark:text-night-50">{{ item.time }}</td>
           <td class="py-3 text-right font-bold text-gray-900 dark:text-night-50">{{ item.speed }}</td>

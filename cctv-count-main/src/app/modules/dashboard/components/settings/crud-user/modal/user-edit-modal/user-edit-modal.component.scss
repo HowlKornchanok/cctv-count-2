@@ -1,0 +1,77 @@
+.blackdrop-overlay {
+    position: absolute;
+    top: 0;
+    left: 0rem;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px); 
+  }
+  
+  
+  .modal-overlay {
+      position: absolute;
+      top: 0rem;
+      left: 0rem;
+      width: 30%;
+      height: 60%;
+      background: rgba(0, 0, 0, 0);
+      backdrop-filter: blur(1px); 
+    }
+  
+    
+    
+    .modal-container {
+      position: relative;
+      top: 70%;
+      left: 170%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      max-width: 90%;
+      background-size: cover;
+      opacity: 1;
+      max-height: calc(90%);
+    }
+    
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .close-button {
+      cursor: pointer;
+    }
+    
+    .modal-content {
+      margin-bottom: 10px;
+  
+    }
+    .relative {
+      position: relative;
+    }
+    
+    .h-48 {
+      height: 12rem; /* Adjust the height as needed */
+    }
+    
+    .bg-gray-200 {
+      background-color: #e5e7eb; /* Adjust the background color as needed */
+    }
+    
+    .absolute {
+      position: absolute;
+    }
+    
+    .p-2 {
+      padding: 0.5rem;
+    }
+    
+    /* Larger Player Styles */
+    .larger {
+      width: 40% !important;
+      height: 40% !important;
+    }
+  
+  
+  

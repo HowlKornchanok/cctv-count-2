@@ -1,18 +1,18 @@
 <div class="overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800 text-gray-900 dark:text-night-50">
-  <div class="mb-8">
+  <div class="mb-8 ">
     <ng-container *ngFor="let location of jsonData; let i = index">
       <ng-container *ngIf="getInactiveCameras(location.cameras).length > 0">
-        <p class="mb-2 font-bold">
+        <p class="mb-2 font-bold ">
           {{ translations[currentLanguage]['Location'] }} {{ location.location_name }}
         </p>
         <p class="mb-1">
           {{ translations[currentLanguage]['Cameras Work'] }}: {{ getActiveCameraCount(location.cameras) }}/{{ location.cameras.length }}
         </p>
-        <p class="mb-1">
+        <p class="mb-1 ">
           {{ translations[currentLanguage]['Cameras Inactive'] }}:
         </p>
-        <ul class="list-disc list-inside">
-          <li *ngFor="let camera of getInactiveCameras(location.cameras)" class="flex justify-between items-center text-red-500 mb-1 px-2">
+        <ul class="list-disc list-inside ">
+          <li *ngFor="let camera of getInactiveCameras(location.cameras)" class="flex justify-between items-center text-red-500 mb-1 px-2 hover:bg-gray-100 dark:border-night-50 dark:hover:bg-night-900">
             ⚠️ {{ camera }}
             <button class="bg-red-500 text-bold p-1 text-white rounded-md" (click)="reportIssue(location, location.camera_no)">
               {{ translations[currentLanguage]['Report Issue'] }}

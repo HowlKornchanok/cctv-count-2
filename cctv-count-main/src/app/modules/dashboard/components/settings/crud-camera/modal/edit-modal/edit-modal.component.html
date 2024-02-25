@@ -1,6 +1,6 @@
 <div class="blackdrop-overlay z-[10]"></div>
-<div class="flex flex-row modal-overlay bg-white  z-[20]">
-    <div class="modal-container bg-white scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800 grid grid-cols-1  justify-items-between rounded-lg z-[20]">
+<div class="flex flex-row modal-overlay bg-white p-4 z-[20]">
+    <div class="modal-container p-4 bg-white dark:bg-night-800 text-gray-400 dark:text-white  scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800 grid grid-cols-1  justify-items-between rounded-lg z-[20]">
     <div>
         <h2>Edit Camera</h2>
         <form (ngSubmit)="saveChanges()">
@@ -8,22 +8,17 @@
             <label for="camera_no">Camera No:</label>
             <span>{{ editedCamera.camera_no }}</span>
             </div>
-
+            <div></div>
           <div>
             <label for="streaming_link">Streaming Link:</label>
-            <input type="text" [(ngModel)]="editedCamera.streaming_link" name="streaming_link" id="streaming_link">
+            <input type="text" class="dark:text-white" [(ngModel)]="editedCamera.streaming_link" name="streaming_link" id="streaming_link">
           </div>
-          <div>
-            <label for="status">Status:</label>
-            <select [(ngModel)]="editedCamera.status" name="status" id="status">
-              <option value="active">Active</option>
-              <option value="inactive">Inactive</option>
-            </select>
-          </div>
-          
+
     
-          <div class="modal-buttons">
+          <div class="modal-buttons p-4">
             <button type="submit" (click)="saveChanges()" class="bg-teal-500 text-white font-medium px-4 py-2 rounded-md hover:bg-teal-700">Save Changes</button>
+          </div>
+          <div class="modal-buttons">
             <button  type="button" (click)="cancel()" class="bg-gray-400 text-white font-medium px-4 py-2 rounded-md hover:bg-gray-600">Cancel</button> 
           </div>
         </form>

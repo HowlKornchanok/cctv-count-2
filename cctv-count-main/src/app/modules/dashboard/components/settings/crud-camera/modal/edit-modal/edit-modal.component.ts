@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './edit-modal.component.html',
   styleUrl: './edit-modal.component.scss'
 })
-export class EditModalComponent {
+export class EditModalComponent implements OnInit{
 
   @Input() camera: any;
   @Output() saveChangesAction: EventEmitter<any> = new EventEmitter<any>();

@@ -22,11 +22,14 @@ export class Menu {
           icon: 'assets/icons/table.svg',
           label: 'History',
           route: '/dashboard/history',
-
+          
+        },
+        {
+          icon: 'assets/icons/cctv.svg',
+          label: 'Cameras',
+          route: '/dashboard/cameras',
           
         }
-        
-        
         
       ],
     },

@@ -35,15 +35,15 @@
     <div class="border-b border-dashed border-gray-200 dark:border-night-500"></div>
 
     <ul class="my-2 mx-4">
-      <li (click)="toggleLanguage()" class="block cursor-pointer rounded-md px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-night-200 dark:hover:bg-night-500 dark:hover:text-primary-500">
+      <li (click)="toggleLanguage()" class="block cursor-pointer rounded-md px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-night-200 dark:hover:bg-night-900 dark:hover:text-primary-500">
           {{ translations[currentLanguage]['language_toggle'] }}
       </li>
   
-      <li [routerLink]="['/dashboard/setting']" class="block cursor-pointer rounded-md px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-night-200 dark:hover:bg-night-500 dark:hover:text-primary-500">
+      <li [routerLink]="['/dashboard/setting']" class="block cursor-pointer rounded-md px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-night-200 dark:hover:bg-night-900 dark:hover:text-primary-500">
           {{ translations[currentLanguage]['Settings'] }}
       </li>
       
-      <li [routerLink]="['/auth']" class="block cursor-pointer rounded-md px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-night-200 dark:hover:bg-night-500 dark:hover:text-primary-500">
+      <li (click)="logout()" [routerLink]="['/auth']" class="block cursor-pointer rounded-md px-3 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100 hover:text-primary-500 dark:text-night-200 dark:hover:bg-night-900 dark:hover:text-primary-500">
           {{ translations[currentLanguage]['Sign Out'] }}
       </li>
   </ul>

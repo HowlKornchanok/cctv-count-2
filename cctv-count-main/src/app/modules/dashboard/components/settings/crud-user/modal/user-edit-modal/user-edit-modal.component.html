@@ -1,0 +1,32 @@
+<div class="backdrop-overlay z-[30] bg-opacity-60 backdrop-blur-md"></div>
+<div class="flex flex-row modal-overlay bg-white z-[30]">
+    <div class="modal-container bg-white dark:bg-night-800  grid grid-cols-1 justify-items-between rounded-lg z-[30]">
+        <div class="dark:text-white p-4">
+            <h2>Edit User</h2>  <span>{{ editedUser.username }}</span>
+            <form class="dark:text-white" (ngSubmit)="saveChanges()">
+                <div class="dark:text-white">
+                    <label for="username">Username:</label>
+                    <input type="text" class="dark:text-white" [(ngModel)]="editedUser.username" name="username" id="username">
+                </div>
+                <div class="dark:text-white">
+                    <label for="role">Role:</label>
+                    <select class="dark:text-white" [(ngModel)]="editedUser.role" name="role" id="role">
+                        <option value="admin">Admin</option>
+                        <option value="user">User</option>
+                    </select>
+                </div>
+                <div class="dark:text-white">
+                    <label for="password">Password:</label>
+                    <input class="dark:text-white" type="password" [(ngModel)]="editedUser.password" name="password" id="password">
+                </div>
+
+                <div class="modal-buttons p-2">
+                    <button type="submit" class="bg-teal-500 text-white font-medium px-4 py-2 rounded-md hover:bg-teal-700">Save Changes</button>
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" (click)="cancel()" class="bg-gray-400 text-white font-medium px-4 py-2 rounded-md hover:bg-gray-600">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink, } from '@angular/router';
 import { CommonModule, NgClass } from '@angular/common';
 import { ClickOutsideDirective } from '../../../../../shared/directives/click-outside.directive';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { AuthService } from 'src/app/core/guards/auth.service';
 import { JwtService } from 'src/app/core/guards/jwt.service';
+
 
 @Component({
     selector: 'app-profile-menu',
@@ -15,7 +16,7 @@ import { JwtService } from 'src/app/core/guards/jwt.service';
         ClickOutsideDirective,
         NgClass,
         RouterLink,
-        CommonModule
+        CommonModule,
     ],
 })
 export class ProfileMenuComponent implements OnInit {
@@ -28,7 +29,8 @@ export class ProfileMenuComponent implements OnInit {
   constructor(
     public languageService: LanguageService,
     private authService: AuthService,
-    private jwtService: JwtService
+    private jwtService: JwtService,
+    private router: Router,
     ) {}
 
   toggleLanguage() {
@@ -54,5 +56,12 @@ export class ProfileMenuComponent implements OnInit {
     this.currentLanguage = this.languageService.getCurrentLanguage()
     console.log(this.currentLanguage)
   }
+
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/auth/sign-in']);
+    console.log('User logged out'); 
+  }
+
 
 }

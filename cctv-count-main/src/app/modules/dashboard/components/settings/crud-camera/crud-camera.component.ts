@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MapDataService } from '../../main/map/services/map-data.service';
 import { LanguageService } from 'src/app/core/services/language.service';
@@ -13,12 +13,14 @@ import { EditModalComponent } from './modal/edit-modal/edit-modal.component';
   styleUrl: './crud-camera.component.scss',
   providers: [MapDataService]
 })
-export class CRUDCameraComponent {
+export class CRUDCameraComponent implements OnInit{
 
   public jsonData: any[] = [];
   public selectedCamera: any = {}; // Used for editing or viewing a single camera
   public isNewCamera: boolean = false; // Flag to indicate if the selected camera is new or existing
   public showEditModal: boolean = false;
+  public showModal: boolean = false;
+
 
   currentLanguage: string = 'th';
   translations = this.languageService.translations
@@ -40,8 +42,8 @@ export class CRUDCameraComponent {
 
 
   selectCamera(camera: any): void {
-    this.selectedCamera = { ...camera }; // Copy camera object to selectedCamera
-    this.isNewCamera = false; // Not a new camera
+    this.selectedCamera = { ...camera };
+    this.isNewCamera = false; 
   }
 
   public addCamera(location: any): void {
@@ -50,15 +52,17 @@ export class CRUDCameraComponent {
       return;
     }
   
-    // Generate a new camera object with default values
     const newCamera = {
-      camera_no: this.getNextCameraNumber(location), // Get the next available camera number for the location
+      camera_no: this.getNextCameraNumber(location), 
       status: 'active', // Default status
       days_after_last_maintenance: 0, // Default days after last maintenance
       streaming_link: '' // Default streaming link
     };
   
-    // Add the new camera to the specified location's cameras array
+    this.isNewCamera = true;
+    this.selectedCamera = newCamera; 
+    this.showEditModal = true;
+
     location.cameras.push(newCamera);
     console.log("Camera added successfully to", location.location_name);
   }
@@ -73,7 +77,7 @@ export class CRUDCameraComponent {
   }
   
   saveCamera(): void {
-    // Logic to save the camera goes here
+
     if (this.isNewCamera) {
       // Logic to add new camera
     } else {
@@ -97,6 +101,20 @@ export class CRUDCameraComponent {
   closeEditModal(): void {
     this.showEditModal = false;
   }
+
+  openModal() {
+    this.showModal = true;
+  }
+
+  // Method to close the modal
+  closeModal() {
+    this.showModal = false;
+  }
+
+  maskLink(link: string): string {
+    return link.replace(/./g, '*'); // Replaces each character with an asterisk
+  }
+  
   
   public deleteCamera(camera: any): void {
     const confirmed = confirm("Are you sure you want to delete this camera?");

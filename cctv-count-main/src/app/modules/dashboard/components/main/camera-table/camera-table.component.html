@@ -10,7 +10,7 @@
       </tr>      
     </thead>
     <tbody>
-      <ng-container *ngFor="let location of jsonData; let i = index">
+      <ng-container *ngFor="let location of jsonData; let i = index" class="" >
         <!-- Row for each location -->
         <tr *ngIf="i > 0" class="border-t">
           <td class=""></td>
@@ -19,8 +19,8 @@
           <td class=""></td>
         </tr>
   
-        <tr class="leading-8">
-          <td class="px-3 text-left font-bold text-gray-900 dark:text-night-50">{{ location.location_name }}</td>
+        <tr class="leading-8 hover:bg-gray-100 dark:border-night-50 dark:hover:bg-night-900">
+          <td class="px-3  text-left font-bold text-gray-900 dark:text-night-50">{{ location.location_name }}</td>
           <td class="text-center font-bold text-gray-900 dark:text-night-50">
             <ng-container *ngFor="let camera of location.cameras">
               {{ camera.camera_no }}<br>
