@@ -9,25 +9,25 @@
         "camera_no": 1,
         "status": "active",
         "days_after_last_maintenance": 280,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 2,
         "status": "active",
         "days_after_last_maintenance": 202,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 3,
         "status": "active",
         "days_after_last_maintenance": 202,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 4,
         "status": "active",
         "days_after_last_maintenance": 202,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       }
     ]
   },
@@ -35,31 +35,31 @@
     "location_no": 2,
     "location_name": "Intersection 2",
     "lat": 7.542618376663331,
-    "lon":  99.61592973867563,
+    "lon": 99.61592973867563,
     "cameras": [
       {
         "camera_no": 1,
         "status": "active",
         "days_after_last_maintenance": 56,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 2,
         "status": "active",
         "days_after_last_maintenance": 46,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 3,
         "status": "active",
         "days_after_last_maintenance": 77,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 4,
         "status": "active",
         "days_after_last_maintenance": 261,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 5,
@@ -73,7 +73,7 @@
     "location_no": 3,
     "location_name": "Intersection 3",
     "lat": 7.55786961618612,
-    "lon":  99.58297598283431,
+    "lon": 99.58297598283431,
     "cameras": [
       {
         "camera_no": 1,
@@ -91,13 +91,13 @@
         "camera_no": 3,
         "status": "active",
         "days_after_last_maintenance": 136,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 4,
         "status": "active",
         "days_after_last_maintenance": 210,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       }
     ]
   },
@@ -117,19 +117,19 @@
         "camera_no": 2,
         "status": "active",
         "days_after_last_maintenance": 13,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 3,
         "status": "active",
         "days_after_last_maintenance": 136,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       },
       {
         "camera_no": 4,
         "status": "active",
         "days_after_last_maintenance": 210,
-        "streaming_link": "http://192.168.0.170:7051/video_feed"
+        "streaming_link": "http://127.0.0.1:7051/video_feed"
       }
     ]
   }

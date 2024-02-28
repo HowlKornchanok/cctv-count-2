@@ -41,6 +41,12 @@
       "username": "howl",
       "password": "howl",
       "role": "admin"
+    },
+    {
+      "id": "a177",
+      "username": "aa",
+      "role": "user",
+      "password": "aa"
     }
   ]
 }
