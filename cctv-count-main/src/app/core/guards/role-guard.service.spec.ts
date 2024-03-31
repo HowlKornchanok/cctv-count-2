@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SumVehByHourService } from './sum-veh-by-hour.service';
+import { RoleGuardService } from './role-guard.service';
 
-describe('SumVehByHourService', () => {
-  let service: SumVehByHourService;
+describe('RoleGuardService', () => {
+  let service: RoleGuardService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(SumVehByHourService);
+    service = TestBed.inject(RoleGuardService);
   });
 
   it('should be created', () => {

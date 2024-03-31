@@ -12742,5 +12742,222 @@
     "sumTruck": 49,
     "sumMotorcycle": 44,
     "sumVehicle": 115
+  },
+  {
+    "date": "2024-02-29",
+    "time": "00:00:00",
+    "sumCar": 19,
+    "sumBus": 28,
+    "sumTruck": 31,
+    "sumMotorcycle": 15,
+    "sumVehicle": 93
+  },
+  {
+    "date": "2024-02-29",
+    "time": "01:00:00",
+    "sumCar": 10,
+    "sumBus": 47,
+    "sumTruck": 12,
+    "sumMotorcycle": 23,
+    "sumVehicle": 92
+  },
+  {
+    "date": "2024-02-29",
+    "time": "02:00:00",
+    "sumCar": 13,
+    "sumBus": 31,
+    "sumTruck": 45,
+    "sumMotorcycle": 20,
+    "sumVehicle": 109
+  },
+  {
+    "date": "2024-02-29",
+    "time": "03:00:00",
+    "sumCar": 42,
+    "sumBus": 50,
+    "sumTruck": 38,
+    "sumMotorcycle": 25,
+    "sumVehicle": 155
+  },
+  {
+    "date": "2024-02-29",
+    "time": "04:00:00",
+    "sumCar": 39,
+    "sumBus": 24,
+    "sumTruck": 10,
+    "sumMotorcycle": 11,
+    "sumVehicle": 84
+  },
+  {
+    "date": "2024-02-29",
+    "time": "05:00:00",
+    "sumCar": 34,
+    "sumBus": 44,
+    "sumTruck": 40,
+    "sumMotorcycle": 34,
+    "sumVehicle": 152
+  },
+  {
+    "date": "2024-02-29",
+    "time": "06:00:00",
+    "sumCar": 47,
+    "sumBus": 67,
+    "sumTruck": 73,
+    "sumMotorcycle": 45,
+    "sumVehicle": 232
+  },
+  {
+    "date": "2024-02-29",
+    "time": "07:00:00",
+    "sumCar": 54,
+    "sumBus": 75,
+    "sumTruck": 68,
+    "sumMotorcycle": 67,
+    "sumVehicle": 264
+  },
+  {
+    "date": "2024-02-29",
+    "time": "08:00:00",
+    "sumCar": 53,
+    "sumBus": 80,
+    "sumTruck": 32,
+    "sumMotorcycle": 63,
+    "sumVehicle": 228
+  },
+  {
+    "date": "2024-02-29",
+    "time": "09:00:00",
+    "sumCar": 52,
+    "sumBus": 40,
+    "sumTruck": 39,
+    "sumMotorcycle": 80,
+    "sumVehicle": 211
+  },
+  {
+    "date": "2024-02-29",
+    "time": "10:00:00",
+    "sumCar": 48,
+    "sumBus": 65,
+    "sumTruck": 82,
+    "sumMotorcycle": 52,
+    "sumVehicle": 247
+  },
+  {
+    "date": "2024-02-29",
+    "time": "11:00:00",
+    "sumCar": 56,
+    "sumBus": 34,
+    "sumTruck": 86,
+    "sumMotorcycle": 43,
+    "sumVehicle": 219
+  },
+  {
+    "date": "2024-02-29",
+    "time": "12:00:00",
+    "sumCar": 58,
+    "sumBus": 55,
+    "sumTruck": 58,
+    "sumMotorcycle": 90,
+    "sumVehicle": 261
+  },
+  {
+    "date": "2024-02-29",
+    "time": "13:00:00",
+    "sumCar": 81,
+    "sumBus": 76,
+    "sumTruck": 93,
+    "sumMotorcycle": 48,
+    "sumVehicle": 298
+  },
+  {
+    "date": "2024-02-29",
+    "time": "14:00:00",
+    "sumCar": 87,
+    "sumBus": 63,
+    "sumTruck": 52,
+    "sumMotorcycle": 77,
+    "sumVehicle": 279
+  },
+  {
+    "date": "2024-02-29",
+    "time": "15:00:00",
+    "sumCar": 48,
+    "sumBus": 41,
+    "sumTruck": 74,
+    "sumMotorcycle": 79,
+    "sumVehicle": 242
+  },
+  {
+    "date": "2024-02-29",
+    "time": "16:00:00",
+    "sumCar": 99,
+    "sumBus": 35,
+    "sumTruck": 30,
+    "sumMotorcycle": 42,
+    "sumVehicle": 206
+  },
+  {
+    "date": "2024-02-29",
+    "time": "17:00:00",
+    "sumCar": 43,
+    "sumBus": 100,
+    "sumTruck": 72,
+    "sumMotorcycle": 91,
+    "sumVehicle": 306
+  },
+  {
+    "date": "2024-02-29",
+    "time": "18:00:00",
+    "sumCar": 42,
+    "sumBus": 32,
+    "sumTruck": 23,
+    "sumMotorcycle": 18,
+    "sumVehicle": 115
+  },
+  {
+    "date": "2024-02-29",
+    "time": "19:00:00",
+    "sumCar": 13,
+    "sumBus": 48,
+    "sumTruck": 26,
+    "sumMotorcycle": 17,
+    "sumVehicle": 104
+  },
+  {
+    "date": "2024-02-29",
+    "time": "20:00:00",
+    "sumCar": 21,
+    "sumBus": 33,
+    "sumTruck": 37,
+    "sumMotorcycle": 26,
+    "sumVehicle": 117
+  },
+  {
+    "date": "2024-02-29",
+    "time": "21:00:00",
+    "sumCar": 17,
+    "sumBus": 46,
+    "sumTruck": 37,
+    "sumMotorcycle": 18,
+    "sumVehicle": 118
+  },
+  {
+    "date": "2024-02-29",
+    "time": "22:00:00",
+    "sumCar": 40,
+    "sumBus": 46,
+    "sumTruck": 24,
+    "sumMotorcycle": 49,
+    "sumVehicle": 159
+  },
+  {
+    "date": "2024-02-29",
+    "time": "23:00:00",
+    "sumCar": 10,
+    "sumBus": 12,
+    "sumTruck": 49,
+    "sumMotorcycle": 44,
+    "sumVehicle": 115
   }
+
 ]

@@ -1,60 +1,59 @@
-// speed-gauge.component.ts
-import { Component, OnInit, effect,OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DataService } from 'src/app/core/services/data.service';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/core/services/language.service';
+import { VehicleDataService } from 'src/app/core/services/vehicledata.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: '[history-table]',
   standalone: true,
   templateUrl: './history-table.component.html',
-  imports: [ NgApexchartsModule,CommonModule, ],
+  imports: [NgApexchartsModule, CommonModule,FormsModule],
   styleUrls: ['./history-table.component.scss'],
-  providers: [DataService],
+  providers: [VehicleDataService],
 })
 export class HistoryTableComponent implements OnInit, OnDestroy {
   currentLanguage: string = 'th';
-  translations = this.languageService.translations
-
- 
-
-
+  translations: any; // Define translations property
 
   private dataServiceSubscription: Subscription | undefined;
   public jsonData: any[] = [];
   currentPage: number = 1;
   itemsPerPage: number = 15;
   totalPages: number = 10;
+  selectedFilter: string = '1year'; // Default filter
 
-  constructor(private dataService: DataService, private languageService: LanguageService) {}
-  selectedFilter: string = '1day';
-    
+  constructor(
+    private vehicleDataService: VehicleDataService,
+    private languageService: LanguageService
+  ) {}
+
   ngOnInit(): void {
-    this.loadData();
-    this.languageService.currentLanguage$.subscribe(language => {
+    this.loadInitialData();
+    this.languageService.currentLanguage$.subscribe((language) => {
       this.currentLanguage = language;
+      this.translations = this.languageService.translations; // Assign translations
     });
   }
-  nextPage(): void {
-    if (this.currentPage < this.totalPages) {
-      this.currentPage++;
-    }
-  }
-  prevPage(): void {
-    if (this.currentPage > 1) {
-      this.currentPage--;1
-    }
-  }
-  
 
+  loadInitialData(): void {
+    this.loadData(this.selectedFilter);
+  }
 
-  private loadData(): void {
-    this.dataService.getData().subscribe(
+  loadData(filter: string): void {
+    const { startDate, endDate } = this.calculateDateRange(filter);
+    const startTime = this.getFormattedDateTime(startDate);
+    const endTime = this.getFormattedDateTime(endDate);
+
+    // Fetch data using VehicleDataService
+    this.vehicleDataService.getVehicleData(startTime, endTime).subscribe(
       (data) => {
-        this.jsonData = this.filterData(data,  this.selectedFilter);
-        this.totalPages = Math.ceil(this.jsonData.length / this.itemsPerPage);
+        // Handle successful response
+        this.jsonData = data.msg; // Assign fetched data
+        this.totalPages = Math.ceil(data.msg.length / this.itemsPerPage);
+        console.log(data.msg);
       },
       (error) => {
         console.error('Error fetching data:', error);
@@ -62,37 +61,58 @@ export class HistoryTableComponent implements OnInit, OnDestroy {
     );
   }
 
-  changeFilter(event: any): void {
-    this.selectedFilter = event.target.value;
-    this.loadData();
+  // Helper method to format date and time
+  private getFormattedDateTime(dateTime: Date): string {
+    const year = dateTime.getFullYear();
+    const month = this.padNumber(dateTime.getMonth() + 1);
+    const day = this.padNumber(dateTime.getDate());
+    const hours = this.padNumber(dateTime.getHours());
+    const minutes = this.padNumber(dateTime.getMinutes());
+    const seconds = this.padNumber(dateTime.getSeconds());
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
   }
 
-  private filterData(data: any[], interval: string): any[] {
+  // Helper method to pad numbers with leading zeros
+  private padNumber(num: number): string {
+    return num.toString().padStart(2, '0');
+  }
+
+  // Calculate date range based on the selected filter
+  calculateDateRange(filter: string): { startDate: Date; endDate: Date } {
     const today = new Date();
-    let filterDate: Date;
-    
-    switch (interval) {
+    let startDate = new Date();
+    let endDate = new Date();
+
+    switch (filter) {
       case '1day':
-        filterDate = new Date(today);
-        filterDate.setDate(today.getDate() - 1);
+        startDate.setDate(today.getDate() - 1);
         break;
       case '7days':
-        filterDate = new Date(today);
-        filterDate.setDate(today.getDate() - 7);
+        startDate.setDate(today.getDate() - 7);
         break;
-      case '1month':
-        filterDate = new Date(today);
-        filterDate.setMonth(today.getMonth() - 1);
+      case '30days':
+        startDate.setDate(today.getDate() - 30);
+        break;
+      case '1year':
+        startDate.setDate(today.getDate() - 365);
         break;
       default:
-        // Default to all data
-        return data;
+        break;
     }
 
-    return data.filter((item) => {
-      const itemDate = new Date(item.date);
-      return itemDate >= filterDate && itemDate <= today;
-    });
+    return { startDate, endDate: today };
+  }
+
+  nextPage(): void {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
+    }
+  }
+
+  prevPage(): void {
+    if (this.currentPage > 1) {
+      this.currentPage--;
+    }
   }
 
   ngOnDestroy(): void {
@@ -100,8 +120,4 @@ export class HistoryTableComponent implements OnInit, OnDestroy {
       this.dataServiceSubscription.unsubscribe();
     }
   }
-
-
-  
-  
 }

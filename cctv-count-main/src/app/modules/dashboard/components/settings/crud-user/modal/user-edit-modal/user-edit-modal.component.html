@@ -1,23 +1,26 @@
 <div class="backdrop-overlay z-[30] bg-opacity-60 backdrop-blur-md"></div>
 <div class="flex flex-row modal-overlay bg-white z-[30]">
-    <div class="modal-container bg-white dark:bg-night-800  grid grid-cols-1 justify-items-between rounded-lg z-[30]">
+    <div class="modal-container bg-white dark:bg-night-800 grid grid-cols-1 justify-items-between rounded-lg z-[30]">
         <div class="dark:text-white p-4">
-            <h2>Edit User</h2>  <span>{{ editedUser.username }}</span>
+            <h2>Edit User</h2>
+            <p>user id: {{ editedUser.id }}</p> <!-- Display user ID -->  
+            <span>user name: {{ editedUser.user_name }}</span> <!-- Display username -->
             <form class="dark:text-white" (ngSubmit)="saveChanges()">
-                <div class="dark:text-white">
-                    <label for="username">Username:</label>
-                    <input type="text" class="dark:text-white" [(ngModel)]="editedUser.username" name="username" id="username">
-                </div>
                 <div class="dark:text-white">
                     <label for="role">Role:</label>
                     <select class="dark:text-white" [(ngModel)]="editedUser.role" name="role" id="role">
+                        <option disabled selected value="">Select...</option>
                         <option value="admin">Admin</option>
                         <option value="user">User</option>
                     </select>
                 </div>
                 <div class="dark:text-white">
-                    <label for="password">Password:</label>
-                    <input class="dark:text-white" type="password" [(ngModel)]="editedUser.password" name="password" id="password">
+                    <label for="is_enable">Is Enable:</label>
+                    <select class="dark:text-white" [(ngModel)]="editedUser.is_enable" name="is_enable" id="is_enable">
+                        <option disabled selected value="">Select...</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
                 </div>
 
                 <div class="modal-buttons p-2">

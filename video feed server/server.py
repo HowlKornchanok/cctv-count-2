@@ -14,7 +14,7 @@ lock = threading.Lock()
 # initialize a flask object
 app = Flask(__name__)
  
-source = "rtsp://wrpcamera.autoddns.com:1027/profile2/"
+source = "rtsp://admin:123456@wrpcamera2.autoddns.com:1027/profile2/"
 cap = cv2.VideoCapture(source)
 time.sleep(2.0)
 

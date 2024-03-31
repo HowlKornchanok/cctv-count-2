@@ -1,184 +1,241 @@
-import { Component, OnDestroy, OnInit ,effect } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { ChartOptions } from 'src/app/shared/models/chart-options';
-import { SumVehDataService } from 'src/app/core/services/sum-veh-data.service';
-import { SumVehByHourService } from 'src/app/core/services/sum-veh-by-hour.service';
 import { ThemeService } from 'src/app/core/services/theme.service';
 import { LanguageService } from 'src/app/core/services/language.service';
+import { FormsModule } from '@angular/forms';
+import { VehicleDataService } from 'src/app/core/services/vehicledata.service';
 
+interface VehicleData {
+  v_type: number;
+  record_time: string;
+}
+
+interface ChartData {
+  title: string;
+  value: number;
+}
 @Component({
     selector: '[api-stacked-column]',
     templateUrl: './api-stacked-column.component.html',
     standalone: true,
-    imports: [NgApexchartsModule],
+    imports: [NgApexchartsModule, FormsModule],
     styles: [],
-    providers: [SumVehDataService , SumVehByHourService]
+    providers: [VehicleDataService]
 })
 export class ApiStackedColumnComponent implements OnInit, OnDestroy {
-  public jsonData: any[] = [];
-  public chartOptions: Partial<ChartOptions> = {};
-  private dataServiceSubscription: Subscription | undefined;
-  public currentFilter: string = '1day';
-  currentLanguage : string = 'th';
+  private currentFilter: string = 'all'; // Default filter value
+  currentLanguage: string = 'th';
   translations = this.languageService.translations
+  jsonData: VehicleData[] = [];
+  public chartOptions: Partial<ChartOptions> = {};
+  public typeSeriesData: { [type: string]: { date: string; value: number }[] } = {};
+
+  selectedFilter: string = '90days';
+  public type_1: VehicleData[] = [];
+  public type_2: VehicleData[] = [];
+  public type_3: VehicleData[] = [];
+  public type_4: VehicleData[] = [];
+  public type_5: VehicleData[] = [];
+  public type_6: VehicleData[] = [];
+  public type_7: VehicleData[] = [];
 
   constructor(
-    private dataService: SumVehDataService,
-    private dataServiceHour: SumVehByHourService,
-    private themeService : ThemeService,
-    private languageService : LanguageService
-  ) {
+    private languageService: LanguageService,
+    private vehicleDataService: VehicleDataService) {}
 
-    effect(() => {
-      this.chartOptions.tooltip = {
-        theme: this.themeService.themeChanged(),
-      };
-    });
-  }
-  
   ngOnInit(): void {
-    // Load data when component initializes
-    this.loadData();
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     });
-  }
-  
-  ngOnDestroy(): void {
-    // Unsubscribe from data service subscription when component is destroyed
-    if (this.dataServiceSubscription) {
-      this.dataServiceSubscription.unsubscribe();
-    }
+    this.loadInitialData();
   }
 
-  private loadData(): void {
-    // Load data based on current filter selection
-    if (this.currentFilter === '1day') {
-      // Use the hourly service for 1 day filter
-      this.dataServiceHour.getData().subscribe(
-        (data) => {
-          this.jsonData = this.filterData(data, this.currentFilter);
-          this.chartOptions = this.generateChartOptions(this.jsonData);
-        },
-        (error) => {
-          console.error('Error fetching data for 1 day:', error);
-        }
-      );
-    } else {
-      // Use the daily service for other filters
-      this.dataService.getData().subscribe(
-        (data) => {
-          this.jsonData = this.filterData(data, this.currentFilter);
-          this.chartOptions = this.generateChartOptions(this.jsonData);
-        },
-        (error) => {
-          console.error('Error fetching data:', error);
-        }
-      );
-    }
+  loadInitialData(): void {
+    this.loadData(this.selectedFilter);
   }
 
-  changeFilter(event: any): void {
-    // Update current filter and reload data when filter selection changes
-    this.currentFilter = event.target.value;
-    this.loadData();
+  loadData(filter: string): void {
+    const { startDate, endDate } = this.calculateDateRange(filter);
+    const startTime = this.getFormattedDateTime(startDate);
+    const endTime = this.getFormattedDateTime(endDate);
+
+    this.vehicleDataService.getVehicleData(startTime, endTime).subscribe(
+      (data) => {
+        this.jsonData = data.msg;
+        const seriesData = this.separateDataByTypeAndDate();
+        this.chartOptions = this.generateChartOptions(seriesData);
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
 
-  private filterData(data: any[], interval: string): any[] {
-    // Filter data based on the selected interval
+  calculateDateRange(filter: string): { startDate: Date; endDate: Date } {
     const today = new Date();
-    const isLast1Day = this.currentFilter === '1day';
-    let filterDate: Date;
-    let categories;
-  
-    if (isLast1Day) {
-      // Handle date filtering for the last 1 day
-    } else {
-      // Combine data for the same date
-      const groupedData = this.groupDataByDate(data);
-      categories = Object.keys(groupedData);
-    }
-  
-    switch (interval) {
+    let startDate = new Date();
+
+    switch (filter) {
       case '1day':
-        filterDate = new Date(today);
-        filterDate.setDate(today.getDate() - 1);
+        startDate.setDate(today.getDate() - 1);
         break;
       case '7days':
-        filterDate = new Date(today);
-        filterDate.setDate(today.getDate() - 7);
+        startDate.setDate(today.getDate() - 7);
         break;
-      case '1month':
-        filterDate = new Date(today);
-        filterDate.setMonth(today.getMonth() - 1);
+      case '30days':
+        startDate.setDate(today.getDate() - 30);
+        break;
+      case '90days':
+        startDate.setDate(today.getDate() - 90);
         break;
       case '1year':
-        filterDate = new Date(today);
-        filterDate.setFullYear(today.getFullYear() - 1);
+        startDate.setDate(today.getDate() - 365);
         break;
       default:
-        // If interval is not recognized, return the original data
-        return data;
+        break;
     }
 
-    return data.filter((item) => {
-      const itemDate = new Date(item.date);
-      return itemDate >= filterDate && itemDate <= today;
-    });
+    return { startDate, endDate: today };
   }
 
-  private groupDataByDate(data: any[]): { [key: string]: any[] } {
-    // Group data by date
-    return data.reduce((result, entry) => {
-      const dateKey = entry.date;
-      result[dateKey] = result[dateKey] || [];
-      result[dateKey].push(entry);
-      return result;
-    }, {});
+  private getFormattedDateTime(dateTime: Date): string {
+    const year = dateTime.getFullYear();
+    const month = this.padNumber(dateTime.getMonth() + 1);
+    const day = this.padNumber(dateTime.getDate());
+    const hours = this.padNumber(dateTime.getHours());
+    const minutes = this.padNumber(dateTime.getMinutes());
+    const seconds = this.padNumber(dateTime.getSeconds());
+    return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
   }
 
-  private generateChartOptions(data: any[]): Partial<ChartOptions> {
-    // Generate chart options based on the filtered data
-    const isLast1Day = this.currentFilter === '1day';
-    let categories;
-  
-    if (isLast1Day) {
-      categories = data.map((entry) => entry.time);
-    } else {
-      categories = Object.keys(this.groupDataByDate(data));
-    }
-  
-    const seriesData = [
-      {
-        name: 'Truck',
-        data: data.map(entry => entry.sumTruck),
-        type: 'bar',
-      },
-      {
-        name: 'Car',
-        data: data.map(entry => entry.sumCar),
-        color: '#009900',
-        type: 'bar',
-      },
-      {
-        name: 'Motorbike',
-        data: data.map(entry => entry.sumMotorcycle),
-        type: 'bar',
-      },
-      {
-        name: 'Bus',
-        data: data.map(entry => entry.sumBus),
-        type: 'bar'
-      },
-      {
-        name: 'Total',
-        type: 'line',
-        data: data.map(entry => entry.sumVehicle),
-        color: '#FF0000'
+  private padNumber(num: number): string {
+    return num.toString().padStart(2, '0');
+  }
+
+  ngOnDestroy(): void {}
+
+  changeFilter(event: any): void {
+    this.currentFilter = event.target.value;
+    this.loadInitialData();
+  }
+
+  private translateLabel(label: string): string {
+    return this.translations[this.currentLanguage][label] || label;
+  }
+
+  private separateDataByTypeAndDate(): { [type: string]: { date: string; value: number }[] } {
+    const dataGroupedByDate: { [date: string]: VehicleData[] } = {};
+
+    this.jsonData.forEach((item) => {
+      const date = new Date(item.record_time);
+      let key;
+
+      if (this.selectedFilter === '1year') {
+        key = `${date.getFullYear()}-${date.getMonth() + 1}`;
+      } else if (this.selectedFilter === '1day') {
+        key = `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}-${date.getHours()}`;
+      } else {
+        key = date.toDateString();
       }
-    ];
-    
+
+      if (!dataGroupedByDate[key]) {
+        dataGroupedByDate[key] = [];
+      }
+      dataGroupedByDate[key].push(item);
+    });
+
+    const categories: string[] = Object.keys(dataGroupedByDate);
+    const typeseriesData: { [type: string]: { date: string; value: number }[] } = {
+      'type_1': [],
+      'type_2': [],
+      'type_3': [],
+      'type_4': [],
+      'type_5': [],
+      'type_6': [],
+      'type_7': [],
+    };
+
+    categories.forEach((date) => {
+      const dataForDate = dataGroupedByDate[date];
+      let sum_type_1 = 0;
+      let sum_type_2 = 0;
+      let sum_type_3 = 0;
+      let sum_type_4 = 0;
+      let sum_type_5 = 0;
+      let sum_type_6 = 0;
+      let sum_type_7 = 0;
+
+      dataForDate.forEach((item) => {
+        switch (item.v_type) {
+          case 1:
+            sum_type_1 += 1;
+            break;
+          case 2:
+            sum_type_2 += 1;
+            break;
+          case 3:
+            sum_type_3 += 1;
+            break;
+          case 4:
+            sum_type_4 += 1;
+            break;
+          case 5:
+            sum_type_5 += 1;
+            break;
+          case 6:
+            sum_type_6 += 1;
+            break;
+          case 7:
+            sum_type_7 += 1;
+            break;
+          default:
+            break;
+        }
+      });
+
+      typeseriesData['type_1'].push({ date: date, value: sum_type_1 });
+      typeseriesData['type_2'].push({ date: date, value: sum_type_2 });
+      typeseriesData['type_3'].push({ date: date, value: sum_type_3 });
+      typeseriesData['type_4'].push({ date: date, value: sum_type_4 });
+      typeseriesData['type_5'].push({ date: date, value: sum_type_5 });
+      typeseriesData['type_6'].push({ date: date, value: sum_type_6 });
+      typeseriesData['type_7'].push({ date: date, value: sum_type_7 });
+    });
+
+    return typeseriesData;
+  }
+
+  private generateChartOptions(data: { [type: string]: { date: string; value: number }[] }): Partial<ChartOptions> {
+    let categories;
+    if (data && Object.keys(data).length > 0) {
+      categories = data[Object.keys(data)[0]].map(entry => entry.date);
+    }
+  
+    // Check if categories is defined before using it
+    const total = categories ? categories.map(date => {
+      return Object.values(data).reduce((acc, curr) => {
+        const entry = curr.find(item => item.date === date);
+        if (entry) {
+          return acc + entry.value;
+        }
+        return acc;
+      }, 0);
+    }) : [];
+  
+    const seriesData = Object.keys(data).map(type => ({
+      name: type,
+      data: data[type].map(entry => entry.value),
+      type: 'bar'
+    }));
+  
+    // Adding the new series for "total"
+    seriesData.push({
+      name: "total",
+      type: "line",
+      data: total
+    });
+  
     return {
       series: seriesData,
       chart: {
@@ -196,7 +253,7 @@ export class ApiStackedColumnComponent implements OnInit, OnDestroy {
       },
       dataLabels: {
         enabled: true,
-        enabledOnSeries: [4]
+        enabledOnSeries: [7]
       },
       responsive: [
         {
@@ -218,7 +275,7 @@ export class ApiStackedColumnComponent implements OnInit, OnDestroy {
       },
       xaxis: {
         type: 'category',
-        categories: categories
+        categories: categories || [] // Provide an empty array if categories is undefined
       },
       legend: {
         position: 'bottom',
@@ -229,6 +286,6 @@ export class ApiStackedColumnComponent implements OnInit, OnDestroy {
       fill: {
         opacity: 0.9
       }
-    };    
+    };
   }
-}
+}  

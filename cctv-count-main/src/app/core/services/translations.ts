@@ -22,6 +22,8 @@ export const translations: { [key: string]: { [key: string]: string } } = {
     'Last 1 Day': '1 วันที่ผ่านมา',
     'Last 7 Days': '7 วันที่ผ่านมา',
     'Last 1 Month': '1 เดือนที่ผ่านมา',
+    'Last 30 Days': '30 วันที่ผ่านมา',
+    'Last 90 Days': '90 วันที่ผ่านมา',
     'Analytics': 'การวิเคราะห์',
     'History': 'ประวัติ',
     'Menu' : 'เมนู',
@@ -44,6 +46,8 @@ export const translations: { [key: string]: { [key: string]: string } } = {
     'Vehicle Type': 'ประเภทรถ',
     'Refresh' : 'รีเฟรช',
     'Cameras': 'กล้อง',
+    'Last 1 Year' : '1 ปีที่ผ่านมา',
+    
     
 
   },
@@ -70,6 +74,9 @@ export const translations: { [key: string]: { [key: string]: string } } = {
     'Last 1 Day': 'Last 1 Day',
     'Last 7 Days': 'Last 7 Days',
     'Last 1 Month': 'Last 1 Month',
+    'Last 30 Days': 'Last 30 Days',
+    'Last 90 Days': 'Last 90 Days',
+    'Last 1 Year' : 'Last 1 Year',
     'Analytics': 'Analytics',
     'History': 'History',
     'Menu' : 'เมนู',

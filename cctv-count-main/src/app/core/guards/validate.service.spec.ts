@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { PCUPhaseDataService } from './pcu-phase-data.service';
+import { ValidateService } from './validate.service';
 
-describe('PCUPhaseDataService', () => {
-  let service: PCUPhaseDataService;
+describe('ValidateService', () => {
+  let service: ValidateService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(PCUPhaseDataService);
+    service = TestBed.inject(ValidateService);
   });
 
   it('should be created', () => {

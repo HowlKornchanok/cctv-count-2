@@ -10,16 +10,16 @@ import { defaults as defaultControls} from 'ol/control.js';
 import { MapModalComponent } from './map-modal/map-modal.component';
 import { ZoomToCentralPin } from './zoomto-central-pin/zoomto-central-pin.component';
 import { ModalService } from './services/modal.service';
-import { MapDataService } from './services/map-data.service';
-import { Subscription } from 'rxjs';
 
+import { Subscription } from 'rxjs';
+import { StationDataService } from 'src/app/core/services/station-data.service';
 @Component({
   selector: '[map]',
   standalone: true,
   imports: [CommonModule,MapModalComponent],
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
-  providers: [MapDataService]
+  providers: [StationDataService]
 })
 export class MapComponent implements OnInit,OnDestroy {
   map!: Map;
@@ -34,46 +34,75 @@ export class MapComponent implements OnInit,OnDestroy {
     }
   }
 
-  constructor(private modalDataService: ModalService, private mapDataService: MapDataService) {}
+  constructor(
+    private modalDataService: ModalService,
+    private stationDataService: StationDataService ) {}
 
-  getCenterCoordinates(): number[] {
-    return [this.jsonData[0].lon, this.jsonData[0].lat];
+    getCenterCoordinates(stationData: any[]): number[] {
+      if (stationData.length === 0) {
+        return [0, 0]; // Default coordinates if no station data available
+      }
+      const totalLat = stationData.reduce((sum, station) => sum + station.lat, 0);
+      const totalLon = stationData.reduce((sum, station) => sum + station.lon, 0);
+      const avgLat = totalLat / stationData.length;
+      const avgLon = totalLon / stationData.length;
+      return [avgLon, avgLat];
+    }
+    
+    ngOnInit(): void {
+      this.stationDataService.getStationData().subscribe(
+        (response) => {
+          const stationData = response.msg;
+    
+          this.map = new Map({
+            controls: defaultControls(),
+            layers: [
+              new TileLayer({
+                source: new OSM(),
+              }),
+            ],
+            target: 'map',
+            view: new View({
+              center: fromLonLat(this.getCenterCoordinates(stationData)),
+              zoom: 13,
+              maxZoom: 20,
+            }),
+          });
+    
+          // Add pins for each station location
+          stationData.forEach((station: any) => {
+            const coordinates = [station.lon, station.lat];
+            this.addPin(coordinates, station.station_name);
+          });
+    
+          // Create ZoomToCentralPin control after map initialization
+          const zoomControl = new ZoomToCentralPin(this.map, this.getCenterCoordinates(stationData));
+          this.map.addControl(zoomControl);
+        },
+        (error) => {
+          console.error('Failed to fetch station data:', error);
+        }
+      );
+    }
+    
+  
+  
+
+  loadStationData(): void {
+    // Call the method to get station data from StationDataService
+    this.stationDataService.getStationData().subscribe(
+      (data) => {
+        // Handle the retrieved station data
+        console.log('Station data:', data);
+        // Process the data as needed, e.g., add pins to the map
+      },
+      (error) => {
+        // Handle errors if any
+        console.error('Failed to fetch station data:', error);
+      }
+    );
   }
-  ngOnInit(): void {
-    this.mapDataService.getMapData().subscribe(data => {
-      this.jsonData = data;
-      console.log('Camera locations fetched successfully:', this.jsonData);
-      const center = [this.jsonData[0].lon, this.jsonData[0].lat];
-      
 
-      // Initialize the map
-      this.map = new Map({
-        controls: defaultControls().extend([
-          new ZoomToCentralPin(this.map, center)
-        ]),
-        layers: [
-          new TileLayer({
-            source: new OSM(),
-          }),
-        ],
-        target: 'map',
-        view: new View({
-          center: fromLonLat(center),
-          zoom: 13,
-          maxZoom: 20,
-        }),
-      });
-      const zoomToCentralPinControl = new ZoomToCentralPin(this.map, center);
-      this.map.addControl(zoomToCentralPinControl);
-
-      
-      this.jsonData.forEach(location => {
-        const coordinates = [location.lon, location.lat];
-        this.addPin(coordinates, location.location_name);
-        console.log(coordinates);
-      });
-    });
-  }
   
   
   addPin(coordinates: number[], label: string): void {
@@ -95,16 +124,15 @@ export class MapComponent implements OnInit,OnDestroy {
       stopEvent: false,
     });
 
-
-
     pinElement.addEventListener('click', () => {
-      const location = this.jsonData.find(item => item.lat === coordinates[1] && item.lon === coordinates[0]);
-      if (location) {
-        this.openMapModal(location);
+      const station = this.jsonData.find(item => item.lat === coordinates[1] && item.lon === coordinates[0]);
+      if (station) {
+        this.openMapModal(station.id);
       } else {
-        console.error(`Location with coordinates ${coordinates} not found.`);
+        console.error(`Station not found for coordinates: ${coordinates}`);
       }
     });
+    
     
     
 
@@ -146,11 +174,11 @@ export class MapComponent implements OnInit,OnDestroy {
     });
   }
 
-
-  openMapModal(location: any): void {
+  openMapModal(station: any): void {
     this.showModal = true;
-    this.modalDataService.setLocationData(location.location_no);
+    this.modalDataService.setLocationData(station.id); // Assuming the station object has an 'id' property
   }
+  
   
 
   closeModal() {

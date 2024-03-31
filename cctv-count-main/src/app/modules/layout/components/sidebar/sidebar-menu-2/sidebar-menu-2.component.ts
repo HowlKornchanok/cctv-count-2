@@ -6,7 +6,6 @@ import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { NgFor, NgClass, NgTemplateOutlet, NgIf } from '@angular/common';
 import { ThemeService } from 'src/app/core/services/theme.service';
-import { AuthService } from 'src/app/core/guards/auth.service';
 import { LanguageService } from 'src/app/core/services/language.service';
 
 @Component({
@@ -30,7 +29,6 @@ export class SidebarMenu2Component implements OnInit {
   constructor(
     public menu2Service: Menu2Service,
     public themeService: ThemeService,
-    private authService: AuthService,
     private router: Router,
     private languageService: LanguageService
   ) {}
@@ -65,7 +63,6 @@ export class SidebarMenu2Component implements OnInit {
   }
 
   logout(): void {
-    this.authService.logout();
     this.router.navigate(['/auth/sign-in']);
     console.log('User logged out'); 
   }

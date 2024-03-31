@@ -17,11 +17,11 @@ import { LanguageService } from 'src/app/core/services/language.service';
 })
 export class MapModalComponent implements OnInit, OnDestroy {
   @Input() showModal: boolean = false;
-  @Input() locationNo?: number;
+  @Input() stationId?: number; // Change locationNo to stationId
   public jsonData: any[] = [];
   @Output() closeModalEvent = new EventEmitter();
   public locationData: LocationData[] = [];
-  public locationNumberNum: number = 0; // Initialize with a default value
+  public stationIdNum: number = 0; // Initialize with a default value
   private locationDataSubscription!: Subscription;
   currentLanguage!: string;
   translations = this.languageService.translations
@@ -29,13 +29,11 @@ export class MapModalComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.locationDataSubscription = this.modalService.locationData$.subscribe(
-      (locationNumber) => {
-        // Convert locationNumber to number
-        this.locationNumberNum = Number(locationNumber);
-        this.locationData = this.jsonData.filter(item => item.location_no === this.locationNumberNum);
-        console.log(this.locationNumberNum);
-        
-        
+      (stationId) => { // Change locationNumber to stationId
+        // Convert stationId to number
+        this.stationIdNum = Number(stationId); // Change locationNumberNum to stationIdNum
+        this.locationData = this.jsonData.filter(item => item.id === this.stationIdNum); // Change location_no to id
+        console.log(this.stationIdNum);
       }
     );
   

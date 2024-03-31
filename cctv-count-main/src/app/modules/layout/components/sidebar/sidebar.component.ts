@@ -7,7 +7,6 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import { NgClass, NgIf } from '@angular/common';
 import { SidebarMenu2Component } from './sidebar-menu-2/sidebar-menu-2.component';
 import { Menu2Service } from '../../services/menu2.service';
-import { AuthService } from 'src/app/core/guards/auth.service';
 import { Router } from '@angular/router';
 import { LanguageService } from 'src/app/core/services/language.service';
 @Component({
@@ -34,7 +33,7 @@ export class SidebarComponent implements OnInit {
       this.currentLanguage = language;
     });
   }
-  constructor( public menuService: MenuService ,public menu2Service: Menu2Service, private authService: AuthService , private router: Router, private languageService: LanguageService) {}
+  constructor( public menuService: MenuService ,public menu2Service: Menu2Service , private router: Router, private languageService: LanguageService) {}
 
 
 

@@ -1,8 +1,9 @@
 <!-- Button to open the modal -->
-<button (click)="openModal()" class="bg-blue-500 text-white px-4 py-2 rounded-md">User Configuration</button>
+<button (click)="openModal()" class="bg-blue-500 text-white w-full py-2 rounded-md">User Configuration</button>
+
 
 <!-- Modal -->
-<div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
+<div *ngIf="showModal" id="userModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
   <div class="bg-white dark:bg-night-800 rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
     <!-- Modal header -->
     <div class="sticky top-0 flex justify-between items-center mb-4">
@@ -21,25 +22,31 @@
             <th class="p-2">User ID</th>
             <th class="p-2">Username</th>
             <th class="p-2">Role</th>
+            <th class="p-2">Enable</th>
             <th class="p-2">Actions</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of users">
-            <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ user.id }}</td>
-            <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ user.username }}</td>
-            <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ user.role }}</td>
-            <td class="text-center">
-              <!-- Edit button -->
-              <button (click)="editUser(user)" class="bg-blue-500 rounded-md px-4 mr-2">Edit</button>
-              <!-- Delete button -->
-              <button (click)="deleteUser(user)" class="bg-red-500 rounded-md px-4">Delete</button>
-            </td>
-          </tr>
-        </tbody>
-        <button (click)="addUser()" class="bg-blue-500 rounded-md px-4 ml-2">Add User</button>
+            <tr *ngFor="let userData of users">
+              <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ userData.id }}</td>
+              <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ userData.user_name }}</td>
+              <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ userData.role }}</td>
+              <td class="text-center font-bold text-gray-900 dark:text-night-50">{{ userData.is_enable }}</td>
+              <td class="text-center">
+                <!-- Edit button -->
+                <button (click)="openEditModal(userData)" class="bg-blue-500 rounded-md px-4 mr-2">Edit</button>
+                <!-- Delete button -->
+                <button class="bg-red-500 rounded-md px-4">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+          
       </table>
     </div>
+    <!-- Add User button -->
+    <button class="bg-blue-500 rounded-md px-4 ml-2">Add User</button>
   </div>
 </div>
-<app-user-edit-modal *ngIf="showEditModal" [user]="selectedUser" (saveChangesAction)="saveChanges($event)" (cancelAction)="closeEditModal()"></app-user-edit-modal>
+
+<!-- Edit User Modal -->
+<app-user-edit-modal *ngIf="showEditModal" [user]="selectedUser"  (cancelAction)="closeEditModal()"></app-user-edit-modal>

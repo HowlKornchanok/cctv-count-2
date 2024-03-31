@@ -6,30 +6,33 @@
   <div class="flex-col col-span-2 px-4 py-2.5 text-xs font-semibold text-gray-500">
     <!-- Translate the label -->
     <label for="timeRange" class="flex-none rounded-md px-4 py-2.5 text-xs font-semibold text-gray-500">{{ translations[currentLanguage]['Select Time Range'] }}</label>
-    <select id="timeRange" class="rounded-md p-2 text-left text-gray-900 dark:text-night-50" (change)="changeFilter($event)">
+    <select id="timeRange" class="rounded-md p-2 text-left col-1 text-gray-900 dark:text-night-50" [(ngModel)]="selectedFilter" (change)="loadData(selectedFilter)">
       <option value="1day">{{ translations[currentLanguage]['Last 1 Day'] }}</option>
       <option value="7days">{{ translations[currentLanguage]['Last 7 Days'] }}</option>
-      <option value="1month">{{ translations[currentLanguage]['Last 1 Month'] }}</option>
+      <option value="30days">{{ translations[currentLanguage]['Last 30 Days'] }}</option>
+      <option value="90days">{{ translations[currentLanguage]['Last 90 Days'] }}</option>
+      <option value="1year">{{ translations[currentLanguage]['Last 1 Year'] }}</option>
+      
     </select>
   </div>
 </div>
 
 
-    <apx-chart style="width: 100%; height: 300px"
-      [series]="chartOptions.series!"
-      [chart]="chartOptions.chart!"
-      [legend]="chartOptions.legend!"
-      [dataLabels]="chartOptions.dataLabels!"
-      [fill]="chartOptions.fill!"
-      [stroke]="chartOptions.stroke!"
-      [xaxis]="chartOptions.xaxis!"
-      [yaxis]="chartOptions.yaxis!"
-      [responsive]="chartOptions.responsive!"
-      [states]="chartOptions.states!"
-      [tooltip]="chartOptions.tooltip!"
-      [colors]="chartOptions.colors!"
-      [grid]="chartOptions.grid!"
-      [title]="chartOptions.title!"
-      [theme]="chartOptions.theme!"
-      >
-    </apx-chart>
+<apx-chart class="min-h-[400px]" style="width: 100%;"
+[series]="chartOptions.series!"
+[chart]="chartOptions.chart!"
+[legend]="chartOptions.legend!"
+[dataLabels]="chartOptions.dataLabels!"
+[fill]="chartOptions.fill!"
+[stroke]="chartOptions.stroke!"
+[xaxis]="chartOptions.xaxis!"
+[yaxis]="chartOptions.yaxis!"
+[responsive]="chartOptions.responsive!"
+[states]="chartOptions.states!"
+[tooltip]="chartOptions.tooltip!"
+[colors]="chartOptions.colors!"
+[grid]="chartOptions.grid!"
+[title]="chartOptions.title!"
+[theme]="chartOptions.theme!"
+>
+</apx-chart>
