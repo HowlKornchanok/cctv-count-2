@@ -13,23 +13,36 @@ export class UserService {
 
   getUserList(): Observable<any> {
     // Retrieve transaction key from session storage
-    const accessToken = sessionStorage.getItem('accessToken');
-    const transactionBody = sessionStorage.getItem('UserTransaction');
-    console.log('accessToken: ', accessToken);
-    console.log('transaction body: ', transactionBody);
-    if (!accessToken || !transactionBody) {
-      // Handle case where access token or transaction key is not available
-      return throwError('Access token or transaction key not found in session storage');
-    }
+    const userToken = sessionStorage.getItem('accessToken');
+    const username = sessionStorage.getItem('uname');
+    // Check if username is not null before encoding
+    const encodedUsername = username ? btoa(username) : '';
 
-    // Set the Authorization header with the access token
+    // Construct the request payload
+    const payload = {
+      id: '',
+      auth_data: {
+        uname: encodedUsername
+      },
+      detail: {
+      }
+    };
+
+    const jsonString = JSON.stringify(payload);
+    const encodedPayload = btoa(jsonString);
+    const requestBody = {
+      transaction: encodedPayload
+    };
+
+
+    // Set headers including the user token
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${accessToken}`
+      'Authorization': `Bearer ${userToken}`
     });
 
     // Make HTTP POST request to get user list with headers and transaction key as the body
-    return this.http.post<any>(`${this.apiUrl}/api/data_view/get_user_list`, JSON.parse(transactionBody), { headers }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/data_view/get_user_list`, requestBody, { headers }).pipe(
       tap(response => {
         console.log('Server response:', response);
       }),

@@ -9,8 +9,7 @@ import { ValidateService } from './validate.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl1 = 'http://localhost:9001';
-  private apiUrl0 = 'http://localhost:9000';
+  private apiUrl = 'https://150.95.31.129';
 
   constructor(
     private http: HttpClient,
@@ -50,21 +49,17 @@ export class AuthService {
     
 
     // Make HTTP POST request to login
-    return this.http.post<any>(`${this.apiUrl1}/api/auth/login`, message).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/auth/login`, message).pipe(
       catchError(error => {
         // Handle authentication failure
         return throwError(error.error.msg || 'Authentication failed');
-      }),
-      switchMap(response => {
-        // If login successful, call getToken
-        return this.getToken(username, password);
-      }),
+      })
     );
   }
 
   private getToken(username: string, password: string): Observable<any> {
     // Make HTTP POST request to get JWT token
-    return this.http.post<any>(`${this.apiUrl0}/api/generate`, { uname: username, ukey: password }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/generate`, { uname: username, ukey: password }).pipe(
       catchError(error => {
         // Handle token generation failure
         return throwError(error.error.msg || 'Failed to generate token');
@@ -97,7 +92,7 @@ export class AuthService {
     });
 
     // Make HTTP POST request to get user data with headers
-    return this.http.post<any>(`${this.apiUrl1}/api/auth/get_user_data`, message, { headers }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/auth/get_user_data`, message, { headers }).pipe(
       catchError(error => {
         // Handle error
         return throwError(error.error.msg || 'Failed to get user data');

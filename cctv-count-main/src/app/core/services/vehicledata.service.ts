@@ -46,7 +46,6 @@ export class VehicleDataService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
-    console.log(requestBody);
     // Make the POST request
     return this.http.post<any>(this.apiUrl, requestBody, { headers }).pipe(
       tap(response => console.log('Server Response:', response)), // Log the response
