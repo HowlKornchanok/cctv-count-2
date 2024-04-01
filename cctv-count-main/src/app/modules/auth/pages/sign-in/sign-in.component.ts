@@ -64,7 +64,7 @@ export class SignInComponent {
             console.log('Login successful', response);
             if (response.status === 200) {
                 // Store token in session storage
-                sessionStorage.setItem('accessToken', response.access_token);
+                sessionStorage.setItem('accessToken', response.msg);
                 
                 // Store username in session storage as "uname"
                 sessionStorage.setItem('uname', user);
