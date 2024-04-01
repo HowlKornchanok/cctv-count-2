@@ -7,7 +7,7 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class VehicleDataService {
-  private apiUrl = 'http://150.95.31.129/api/data_view/get_vehicle_data'; 
+  private apiUrl = 'https://150.95.31.129/api/data_view/get_vehicle_data'; 
 
   constructor(private http: HttpClient) {}
 
@@ -34,23 +34,24 @@ export class VehicleDataService {
       }
     };
 
-    const jsonString = JSON.stringify(payload);
-    const encodedPayload = btoa(jsonString);
-    const requestBody = {
-      transaction: encodedPayload
+
+    const payloadJsonString = JSON.stringify(payload);
+
+    // Construct the message object with the required format
+    const message = {
+      transaction: btoa(payloadJsonString)
     };
-
-
-    // Set headers including the user token
+    console.log(message);
+    // Set the Authorization header with the bearer token
     const headers = new HttpHeaders({
-      'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
-    // Make the POST request
-    return this.http.post<any>(this.apiUrl, requestBody, { headers }).pipe(
-      tap(response => console.log('Server Response:', response)), // Log the response
+
+    // Make HTTP POST request to get user data with headers
+    return this.http.post<any>(`${this.apiUrl}`, message, { headers }).pipe(
       catchError(error => {
-        return throwError(error);
+        // Handle error
+        return throwError(error.error.msg || 'Failed to get vehicle data');
       })
     );
   }

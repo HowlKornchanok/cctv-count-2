@@ -63,6 +63,7 @@ export class AuthService {
 
   getUserData(username: string, password: string, token: string): Observable<any> {
     // Construct payload for getting user data
+    const test = sessionStorage.getItem('accessToken')
     const encodedUsername = btoa(username);
     const encodedPassword = btoa(password);
     const payload = {
@@ -82,7 +83,7 @@ export class AuthService {
 
     // Set the Authorization header with the bearer token
     const headers = new HttpHeaders({
-      'Authorization': `Bearer ${token}`
+      'Authorization': `Bearer ${test}`
     });
 
     // Make HTTP POST request to get user data with headers

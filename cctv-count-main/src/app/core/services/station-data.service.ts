@@ -7,7 +7,7 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class StationDataService {
-  private apiUrl = 'http://150.95.31.129';
+  private apiUrl = 'https://150.95.31.129';
 
   constructor(private http: HttpClient) {}
 

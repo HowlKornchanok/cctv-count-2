@@ -311,7 +311,7 @@ export class APIDonutComponent implements OnInit, OnDestroy {
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 1,
-          stops: [0, 100]
+          
         }
       },
       stroke: {
