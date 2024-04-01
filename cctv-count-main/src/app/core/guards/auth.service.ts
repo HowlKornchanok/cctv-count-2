@@ -55,19 +55,11 @@ export class AuthService {
         // Handle authentication failure
         return throwError(error.error.msg || 'Authentication failed');
       }),
-
+     
     );
   }
 
-  private getToken(username: string, password: string): Observable<any> {
-    // Make HTTP POST request to get JWT token
-    return this.http.post<any>(`${this.apiUrl0}/api/generate`, { uname: username, ukey: password }).pipe(
-      catchError(error => {
-        // Handle token generation failure
-        return throwError(error.error.msg || 'Failed to generate token');
-      })
-    );
-  }
+
 
   getUserData(username: string, password: string, token: string): Observable<any> {
     // Construct payload for getting user data

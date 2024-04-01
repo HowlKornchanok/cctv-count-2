@@ -75,7 +75,7 @@ validateToken(token: string): Observable<any> {
   // Log remaining time before token expiry
   this.showRemainingTime(token);
 
-  return this.http.post<any>('http://localhost:9000/api/validate', {}, { headers }).pipe(
+  return this.http.post<any>('https://150.95.31.129/api/validate', {}, { headers }).pipe(
     tap(response => {
       console.log('Token Validation response:', response);
       if (response.status === 200) {
