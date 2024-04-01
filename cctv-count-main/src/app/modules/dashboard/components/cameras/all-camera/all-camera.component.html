@@ -4,7 +4,7 @@
       <ng-container *ngFor="let location of allLocations">
         <div class="relative bg-white dark:bg-night-800 p-4 rounded-lg shadow-md">
             <h2 class="text-lg font-semibold mb-2 dark:text-white cursor-pointer"
-                (click)="toggleCollapse(location)">{{ location.location_name }}</h2>
+                (click)="toggleCollapse(location)">{{ location.station_name }}</h2>
             <div *ngIf="!location.collapsed" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                 <div *ngFor="let camera of location.cameras" class="relative mb-4 min-h-24">
                     <div class="relative" *ngIf="!location.collapsed">

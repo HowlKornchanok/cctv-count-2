@@ -47,9 +47,7 @@ export class AuthService {
       transaction: btoa(UserPayloadJsonString)
     }
 
-    // Log the transaction
-    console.log('Login transaction:', message);
-    sessionStorage.setItem('UserTransaction', JSON.stringify(userMessage));
+    
 
     // Make HTTP POST request to login
     return this.http.post<any>(`${this.apiUrl1}/api/auth/login`, message).pipe(
@@ -64,7 +62,7 @@ export class AuthService {
     );
   }
 
-  getToken(username: string, password: string): Observable<any> {
+  private getToken(username: string, password: string): Observable<any> {
     // Make HTTP POST request to get JWT token
     return this.http.post<any>(`${this.apiUrl0}/api/generate`, { uname: username, ukey: password }).pipe(
       catchError(error => {

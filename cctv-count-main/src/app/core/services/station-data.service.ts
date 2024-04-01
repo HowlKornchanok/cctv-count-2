@@ -12,24 +12,39 @@ export class StationDataService {
   constructor(private http: HttpClient) {}
 
   getStationData(): Observable<any> {
-    // Retrieve access token and transaction key from session storage
-    const accessToken = sessionStorage.getItem('accessToken');
-    const transactionBody = sessionStorage.getItem('UserTransaction');
-    if (!accessToken || !transactionBody) {
-      return throwError('Access token or transaction key not found in session storage');
-    }
+    const userToken = sessionStorage.getItem('accessToken');
+    const username = sessionStorage.getItem('uname');
+    // Check if username is not null before encoding
+    const encodedUsername = username ? btoa(username) : '';
 
-    // Set headers with access token
+    // Construct the request payload
+    const payload = {
+      id: '',
+      auth_data: {
+        uname: encodedUsername
+      },
+      detail: {
+      }
+    };
+
+    const jsonString = JSON.stringify(payload);
+    const encodedPayload = btoa(jsonString);
+    const requestBody = {
+      transaction: encodedPayload
+    };
+
+
+    // Set headers including the user token
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
-      'Authorization': `Bearer ${accessToken}`
+      'Authorization': `Bearer ${userToken}`
     });
 
 
     
 
     // Make POST request to the API endpoint
-    return this.http.post<any>(`${this.apiUrl}/api/data_view/get_station_data`,JSON.parse(transactionBody), { headers }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/data_view/get_station_data`,requestBody, { headers }).pipe(
       tap(response => {
         console.log('Server response:', response);
       }),
