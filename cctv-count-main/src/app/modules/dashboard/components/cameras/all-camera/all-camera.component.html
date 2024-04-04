@@ -1,28 +1,40 @@
-<div class="container mx-auto px-4 py-8">
-  <app-larger-size *ngIf="showModal" [selectedCamera]="selectedCamera" (closeModal)="closeModal()"></app-larger-size>
-  <div class="grid grid-cols-1 lg:grid-cols-1 gap-6">
-      <ng-container *ngFor="let location of allLocations">
-        <div class="relative bg-white dark:bg-night-800 p-4 rounded-lg shadow-md">
-            <h2 class="text-lg font-semibold mb-2 dark:text-white cursor-pointer"
-                (click)="toggleCollapse(location)">{{ location.station_name }}</h2>
-            <div *ngIf="!location.collapsed" class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-                <div *ngFor="let camera of location.cameras" class="relative mb-4 min-h-24">
-                    <div class="relative" *ngIf="!location.collapsed">
-                        <img [src]="camera.streaming_link" alt="Camera Stream"
-                            class="max-h-48 w-full object-cover cursor-pointer" (click)="openModal(camera)">
-                        <div *ngIf="camera.status !== 'active'"
-                            class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center">
-                            <p class="text-white font-semibold">Warning: Camera {{ camera.camera_no }} is inactive</p>
-                        </div>
-                        <div *ngIf="camera.status === 'active'"
-                            class="absolute top-0 right-0 bg-black bg-opacity-50 text-white p-2">
-                            <p class="text-xs font-semibold">Camera No. {{ camera.camera_no }}</p>
-                            <p class="text-xs">{{ camera.status }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div *ngFor="let station of stationDataList" class="p-4 bg-whtite rounded-lg">
+    <h2 (click)="toggleCollapse(station)" class="cursor-pointer p-8 bg-white">
+      {{ station.station_name }}
+    </h2>
+    <div *ngIf="!station.collapsed" class="bg-white rounded-lg p-4 mt-2">
+      <div *ngIf="getCamerasForStation(station.id).length > 0; else noCameraData" class="mb-4">
+        <div *ngFor="let camera of getCamerasForStation(station.id)" class="mb-4">
+          <!-- Display camera information -->
+          <div class="mb-2">
+            <span class="font-semibold">Camera ID:</span> {{ camera.id }}
+          </div>
+          <div class="mb-2">
+            <span class="font-semibold">Camera URL:</span> {{ camera.camera_url }}
+          </div>
+          <!-- Add other camera properties as needed -->
+          <button (click)="openModal(camera)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">View Details</button>
         </div>
-      </ng-container>
+      </div>
+      <ng-template #noCameraData>
+        <p class="text-gray-500">No camera data available for this station.</p>
+      </ng-template>
+    </div>
   </div>
-</div>
+
+  
+  <!-- Modal -->
+  <div *ngIf="showModal" class="modal-overlay">
+    <div class="modal-content">
+      <h2>Camera Details</h2>
+      <div>
+        Camera ID: {{ selectedCamera?.id }}
+      </div>
+      <div>
+        Camera URL: {{ selectedCamera?.camera_url }}
+      </div>
+      <!-- Add other camera details as needed -->
+      <button (click)="closeModal()" class="close-button">Close</button>
+    </div>
+  </div>
+  

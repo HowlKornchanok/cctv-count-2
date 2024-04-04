@@ -1,0 +1,79 @@
+.station {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .station-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .station-header:hover {
+    color: blue;
+  }
+  
+  .arrow-up, .arrow-down {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .arrow-up {
+    transform: rotate(180deg);
+  }
+  
+  .station-details {
+    padding-left: 20px;
+  }
+  
+  .camera {
+    margin-top: 10px;
+  }
+  
+  .view-details-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .view-details-button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .close-button {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    background-color: #e0e0e0;
+  }
+  

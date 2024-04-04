@@ -7,8 +7,7 @@ import { CameraDataService } from 'src/app/core/services/camera-data.service';
 import { StationDataService } from 'src/app/core/services/station-data.service';
 
 interface StationData {
-  id: string; // Assuming id is of type string
-  // Add other properties here if available in stationData
+  id: string; 
 }
 @Component({
   selector: '[crud-camera]',
@@ -26,6 +25,14 @@ export class CRUDCameraComponent implements OnInit{
   public isNewCamera: boolean = false; // Flag to indicate if the selected camera is new or existing
   public showEditModal: boolean = false;
   public showModal: boolean = false;
+  public newCamera: any = {
+    name: '',
+    port: '',
+    csn: '',
+    url: '',
+    sid: ''
+  };
+  
 
 
   currentLanguage: string = 'th';
@@ -94,7 +101,12 @@ export class CRUDCameraComponent implements OnInit{
   openModal() {
     this.showModal = true;
   }
-
+  openModalnew () {
+    this.selectedCamera = this.newCamera
+    console.log(this.selectedCamera);
+    this.showEditModal = true;
+    
+  }
   // Method to close the modal
   closeModal() {
     this.showModal = false;
@@ -107,6 +119,33 @@ export class CRUDCameraComponent implements OnInit{
   getCamerasForStation(stationId: string): any[] {
     return this.cameraData.filter(camera => camera.station_id === stationId);
   }
+
+  addCamera(newCamera: any): void {
+    console.log("Adding new camera:", newCamera);
+    // Make HTTP request to add the new camera
+    // Upon success, add the new camera to the cameraData array
+    this.cameraData.push(newCamera);
+  }
+
+  // Method to update an existing camera
+  updateCamera(updatedCamera: any): void {
+    console.log("Updating camera:", updatedCamera);
+    // Make HTTP request to update the existing camera
+    // Upon success, update the cameraData array with the updated camera information
+    const index = this.cameraData.findIndex(camera => camera.id === updatedCamera.id);
+    if (index !== -1) {
+      this.cameraData[index] = updatedCamera;
+    }
+  }
+
+  // Method to delete a camera
+  deleteCamera(cameraToDelete: any): void {
+    console.log("Deleting camera:", cameraToDelete);
+    // Make HTTP request to delete the camera
+    // Upon success, remove the camera from the cameraData array
+    this.cameraData = this.cameraData.filter(camera => camera.id !== cameraToDelete.id);
+  }
+
 
 
 }
