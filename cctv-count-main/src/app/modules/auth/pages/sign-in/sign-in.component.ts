@@ -68,6 +68,7 @@ export class SignInComponent {
                 
                 // Store username in session storage as "uname"
                 sessionStorage.setItem('uname', user);
+          
                 
                 // Log session storage
                 console.log('Session Storage:', sessionStorage);
@@ -79,12 +80,14 @@ export class SignInComponent {
                 this.getUserInfo(user, password, response.access_token);
             } else {
                 // Handle other scenarios if needed
+
             }
         },
         error => {
             // Handle login error
             console.error('Login error', error);
             // Display error message to the user
+            alert('Incorrect Password');
         }
     );
 }
@@ -98,8 +101,9 @@ export class SignInComponent {
             // Handle user info
             console.log('User data:', userData);
             const userInfo = userData.msg[0]; // Extracting user info from the response
-            
+
             // Store user data in session storage
+            sessionStorage.setItem('userID', JSON.stringify(userInfo.id));
             sessionStorage.setItem('userData', JSON.stringify(userInfo));
 
             // Log session storage

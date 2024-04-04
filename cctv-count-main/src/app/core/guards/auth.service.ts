@@ -9,8 +9,8 @@ import { ValidateService } from './validate.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl1 = 'https://150.95.31.129';
-  private apiUrl0 = 'https://150.95.31.129';
+  private apiUrl = 'https://wrp-smarttraffic.com';
+  
 
   constructor(
     private http: HttpClient,
@@ -50,10 +50,10 @@ export class AuthService {
     
 
     // Make HTTP POST request to login
-    return this.http.post<any>(`${this.apiUrl1}/api/auth/login`, message).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/auth/login`, message).pipe(
       catchError(error => {
         // Handle authentication failure
-        return throwError(error.error.msg || 'Authentication failed');
+        return throwError(error.error.msg || 'Authenticationsssss failed');
       }),
      
     );
@@ -87,7 +87,7 @@ export class AuthService {
     });
 
     // Make HTTP POST request to get user data with headers
-    return this.http.post<any>(`${this.apiUrl1}/api/auth/get_user_data`, message, { headers }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/api/auth/get_user_data`, message, { headers }).pipe(
       catchError(error => {
         // Handle error
         return throwError(error.error.msg || 'Failed to get user data');

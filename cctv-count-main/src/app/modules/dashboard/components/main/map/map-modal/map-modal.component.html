@@ -3,7 +3,8 @@
   <div class="modal-container bg-white dark:bg-night-900 grid grid-cols-1 justify-items-between rounded-lg z-[20]">
     <div class="modal-header sticky top-0 dark:bg-night-900 z-[10] uppercase flex items-center ">
       <div *ngIf="jsonData.length > 0">
-        <h2 class="text-black dark:text-white">{{ jsonData[stationIdNum - 1]?.location_name }}</h2>
+        <h2 class="text-black dark:text-white">Station ID: </h2>
+        <h2></h2> 
       </div>
       <div>
         <img src="assets/icons/close.svg" alt="Close" class="close-button py-4" (click)="closeModal()" />

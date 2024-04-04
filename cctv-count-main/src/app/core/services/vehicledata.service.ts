@@ -7,7 +7,7 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class VehicleDataService {
-  private apiUrl = 'https://150.95.31.129/api/data_view/get_vehicle_data'; 
+  private apiUrl = 'https://wrp-smarttraffic.com/api/data_view/get_vehicle_data'; 
 
   constructor(private http: HttpClient) {}
 

@@ -13,13 +13,14 @@ import { ModalService } from './services/modal.service';
 
 import { Subscription } from 'rxjs';
 import { StationDataService } from 'src/app/core/services/station-data.service';
+import { CameraDataService } from 'src/app/core/services/camera-data.service';
 @Component({
   selector: '[map]',
   standalone: true,
   imports: [CommonModule,MapModalComponent],
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss'],
-  providers: [StationDataService]
+  providers: [StationDataService,CameraDataService]
 })
 export class MapComponent implements OnInit,OnDestroy {
   map!: Map;
@@ -72,7 +73,8 @@ export class MapComponent implements OnInit,OnDestroy {
           // Add pins for each station location
           stationData.forEach((station: any) => {
             const coordinates = [station.lon, station.lat];
-            this.addPin(coordinates, station.station_name);
+            const id = station.id;
+            this.addPin(id,coordinates, station.station_name);
           });
     
           // Create ZoomToCentralPin control after map initialization
@@ -105,7 +107,7 @@ export class MapComponent implements OnInit,OnDestroy {
 
   
   
-  addPin(coordinates: number[], label: string): void {
+  addPin(id: number,coordinates: number[], label: string): void {
     const pinElement = this.createPinElement(label);
     const pinText = this.createPinText(label);
 
@@ -125,12 +127,7 @@ export class MapComponent implements OnInit,OnDestroy {
     });
 
     pinElement.addEventListener('click', () => {
-      const station = this.jsonData.find(item => item.lat === coordinates[1] && item.lon === coordinates[0]);
-      if (station) {
-        this.openMapModal(station.id);
-      } else {
-        console.error(`Station not found for coordinates: ${coordinates}`);
-      }
+        this.openMapModal(id);
     });
     
     
@@ -174,9 +171,9 @@ export class MapComponent implements OnInit,OnDestroy {
     });
   }
 
-  openMapModal(station: any): void {
+  openMapModal(stationID: any): void {
     this.showModal = true;
-    this.modalDataService.setLocationData(station.id); // Assuming the station object has an 'id' property
+    this.modalDataService.setCameraData(stationID); 
   }
   
   

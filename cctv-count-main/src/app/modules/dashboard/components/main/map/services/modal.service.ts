@@ -1,30 +1,17 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { LocationData } from '../map-modal/location-data.interface';
-import { map } from 'rxjs/operators';
+import { CameraDataService } from 'src/app/core/services/camera-data.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class ModalService {
+  private cameraDataSubject = new BehaviorSubject<number | undefined>(undefined);
+  cameraData$ = this.cameraDataSubject.asObservable();
 
-
-  private locationDataSubject = new BehaviorSubject<LocationData[]>([]);
-  locationData$ = this.locationDataSubject.asObservable();
-
-
-  setLocationData(data: LocationData[]): void {
-    this.locationDataSubject.next(data);
-    console.log('Location data set:', data);
-  }
-
-  getLocationDataByNumber(locationNumber: number): Observable<LocationData | undefined> {
-    return this.locationData$.pipe(
-      map((locationData: LocationData[]) => {
-        const foundLocation = locationData.find((data: LocationData) => data.location_no === locationNumber);
-        console.log('Location data retrieved:', foundLocation);
-        return foundLocation;
-      })
-    );
-  }
+  setCameraData(cameraData: any): void {
+    console.log('Camera data set:', cameraData);
+    this.cameraDataSubject.next(cameraData);
+    
+  }   
 }

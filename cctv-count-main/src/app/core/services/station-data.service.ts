@@ -7,7 +7,7 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class StationDataService {
-  private apiUrl = 'https://150.95.31.129';
+  private apiUrl = 'https://wrp-smarttraffic.com';
 
   constructor(private http: HttpClient) {}
 
