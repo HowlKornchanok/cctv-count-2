@@ -1,27 +1,33 @@
-<div class="blackdrop-overlay z-[10]"></div>
-<div class="flex flex-row modal-overlay bg-white p-4 z-[20]">
-    <div class="modal-container p-4 bg-white dark:bg-night-800 text-gray-400 dark:text-white  scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800 grid grid-cols-1  justify-items-between rounded-lg z-[20]">
-    <div>
-        <h2>Edit Camera</h2>
-        <form (ngSubmit)="saveChanges()">
-          <div>
-            <label for="camera_no">Camera No:</label>
-            <span>{{ editedCamera.camera_no }}</span>
-            </div>
-            <div></div>
-          <div>
-            <label for="streaming_link">Streaming Link:</label>
-            <input type="text" class="dark:text-white" [(ngModel)]="editedCamera.streaming_link" name="streaming_link" id="streaming_link">
-          </div>
-
-    
-          <div class="modal-buttons p-4">
-            <button type="submit" (click)="saveChanges()" class="bg-teal-500 text-white font-medium px-4 py-2 rounded-md hover:bg-teal-700">Save Changes</button>
-          </div>
-          <div class="modal-buttons">
-            <button  type="button" (click)="cancel()" class="bg-gray-400 text-white font-medium px-4 py-2 rounded-md hover:bg-gray-600">Cancel</button> 
-          </div>
-        </form>
-    </div>
+<div class="modal-overlay" (click)="cancel()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <button class="close-button" (click)="cancel()">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <h2>Edit Camera</h2>
+    <form class="py-4" (ngSubmit)="saveChanges()">
+      <div>
+        <label for="camera_sn">Camera SN:</label>
+        <input type="text" id="camera_sn" name="camera_sn" [(ngModel)]="camera.camera_sn" required>
+      </div>
+      <div>
+        <label for="camera_url">Camera URL:</label>
+        <input type="text" id="camera_url" name="camera_url" [(ngModel)]="camera.camera_url" required>
+      </div>
+      <div>
+        <label for="camera_port">Camera Port:</label>
+        <input type="number" id="camera_port" name="camera_port" [(ngModel)]="camera.camera_port" required>
+      </div>
+      <!-- Add other camera properties as needed -->
+      <div class="flex justify-end">
+        <div class="mr-4">
+          <button type="submit" class="btn-save">Save Changes</button>
+        </div>
+        <div class="mr-4">
+          <button type="button" (click)="cancel()" class="btn-cancel">Cancel</button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>

@@ -1,35 +1,41 @@
-<div class="backdrop-overlay z-[30] bg-opacity-60 backdrop-blur-md"></div>
-<div class="flex flex-row modal-overlay bg-white z-[30]">
-    <div class="modal-container bg-white dark:bg-night-800 grid grid-cols-1 justify-items-between rounded-lg z-[30]">
-        <div class="dark:text-white p-4">
-            <h2>Edit User</h2>
-            <p>user id: {{ editedUser.id }}</p> <!-- Display user ID -->  
-            <span>user name: {{ editedUser.user_name }}</span> <!-- Display username -->
-            <form class="dark:text-white" (ngSubmit)="saveChanges()">
-                <div class="dark:text-white">
-                    <label for="role">Role:</label>
-                    <select class="dark:text-white" [(ngModel)]="editedUser.role" name="role" id="role">
-                        <option disabled selected value="">Select...</option>
-                        <option value="admin">Admin</option>
-                        <option value="user">User</option>
-                    </select>
-                </div>
-                <div class="dark:text-white">
-                    <label for="is_enable">Is Enable:</label>
-                    <select class="dark:text-white" [(ngModel)]="editedUser.is_enable" name="is_enable" id="is_enable">
-                        <option disabled selected value="">Select...</option>
-                        <option value="true">Yes</option>
-                        <option value="false">No</option>
-                    </select>
-                </div>
-
-                <div class="modal-buttons p-2">
-                    <button type="submit" class="bg-teal-500 text-white font-medium px-4 py-2 rounded-md hover:bg-teal-700">Save Changes</button>
-                </div>
-                <div class="modal-buttons">
-                    <button type="button" (click)="cancel()" class="bg-gray-400 text-white font-medium px-4 py-2 rounded-md hover:bg-gray-600">Cancel</button>
-                </div>
-            </form>
+<div class="modal-overlay" (click)="cancel()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="cancel()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h2>Edit User</h2>
+      <form class="py-4" (ngSubmit)="saveChanges()">
+        <div>
+          <label for="user_id">User ID:</label>
+          <span>{{ editedUser.id }}</span>
         </div>
+        <div>
+          <label for="username">Username:</label>
+          <span>{{ editedUser.user_name }}</span>
+        </div>
+        <div>
+          <label for="role">Role:</label>
+          <select id="role" name="role" [(ngModel)]="editedUser.role" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div>
+          <label for="is_enable">Is Enable:</label>
+          <input type="checkbox" id="is_enable" name="is_enable" [(ngModel)]="editedUser.is_enable">
+        </div>
+        <!-- Add other user properties as needed -->
+        <div class="flex justify-end">
+          <div class="mr-4">
+            <button type="submit" class="btn-save">Save Changes</button>
+          </div>
+          <div class="mr-4">
+            <button type="button" (click)="cancel()" class="btn-cancel">Cancel</button>
+          </div>
+        </div>
+      </form>
     </div>
-</div>
+  </div>
+  

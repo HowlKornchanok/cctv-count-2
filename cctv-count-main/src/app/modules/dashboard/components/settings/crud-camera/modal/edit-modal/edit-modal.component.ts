@@ -9,9 +9,8 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './edit-modal.component.html',
   styleUrl: './edit-modal.component.scss'
 })
-export class EditModalComponent implements OnInit{
-
-  @Input() camera: any;
+export class EditModalComponent implements OnInit {
+  @Input() camera: any; // Input for camera data
   @Output() saveChangesAction: EventEmitter<any> = new EventEmitter<any>();
   @Output() cancelAction: EventEmitter<void> = new EventEmitter<void>();
 
@@ -19,17 +18,17 @@ export class EditModalComponent implements OnInit{
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     // Initialize editedCamera with a copy of the original camera data
     this.editedCamera = { ...this.camera };
   }
 
-  saveChanges() {
+  saveChanges(): void {
     // Emit the edited camera data to the parent component
     this.saveChangesAction.emit(this.editedCamera);
   }
 
-  cancel() {
+  cancel(): void {
     this.cancelAction.emit();
   }
 }

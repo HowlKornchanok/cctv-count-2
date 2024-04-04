@@ -53,7 +53,7 @@ export class MapModalComponent implements OnInit, OnDestroy {
   fetchCameraData(stationId: number): void {
     // Use the provided stationId to fetch camera data
     this.cameraDataService.getCameraList(stationId.toString()).subscribe(data => {
-      this.jsonData = data;
+      this.jsonData = data.msg;
       console.log('Camera data fetched successfully:', this.jsonData);
   });
   

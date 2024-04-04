@@ -1,17 +1,16 @@
 import { Injectable } from '@angular/core';
-import { HttpClient,HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CameraDataService {
-  private baseUrl = 'https://wrp-smarttraffic.com/api/data_view';
+  private baseUrl = 'https://wrp-smarttraffic.com/api/camera_service';
 
   constructor(private http: HttpClient) { }
   
   private getAccessTokenFromSessionStorage(): string | null {
-    console.log(sessionStorage.getItem('accessToken'));
     return sessionStorage.getItem('accessToken');
   }
 
@@ -26,15 +25,18 @@ export class CameraDataService {
     });
   }
 
-
-
   private getDataFromSessionStorage(key: string): string | null {
     return sessionStorage.getItem(key);
   }
-  private encodeData(data: any): any {
-    return btoa(JSON.stringify(data));
-}
 
+  private encodeData(data: any): string {
+    return btoa(JSON.stringify(data));
+  }
+
+  private createTransactionObject(data: any): any {
+    const encodedData = this.encodeData(data);
+    return { transaction: encodedData };
+  }
 
   getCameraList(stationId?: string): Observable<any> {
     const userId = this.getDataFromSessionStorage('userID');
@@ -43,15 +45,16 @@ export class CameraDataService {
       throw new Error('User ID or username not found in session storage');
     }
 
-    const data = {
-      id: userId,
-      auth_data: { uname: username },
-      detail: { sid: stationId || null }
+    const requestData = {
+      id: btoa(userId),
+      auth_data: { uname: btoa(username) },
+      detail: { sid: stationId ? btoa(stationId) : null }
     };
-    
-    const encodedData = btoa(JSON.stringify(data));
+
+    const transactionObject = this.createTransactionObject(requestData);
     const headers = this.getHeaders();
-    return this.http.post<any>(`${this.baseUrl}/get_camera_list`, { transaction: encodedData }, { headers });
+    
+    return this.http.post<any>(`${this.baseUrl}/get_camera_list`, transactionObject, { headers });
   }
 
   getUsedPort(): Observable<any> {
@@ -65,8 +68,9 @@ export class CameraDataService {
       auth_data: { uname: btoa(username) },
       detail: {}
     };
-    const encodedData = this.encodeData(data);
-    return this.http.post(`${this.baseUrl}/get_used_port`, encodedData);
+    const transactionObject = this.createTransactionObject(data);
+    const headers = this.getHeaders();
+    return this.http.post(`${this.baseUrl}/get_used_port`, transactionObject, { headers });
   }
 
   addCameraService(serviceName: string, cameraPort: string, cameraSerialNumber: string, cameraRtspUrl: string, stationId: string): Observable<any> {
@@ -86,8 +90,9 @@ export class CameraDataService {
         sid: btoa(stationId)
       }
     };
-    const encodedData = this.encodeData(data);
-    return this.http.post(`${this.baseUrl}/add_camera_service`, encodedData);
+    const transactionObject = this.createTransactionObject(data);
+    const headers = this.getHeaders();
+    return this.http.post(`${this.baseUrl}/add_camera_service`, transactionObject, { headers });
   }
 
   deleteCameraService(serviceName: string): Observable<any> {
@@ -101,8 +106,9 @@ export class CameraDataService {
       auth_data: { uname: btoa(username) },
       detail: { name: btoa(serviceName) }
     };
-    const encodedData = this.encodeData(data);
-    return this.http.request('delete', `${this.baseUrl}/delete_camera_service`, { body: encodedData });
+    const transactionObject = this.createTransactionObject(data);
+    const headers = this.getHeaders();
+    return this.http.request('delete', `${this.baseUrl}/delete_camera_service`, { body: transactionObject, headers });
   }
 
   startCameraService(serviceName: string): Observable<any> {
@@ -116,8 +122,9 @@ export class CameraDataService {
       auth_data: { uname: btoa(username) },
       detail: { name: btoa(serviceName) }
     };
-    const encodedData = this.encodeData(data);
-    return this.http.put(`${this.baseUrl}/start_camera_service`, encodedData);
+    const transactionObject = this.createTransactionObject(data);
+    const headers = this.getHeaders();
+    return this.http.put(`${this.baseUrl}/start_camera_service`, transactionObject, { headers });
   }
 
   stopCameraService(serviceName: string): Observable<any> {
@@ -131,7 +138,8 @@ export class CameraDataService {
       auth_data: { uname: btoa(username) },
       detail: { name: btoa(serviceName) }
     };
-    const encodedData = this.encodeData(data);
-    return this.http.put(`${this.baseUrl}/stop_camera_service`, encodedData);
+    const transactionObject = this.createTransactionObject(data);
+    const headers = this.getHeaders();
+    return this.http.put(`${this.baseUrl}/stop_camera_service`, transactionObject, { headers });
   }
 }

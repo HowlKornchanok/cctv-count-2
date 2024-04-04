@@ -4,7 +4,12 @@ import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UserEditModalComponent } from './modal/user-edit-modal/user-edit-modal.component';
 import { UserService } from 'src/app/core/guards/user.service';
-
+interface user {
+  user_name: string;
+  id: number;
+  is_enable: boolean;
+  role: number;
+}
 @Component({
   selector: '[crud-user]',
   standalone: true,
@@ -14,7 +19,7 @@ import { UserService } from 'src/app/core/guards/user.service';
   providers: [UserService]
 })
 export class CrudUserComponent implements OnInit {
-  public users: any[] = [];
+  public users: user[] = [];
   public showModal: boolean = false;
   public selectedUser: any = {};
   public isNewUser: boolean = false;
@@ -48,6 +53,7 @@ export class CrudUserComponent implements OnInit {
 
   openEditModal(user: any): void {
     this.selectedUser = user;
+    console.log(user);
     this.showEditModal = true;
   }
 

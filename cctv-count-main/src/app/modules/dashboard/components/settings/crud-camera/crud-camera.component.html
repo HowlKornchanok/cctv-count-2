@@ -3,9 +3,9 @@
 
 <!-- Modal -->
 <div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
-  <div class="bg-white dark:bg-night-800 rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded  overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+  <div class="bg-white dark:bg-night-800 rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
     <!-- Modal header -->
-    <div class="sticky top-0  flex justify-between items-center mb-4">
+    <div class="sticky top-0 flex justify-between items-center mb-4">
         <div></div>
         <button (click)="closeModal()" class="text-gray-600 hover:text-gray-800">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -13,45 +13,53 @@
           </svg>
         </button>
     </div>
-    <!-- Modal content -->
-    <div class="table-container ">
-      <table class="w-full">
-        <thead>
-          <tr class="bg-white dark:bg-night-700 z-[10] uppercase text-gray-400 dark:text-white text-sm">
-            <th class="p-2">{{ translations[currentLanguage]['Camera No.'] }}</th>
-            <th class="p-2">{{ translations[currentLanguage]['Camera Link'] }}</th>
-            <th class="p-2">{{ translations[currentLanguage]['Actions'] }}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <ng-container *ngFor="let location of jsonData; let i = index">
-            <tr>
-              <td colspan="2" class="px-3 font-bold text-gray-900 dark:text-night-50">
-                {{ location.location_name }}
-                <button (click)="addCamera(location)" class="bg-blue-500 rounded-md px-4 ml-2">Add Camera</button>
-              </td>
-            </tr>
-            <ng-container *ngFor="let camera of location.cameras; let j = index">
-              <tr class="leading-8">
-                <td class="text-center font-bold text-gray-900 dark:text-night-50">
-                  {{ camera.camera_no }}
-                </td>
-                <td class="text-center font-bold text-gray-900 dark:text-night-50">
-                  {{ maskLink(camera.streaming_link) }}
-
-                </td>
-                <td class="text-center">
-                  <!-- Edit button -->
-                  <button (click)="editCamera(camera)" class="bg-blue-500 rounded-md px-4 mr-2">Edit</button>
-                  <!-- Delete button -->
-                  <button (click)="deleteCamera(camera)" class="bg-red-500 rounded-md px-4">Delete</button>
+    <!-- Table to display camera data -->
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50 dark:bg-night-700">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Station ID</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Camera ID</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Camera Port</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Camera SN</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          <!-- Add other camera properties you want to display -->
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200 dark:bg-night-800 dark:divide-night-700">
+        <!-- Iterate through stationDataList -->
+        <ng-container *ngFor="let stationData of stationDataList">
+          <!-- Get cameras for the current station -->
+          <ng-container *ngIf="getCamerasForStation(stationData.id).length > 0">
+            <!-- Cameras are available for this station -->
+            <ng-container *ngFor="let camera of getCamerasForStation(stationData.id)">
+              <tr>
+                <!-- Display station ID for the first camera only -->
+                <td *ngIf="getCamerasForStation(stationData.id).indexOf(camera) === 0" [attr.rowspan]="getCameraCount(stationData.id)" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ stationData.id }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ camera.id }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ camera.camera_port }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ camera.camera_sn }}</td>
+                <!-- Add other camera properties you want to display -->
+                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                  <button (click)="editCamera(camera)" class="text-indigo-600 hover:text-indigo-900">Edit</button>
                 </td>
               </tr>
             </ng-container>
           </ng-container>
-        </tbody>
-      </table>
-    </div>
+          <!-- If no cameras exist for the current station -->
+          <ng-container *ngIf="getCamerasForStation(stationData.id).length === 0">
+            <tr>
+              <td>{{ stationData.id }}</td>
+              <td colspan="4" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">No camera data available for this station.</td>
+            </tr>
+          </ng-container>
+        </ng-container>
+      </tbody>
+    </table>
   </div>
 </div>
-<app-edit-modal *ngIf="showEditModal" [camera]="selectedCamera" (saveChangesAction)="saveChanges($event)" (cancelAction)="closeEditModal()"></app-edit-modal>
+<app-edit-modal 
+  *ngIf="showEditModal" 
+  [camera]="selectedCamera" 
+  (saveChangesAction)="saveChanges($event)" 
+  (cancelAction)="closeEditModal()">
+</app-edit-modal>
