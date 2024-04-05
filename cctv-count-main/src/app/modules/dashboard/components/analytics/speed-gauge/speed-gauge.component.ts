@@ -32,7 +32,7 @@ export class SpeedGaugeComponent implements OnInit {
 
 
 
-  selectedFilter: string = '30days';
+  selectedFilter: string = '1year';
 
 
   constructor(
@@ -61,6 +61,11 @@ export class SpeedGaugeComponent implements OnInit {
       (data) => {
         // Handle successful response
         this.jsonData = data.msg; // Assign fetched data
+
+        const sumOfVCount = this.getSumOfVCount();
+
+        const averageSpeed = this.getAverageSpeed();
+        this.chartOptions = this.generateChartOptions();
       },
         (error) => {
           console.error('Error fetching data:', error);

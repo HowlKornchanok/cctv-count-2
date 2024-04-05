@@ -41,7 +41,7 @@ export class APIDonutComponent implements OnInit, OnDestroy {
 
 
 
-  selectedFilter: string = '30days';
+  selectedFilter: string = '1year';
   public type_1: VehicleData[] = [];
   public type_2: VehicleData[] = [];
   public type_3: VehicleData[] = [];
