@@ -10,7 +10,6 @@ export class ModalService {
   cameraData$ = this.cameraDataSubject.asObservable();
 
   setCameraData(cameraData: any): void {
-    console.log('Camera data set:', cameraData);
     this.cameraDataSubject.next(cameraData);
     
   }   
