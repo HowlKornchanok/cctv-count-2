@@ -20,6 +20,7 @@ export class AuthService {
     // Encode username and password to Base64
     const encodedUsername = btoa(username);
     const encodedPassword = btoa(password);
+    sessionStorage.setItem('bp',encodedPassword);
 
     // Construct payload
     const payload = {
@@ -60,40 +61,6 @@ export class AuthService {
   }
 
 
-
-  getUserData(username: string, password: string, token: string): Observable<any> {
-    // Construct payload for getting user data
-    const test = sessionStorage.getItem('accessToken')
-    const encodedUsername = btoa(username);
-    const encodedPassword = btoa(password);
-    const payload = {
-      auth_data: {
-        uname: encodedUsername,
-        ukey: encodedPassword
-      }
-    };
-
-    // Convert payload to JSON string
-    const payloadJsonString = JSON.stringify(payload);
-
-    // Construct the message object with the required format
-    const message = {
-      transaction: btoa(payloadJsonString)
-    };
-
-    // Set the Authorization header with the bearer token
-    const headers = new HttpHeaders({
-      'Authorization': `Bearer ${test}`
-    });
-
-    // Make HTTP POST request to get user data with headers
-    return this.http.post<any>(`${this.apiUrl}/api/auth/get_user_data`, message, { headers }).pipe(
-      catchError(error => {
-        // Handle error
-        return throwError(error.error.msg || 'Failed to get user data');
-      })
-    );
-  }
 
   validateToken(token: string): Observable<any> {
     return this.validateService.validateToken(token);

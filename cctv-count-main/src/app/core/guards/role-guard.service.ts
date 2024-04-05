@@ -10,11 +10,11 @@ export class RoleGuard implements CanActivate {
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
     // Check user role from session storage
-    const userData = sessionStorage.getItem('userData');
-    if (userData) {
-      const user = JSON.parse(userData);
-      // Check if the user's role is 'admin' (role === 1)
-      if (user.role === 1) {
+    const userRole =  sessionStorage.getItem('role');
+
+    if (userRole) {
+      const roleNumber = parseInt(userRole, 10); // Parse the user role as a number
+      if (roleNumber === 1) {
         return true; // Allow access to the route
       } else {
         alert('You do not have permission to access this page.');
@@ -27,3 +27,4 @@ export class RoleGuard implements CanActivate {
     return false;
   }
 }
+

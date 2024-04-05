@@ -5,7 +5,7 @@ import { NgClass, NgIf } from '@angular/common';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { AuthService } from 'src/app/core/guards/auth.service';
 import { ValidateService } from 'src/app/core/guards/validate.service';
-
+import { UserService } from 'src/app/core/guards/user.service';
 @Component({
     selector: 'app-sign-in',
     templateUrl: './sign-in.component.html',
@@ -20,7 +20,7 @@ import { ValidateService } from 'src/app/core/guards/validate.service';
         NgIf,
         
     ],
-    providers:[AuthService,ValidateService]
+    providers:[AuthService,ValidateService,UserService]
 })
 export class SignInComponent {
   form: FormGroup;
@@ -31,8 +31,8 @@ export class SignInComponent {
   constructor(
     private formBuilder: FormBuilder,
     private authService: AuthService,
-    private validateService: ValidateService,
-    private router: Router // Inject Router service
+    private router: Router,
+    private userService: UserService
   ) {
     this.form = this.formBuilder.group({
       user: ['', [Validators.required]],
@@ -66,17 +66,13 @@ export class SignInComponent {
                 // Store token in session storage
                 sessionStorage.setItem('accessToken', response.msg);
                 
-                // Store username in session storage as "uname"
-                sessionStorage.setItem('uname', user);
-          
                 
-
-
                 // Redirect to dashboard upon successful login
                 this.router.navigate(['/dashboard']);
 
                 // Call the method to fetch user info
-                this.getUserInfo(user, password, response.access_token);
+                this.getUserInfo(user);
+                console.log(sessionStorage);
             } else {
                 // Handle other scenarios if needed
 
@@ -89,38 +85,29 @@ export class SignInComponent {
             alert('Incorrect Password');
         }
     );
-}
+  }
 
 
 
-  getUserInfo(username: string, password: string, token: string) {
-    // Call the method from AuthService to get user info
-    this.authService.getUserData(username, password, token).subscribe(
+  private getUserInfo(username: string) {
+    // Call the method from UserService to get user info
+    this.userService.getUserInfo(username).subscribe(
         userData => {
             // Handle user info
-            const userInfo = userData.msg[0]; // Extracting user info from the response
-
-            // Store user data in session storage
-            sessionStorage.setItem('userID', JSON.stringify(userInfo.id));
-            sessionStorage.setItem('userData', JSON.stringify(userInfo));
-
-            // Log session storage
+            const userInfo = userData.msg; 
             
-            // Check if the token has expired
-            const isExpired = this.validateService.isTokenExpired(token);
-            if (isExpired) {
-                // If the token is expired, handle accordingly
-                console.log('Token has expired. Please log in again.');
-                // For example, you can display a message to the user or redirect them to the login page
-            }
+            // Filter out the user objects where the user_name matches the username
+            const filteredUserInfo = userInfo.filter((user: any) => user.user_name === username);
+
+            sessionStorage.setItem('userID',filteredUserInfo[0].id);
+            sessionStorage.setItem('uname',filteredUserInfo[0].user_name);
+            sessionStorage.setItem('role',filteredUserInfo[0].role);
+
         },
         error => {
-            // Handle error while fetching user info
-            console.error('Error fetching user data', error);
+            console.error('Error fetching user info:', error);
         }
     );
-}
-
-
-
+  }
+  
 }

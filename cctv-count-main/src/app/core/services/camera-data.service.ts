@@ -53,6 +53,7 @@ export class CameraDataService {
 
     const transactionObject = this.createTransactionObject(requestData);
     const headers = this.getHeaders();
+    console.log('camera',transactionObject)
 
     return this.http.post<any>(`${this.baseUrl}/get_camera_list`, transactionObject, { headers });
   }

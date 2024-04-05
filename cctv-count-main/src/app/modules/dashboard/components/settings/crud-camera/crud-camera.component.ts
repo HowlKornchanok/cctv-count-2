@@ -93,8 +93,10 @@ export class CRUDCameraComponent implements OnInit{
   
   saveAdds(newCamera: any): void {
     console.log(newCamera)
+
     this.cameraDataService.addCameraService(newCamera.service_name, newCamera.camera_port, newCamera.camera_sn, newCamera.camera_url, newCamera.station_id);
     this.showAddModal = false;
+    console.log('add');
     
   }
   saveChanges(editedCamera: any): void {

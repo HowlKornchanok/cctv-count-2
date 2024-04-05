@@ -1,5 +1,14 @@
-<!-- Button to open the modal -->
-<button (click)="openModal()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Camera Setting</button>
+<div class="max-w-md mx-auto" (click)="openModal()">
+  <div class="bg-white overflow-hidden shadow rounded-lg cursor-pointer">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg font-medium leading-6 text-gray-900">Camera Configuration</h3>
+    </div>
+    <div class="px-4 py-4 sm:p-6">
+      <p class="text-sm text-gray-500">Click on the card to configure camera.</p>
+    </div>
+  </div>
+</div>
+
 
 <!-- Modal -->
 <div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
