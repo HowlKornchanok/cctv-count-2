@@ -19,7 +19,7 @@ export class AnalyticsHeaderComponent implements OnInit {
     }
 
     refreshPage(): void {
-        window.location.href = 'http://localhost:4200/';
+        window.location.href = 'https://wrp-smarttraffic.com';
       }
 
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { CameraDataService } from 'src/app/core/services/camera-data.service';
+
 
 @Injectable({
   providedIn: 'root',

@@ -28,7 +28,6 @@ export class WarningComponent {
     this.loadData();
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
-      console.log('test');
     });
   }
 
