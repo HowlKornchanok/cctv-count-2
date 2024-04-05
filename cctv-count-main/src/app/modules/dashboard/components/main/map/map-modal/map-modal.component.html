@@ -9,13 +9,22 @@
           <img src="assets/icons/close.svg" alt="Close" class="w-8 h-8" />
         </button>
       </div>
-      <div class="modal-content grid grid-cols-1 lg:grid-cols-2 gap-2">
-        
-        <div *ngFor="let item of jsonData" class="w-full border bg-gray-100 dark:bg-night-800 border-gray-200 dark:border-night-700 rounded-md p-4">
-          <h2 class="text-black dark:text-white">{{ translations[currentLanguage]['Camera No.'] }} {{ item.id }}</h2>
-          <img [src]="item.service_url" alt="Camera Image" class="max-h-[400px] min-w-[600px] object-cover w-full rounded-md shadow-md">
+      
+      <!-- Check if jsonData exists and is not empty -->
+      <ng-container *ngIf="jsonData && jsonData.length > 0; else noCameraMsg">
+        <div class="modal-content grid grid-cols-1 lg:grid-cols-2 gap-2">
+          <div *ngFor="let item of jsonData" class="w-full border bg-gray-100 dark:bg-night-800 border-gray-200 dark:border-night-700 rounded-md p-4">
+            <h2 class="text-black dark:text-white">{{ translations[currentLanguage]['Camera No.'] }} {{ item.id }}</h2>
+            <img [src]="item.service_url" alt="Camera Image" class="p-8 max-h-[400px] min-w-[400px] object-cover w-full rounded-md shadow-md">
+          </div>
         </div>
-      </div>
+      </ng-container>
+
+      <!-- Message displayed when no camera data is available -->
+      <ng-template #noCameraMsg>
+        <div class="text-center text-gray-500 dark:text-gray-400 mt-4 min-w-[800px]">No camera data available for this station.</div>
+      </ng-template>
+      
     </div>
   </div>
 </div>
