@@ -53,7 +53,8 @@ export class CameraDataService {
 
     const transactionObject = this.createTransactionObject(requestData);
     const headers = this.getHeaders();
-    
+    console.log(transactionObject);
+    console.log(this.getAccessTokenFromSessionStorage());
     return this.http.post<any>(`${this.baseUrl}/get_camera_list`, transactionObject, { headers });
   }
 
@@ -90,8 +91,11 @@ export class CameraDataService {
         sid: btoa(stationId)
       }
     };
+
+    console.log(data);
     const transactionObject = this.createTransactionObject(data);
     const headers = this.getHeaders();
+    console.log(transactionObject);
     return this.http.post(`${this.baseUrl}/add_camera_service`, transactionObject, { headers });
   }
 

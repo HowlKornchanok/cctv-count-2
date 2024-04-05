@@ -77,7 +77,7 @@ export class APIDonutComponent implements OnInit, OnDestroy {
       (data) => {
         // Handle successful response
         this.jsonData = data.msg; // Assign fetched data
-        console.log(data.msg);
+
         this.separateDataByType();
         this.chartOptionsMotorcycle = this.getChartOptions('Motorcycle', this.type_1.length, this.jsonData.length, '#34495e');
         this.chartOptionsCar = this.getChartOptions('Car', this.type_2.length, this.jsonData.length, '#34495e');
@@ -188,13 +188,7 @@ export class APIDonutComponent implements OnInit, OnDestroy {
           break;
       }
     });
-    console.log('Type 1 data:', this.type_1);
-    console.log('Type 2 data:', this.type_2);
-    console.log('Type 3 data:', this.type_3);
-    console.log('Type 4 data:', this.type_4);
-    console.log('Type 5 data:', this.type_5);
-    console.log('Type 6 data:', this.type_6);
-    console.log('Type 7 data:', this.type_7);
+
 }
 
 

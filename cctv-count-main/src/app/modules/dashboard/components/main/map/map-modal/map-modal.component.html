@@ -1,27 +1,21 @@
 <div class="blackdrop-overlay"></div>
 <div class="flex flex-row modal-overlay z-[20]">
-  <div class="modal-container bg-white dark:bg-night-900 grid grid-cols-1 justify-items-between rounded-lg z-[20]">
-    <div class="modal-header sticky top-0 dark:bg-night-900 z-[10] uppercase flex items-center ">
-      <div>
-        <h2 class="text-black dark:text-white">Station ID: {{ stationIdNum }} </h2>
-        <h2></h2> 
+  <div class="modal-container bg-white dark:bg-night-900 grid grid-cols-1  rounded-lg z-[20]">
+
+    <div class="flex-col   p-4 scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+      <div class="modal-header sticky top-0  z-[10] uppercase flex justify-between items-center px-4 py-2">
+        <h2 class="text-black dark:text-white">Station ID: {{ stationIdNum }}</h2>
+        <button class="close-button" (click)="closeModal()">
+          <img src="assets/icons/close.svg" alt="Close" class="w-8 h-8" />
+        </button>
       </div>
-      <div>
-        <img src="assets/icons/close.svg" alt="Close" class="close-button py-4" (click)="closeModal()" />
-      </div>
-    </div>
-    <div class="flex-col justify-items-between bg-gray-100 dark:bg-night-800 p-4 scrollbar-thumb-rounded scrollbar-track-rounded grow overflow-auto scrollbar-thin -thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
       <div class="modal-content grid grid-cols-1 lg:grid-cols-2 gap-2">
-        <div *ngFor="let item of jsonData" class="w-full">
+        
+        <div *ngFor="let item of jsonData" class="w-full border bg-gray-100 dark:bg-night-800 border-gray-200 dark:border-night-700 rounded-md p-4">
           <h2 class="text-black dark:text-white">{{ translations[currentLanguage]['Camera No.'] }} {{ item.id }}</h2>
-          <h2>{{item.service_url}}</h2>
-          <ng-template #videoPlayer>
-            <div class="video-player-wrapper">\
-              
-              <img [src]="item.service_url" class="max-h-[300px]">
-            </div>
-          </ng-template>
+          <img [src]="item.service_url" alt="Camera Image" class="max-h-[400px] min-w-[600px] object-cover w-full rounded-md shadow-md">
         </div>
       </div>
     </div>
   </div>
+</div>

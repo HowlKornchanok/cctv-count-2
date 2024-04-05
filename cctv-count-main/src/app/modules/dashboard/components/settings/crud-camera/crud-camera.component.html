@@ -68,6 +68,6 @@
 <app-add-modal 
   *ngIf="showAddModal" 
   [newCamera]="newCamera" 
-  (saveChangesAction)="addCamera($event)" 
+  (saveChangesAction)="saveAdds($event)" 
   (cancelAction)="closeEditModal()">
 </app-add-modal>

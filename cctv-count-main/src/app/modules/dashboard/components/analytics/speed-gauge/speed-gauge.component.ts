@@ -61,12 +61,6 @@ export class SpeedGaugeComponent implements OnInit {
       (data) => {
         // Handle successful response
         this.jsonData = data.msg; // Assign fetched data
-        console.log(data.msg);
-        const sumOfVCount = this.getSumOfVCount();
-        console.log('Sum of v_count:', sumOfVCount);
-        const averageSpeed = this.getAverageSpeed();
-        console.log('Average speed:', averageSpeed);
-        this.chartOptions = this.generateChartOptions();
       },
         (error) => {
           console.error('Error fetching data:', error);

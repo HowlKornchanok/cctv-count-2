@@ -1,5 +1,5 @@
 <div *ngFor="let station of stationDataList" class="p-4 bg-whtite rounded-lg">
-    <h2 (click)="toggleCollapse(station)" class="cursor-pointer p-8 bg-white">
+    <h2 (click)="toggleCollapse(station)" class="cursor-pointer p-8 bg-white rounded-lg">
       {{ station.station_name }}
     </h2>
     <div *ngIf="!station.collapsed" class="bg-white rounded-lg p-4 mt-2">
@@ -13,7 +13,7 @@
             <span class="font-semibold">Camera URL:</span> {{ camera.camera_url }}
           </div>
           <!-- Add other camera properties as needed -->
-          <button (click)="openModal(camera)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">View Details</button>
+          <button (click)="openModal(camera)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Camera Modal</button>
         </div>
       </div>
       <ng-template #noCameraData>

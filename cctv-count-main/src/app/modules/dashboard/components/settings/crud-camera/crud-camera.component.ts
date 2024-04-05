@@ -9,6 +9,13 @@ import { AddModalComponent } from './modal/add-modal/add-modal.component';
 interface StationData {
   id: string; 
 }
+interface newCamera {
+  service_name: string,
+  camera_port: number,
+  camera_sn: number,
+  camera_url: string,
+  station_id: number
+}
 @Component({
   selector: '[crud-camera]',
   standalone: true,
@@ -28,11 +35,12 @@ export class CRUDCameraComponent implements OnInit{
   public showAddModal: boolean = false;
 
   public newCamera: any = {
-    name: '',
-    port: '',
-    csn: '',
-    url: '',
-    sid: ''
+    service_name: '',
+    camera_port: '',
+    camera_sn: '',
+    camera_url: '',
+    station_id: ''
+    
   };
   
 
@@ -78,18 +86,19 @@ export class CRUDCameraComponent implements OnInit{
   }
   
 
-
-
-   
-
-
   editCamera(camera: any): void {
     this.selectedCamera = camera;
     this.showEditModal = true;
   }
   
-
+  saveAdds(newCamera: any): void {
+    console.log(newCamera)
+    this.cameraDataService.addCameraService(newCamera.service_name, newCamera.camera_port, newCamera.camera_sn, newCamera.camera_url, newCamera.station_id);
+    this.showAddModal = false;
+    
+  }
   saveChanges(editedCamera: any): void {
+    console.log(editedCamera)
     this.showEditModal = false;
   }
 
