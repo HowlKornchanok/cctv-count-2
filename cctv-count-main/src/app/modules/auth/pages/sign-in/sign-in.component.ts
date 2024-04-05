@@ -61,7 +61,7 @@ export class SignInComponent {
     this.authService.login(user, password).subscribe(
         response => {
             // Handle successful login response
-            console.log('Login successful', response);
+
             if (response.status === 200) {
                 // Store token in session storage
                 sessionStorage.setItem('accessToken', response.msg);
@@ -70,8 +70,7 @@ export class SignInComponent {
                 sessionStorage.setItem('uname', user);
           
                 
-                // Log session storage
-                console.log('Session Storage:', sessionStorage);
+
 
                 // Redirect to dashboard upon successful login
                 this.router.navigate(['/dashboard']);
@@ -99,7 +98,6 @@ export class SignInComponent {
     this.authService.getUserData(username, password, token).subscribe(
         userData => {
             // Handle user info
-            console.log('User data:', userData);
             const userInfo = userData.msg[0]; // Extracting user info from the response
 
             // Store user data in session storage
@@ -107,7 +105,6 @@ export class SignInComponent {
             sessionStorage.setItem('userData', JSON.stringify(userInfo));
 
             // Log session storage
-            console.log('Session Storage:', sessionStorage);
             
             // Check if the token has expired
             const isExpired = this.validateService.isTokenExpired(token);

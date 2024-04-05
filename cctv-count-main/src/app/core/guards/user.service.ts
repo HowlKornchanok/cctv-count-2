@@ -7,7 +7,7 @@ import { catchError, tap } from 'rxjs/operators';
   providedIn: 'root'
 })
 export class UserService {
-  private apiUrl = 'https://150.95.31.129';
+  private apiUrl = 'https://wrp-smarttraffic.com';
 
   constructor(private http: HttpClient) {}
 
@@ -44,7 +44,6 @@ export class UserService {
     // Make HTTP POST request to get user list with headers and transaction key as the body
     return this.http.post<any>(`${this.apiUrl}/api/data_view/get_user_list`, requestBody, { headers }).pipe(
       tap(response => {
-        console.log('Server response:', response);
       }),
       catchError(error => {
         // Handle error

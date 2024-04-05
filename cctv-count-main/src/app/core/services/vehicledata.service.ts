@@ -17,7 +17,6 @@ export class VehicleDataService {
     const username = sessionStorage.getItem('uname');
     // Check if username is not null before encoding
     const encodedUsername = username ? btoa(username) : '';
-    console.log(startTime , 'to', endTime);
     // Encode start time and end time to Base64
     const encodedStartTime = btoa(startTime);
     const encodedEndTime = btoa(endTime);
@@ -41,7 +40,6 @@ export class VehicleDataService {
     const message = {
       transaction: btoa(payloadJsonString)
     };
-    console.log(message);
     // Set the Authorization header with the bearer token
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${userToken}`

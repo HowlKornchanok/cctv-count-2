@@ -5,6 +5,8 @@ import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/core/services/language.service';
 import { VehicleDataService } from 'src/app/core/services/vehicledata.service';
 import { FormsModule } from '@angular/forms';
+import jsPDF from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: '[history-table]',
@@ -53,7 +55,6 @@ export class HistoryTableComponent implements OnInit, OnDestroy {
         // Handle successful response
         this.jsonData = data.msg; // Assign fetched data
         this.totalPages = Math.ceil(data.msg.length / this.itemsPerPage);
-        console.log(data.msg);
       },
       (error) => {
         console.error('Error fetching data:', error);
@@ -120,4 +121,42 @@ export class HistoryTableComponent implements OnInit, OnDestroy {
       this.dataServiceSubscription.unsubscribe();
     }
   }
+
+  exportToPDF(): void {
+    const contentElement = document.getElementById('pdfContent');
+    
+    if (contentElement) {
+      // Initialize the PDF document
+      const pdf = new jsPDF('p', 'mm', 'a4');
+      let totalPages = this.totalPages;
+  
+      // Loop through each page
+      for (let i = 0; i < totalPages; i++) {
+        this.currentPage = i + 1; // Set the current page
+  
+        // Wait for the content to render
+        setTimeout(() => {
+          html2canvas(contentElement).then((canvas) => {
+            const contentDataURL = canvas.toDataURL('image/png');
+            const imgWidth = pdf.internal.pageSize.getWidth();
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            
+            // Add the content of each page to the PDF document
+            pdf.addImage(contentDataURL, 'PNG', 0, 0, imgWidth, imgHeight);
+  
+            // Add a new page if there are more pages to capture
+            if (i < totalPages - 1) {
+              pdf.addPage();
+            } else {
+              // Save the PDF document when all pages are captured
+              pdf.save('history-table.pdf');
+            }
+          });
+        }, 2000); // Adjust this timeout value based on your content rendering time
+      }
+    } else {
+      console.error('Content element not found.');
+    }
+  }
+  
 }

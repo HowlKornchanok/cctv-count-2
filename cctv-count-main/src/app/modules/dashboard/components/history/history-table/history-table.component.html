@@ -22,7 +22,7 @@
     <span class="text-gray-600 dark:text-night-300">{{ translations[currentLanguage]['Page'] }} {{ currentPage }} {{ translations[currentLanguage]['of'] }} {{ totalPages }}</span>
     <button class="bg-primary-500 text-white px-4 py-2 rounded-md" (click)="nextPage()" [disabled]="currentPage === totalPages">{{ translations[currentLanguage]['Next'] }}</button>
   </div>
-
+  <div id="pdfContent">
   <div class="relative overflow-x-auto p-4">
     <table class="w-full table-auto">
       <thead class="text-xs uppercase text-gray-600 dark:text-night-300">
@@ -44,5 +44,7 @@
         </tr>
       </tbody>
     </table>
+    <button class="export-button" (click)="exportToPDF()">Export to PDF</button>
+  </div>
   </div>
 </div>

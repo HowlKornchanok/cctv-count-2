@@ -46,7 +46,6 @@ export class StationDataService {
     // Make POST request to the API endpoint
     return this.http.post<any>(`${this.apiUrl}/api/data_view/get_station_data`,requestBody, { headers }).pipe(
       tap(response => {
-        console.log('Server response:', response);
       }),
       catchError(error => {
         // Handle error

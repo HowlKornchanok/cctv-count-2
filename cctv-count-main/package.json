@@ -6,8 +6,7 @@
     "type": "git",
     "url": ""
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Luciano Oliveira <me@lanno.dev>",
   "license": "MIT",
   "scripts": {
@@ -42,7 +41,9 @@
     "auth0": "^4.3.0",
     "font-awesome": "^4.7.0",
     "hls.js": "^1.5.2-0.canary.9971",
+    "html2canvas": "^1.4.1",
     "jsonwebtoken": "^9.0.2",
+    "jspdf": "^2.5.1",
     "jwt-decode": "^4.0.0",
     "ng-apexcharts": "^1.8.0",
     "ngx-cookie-service": "^17.1.0",

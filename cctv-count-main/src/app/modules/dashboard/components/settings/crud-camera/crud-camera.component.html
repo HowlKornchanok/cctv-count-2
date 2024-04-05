@@ -64,3 +64,10 @@
   (saveChangesAction)="saveChanges($event)" 
   (cancelAction)="closeEditModal()">
 </app-edit-modal>
+
+<app-add-modal 
+  *ngIf="showAddModal" 
+  [newCamera]="newCamera" 
+  (saveChangesAction)="addCamera($event)" 
+  (cancelAction)="closeEditModal()">
+</app-add-modal>

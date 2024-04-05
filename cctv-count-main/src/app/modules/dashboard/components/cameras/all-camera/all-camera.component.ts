@@ -45,9 +45,7 @@ export class AllCameraComponent implements OnInit {
           this.cameraDataService.getCameraList(stationId).subscribe((data) => {
             if (data.msg.length > 0) {
               this.cameraData = this.cameraData.concat(data.msg);
-              console.log(`Camera data for station ${stationId}:`, this.cameraData);
             } else {
-              console.log(`No camera data available for station ${stationId}`);
             }
           });
         });

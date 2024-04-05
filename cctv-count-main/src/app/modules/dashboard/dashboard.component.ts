@@ -40,7 +40,7 @@ export class DashboardComponent implements OnInit, OnDestroy {
               // Redirect to the login page
               this.router.navigate(['/auth/sign-in']);
           } else {
-              console.log('Token is still valid');
+
               // Token is still valid
           }
       } else {

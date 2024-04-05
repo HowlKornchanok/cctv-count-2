@@ -37,7 +37,6 @@ export class CrudUserComponent implements OnInit {
       (response) => {
         if (response && response.status === 200 && response.msg) {
           this.users = response.msg; // Assigning the array of users to the component property
-          console.log('Loaded data:', this.users); // Log the loaded data
         } else {
           console.error('Invalid response format:', response);
           // Handle invalid response format
@@ -53,7 +52,6 @@ export class CrudUserComponent implements OnInit {
 
   openEditModal(user: any): void {
     this.selectedUser = user;
-    console.log(user);
     this.showEditModal = true;
   }
 

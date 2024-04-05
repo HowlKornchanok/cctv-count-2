@@ -5,14 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { EditModalComponent } from './modal/edit-modal/edit-modal.component';
 import { CameraDataService } from 'src/app/core/services/camera-data.service';
 import { StationDataService } from 'src/app/core/services/station-data.service';
-
+import { AddModalComponent } from './modal/add-modal/add-modal.component';
 interface StationData {
   id: string; 
 }
 @Component({
   selector: '[crud-camera]',
   standalone: true,
-  imports: [CommonModule, FormsModule,EditModalComponent],
+  imports: [CommonModule, FormsModule,EditModalComponent,AddModalComponent],
   templateUrl: './crud-camera.component.html',
   styleUrl: './crud-camera.component.scss',
   providers: [CameraDataService,StationDataService]
@@ -25,6 +25,8 @@ export class CRUDCameraComponent implements OnInit{
   public isNewCamera: boolean = false; // Flag to indicate if the selected camera is new or existing
   public showEditModal: boolean = false;
   public showModal: boolean = false;
+  public showAddModal: boolean = false;
+
   public newCamera: any = {
     name: '',
     port: '',
@@ -63,7 +65,6 @@ export class CRUDCameraComponent implements OnInit{
             if (data.msg.length > 0) {
               // Merge or concatenate data instead of replacing
               this.cameraData = this.cameraData.concat(data.msg); // Concatenating data
-              console.log(`Camera data for station ${stationId}:`, this.cameraData);
             } else {
               console.log(`No camera data available for station ${stationId}`);
             }
@@ -83,33 +84,29 @@ export class CRUDCameraComponent implements OnInit{
 
 
   editCamera(camera: any): void {
-    console.log("Editing camera:", camera);
     this.selectedCamera = camera;
     this.showEditModal = true;
   }
   
 
   saveChanges(editedCamera: any): void {
-    console.log("Saving changes for camera:", editedCamera);
     this.showEditModal = false;
   }
 
   closeEditModal(): void {
     this.showEditModal = false;
+    this.showAddModal = false;
   }
 
   openModal() {
     this.showModal = true;
   }
-  openModalnew () {
-    this.selectedCamera = this.newCamera
-    console.log(this.selectedCamera);
-    this.showEditModal = true;
-    
-  }
+
+
   // Method to close the modal
   closeModal() {
     this.showModal = false;
+    this.showAddModal = false;
   }
 
   getCameraCount(stationId: string): number {
@@ -121,17 +118,14 @@ export class CRUDCameraComponent implements OnInit{
   }
 
   addCamera(newCamera: any): void {
-    console.log("Adding new camera:", newCamera);
-    // Make HTTP request to add the new camera
-    // Upon success, add the new camera to the cameraData array
+
+    
     this.cameraData.push(newCamera);
   }
 
   // Method to update an existing camera
   updateCamera(updatedCamera: any): void {
     console.log("Updating camera:", updatedCamera);
-    // Make HTTP request to update the existing camera
-    // Upon success, update the cameraData array with the updated camera information
     const index = this.cameraData.findIndex(camera => camera.id === updatedCamera.id);
     if (index !== -1) {
       this.cameraData[index] = updatedCamera;
@@ -140,10 +134,14 @@ export class CRUDCameraComponent implements OnInit{
 
   // Method to delete a camera
   deleteCamera(cameraToDelete: any): void {
-    console.log("Deleting camera:", cameraToDelete);
-    // Make HTTP request to delete the camera
-    // Upon success, remove the camera from the cameraData array
+
     this.cameraData = this.cameraData.filter(camera => camera.id !== cameraToDelete.id);
+  }
+
+
+  openModalnew () {
+    this.selectedCamera = this.newCamera
+    this.showAddModal = true;
   }
 
 

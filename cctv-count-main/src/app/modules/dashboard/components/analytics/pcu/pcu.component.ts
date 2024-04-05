@@ -73,9 +73,9 @@ export class PCUComponent implements OnInit, OnDestroy {
       (data) => {
         // Handle successful response
         this.jsonData = data.msg; // Assign fetched data
-        console.log(data.msg);
+
         const seriesData = this.separateDataByTypeAndDate();
-        console.log('test',seriesData); 
+
       
         this.chartOptions = this.generateChartOptions(seriesData);
         
@@ -220,11 +220,8 @@ export class PCUComponent implements OnInit, OnDestroy {
         }
       });
   
-      console.log(`PCU sum for ${date}:`, pcuSum);
       seriesData.push({ date: date , value: pcuSum }); // Add PCU sum to series data as object with name and data
     });
-  
-    console.log('before return', seriesData); // Verify seriesData before return
     return seriesData; // Return seriesData after the loop has finished
     
   }
@@ -233,11 +230,9 @@ export class PCUComponent implements OnInit, OnDestroy {
   
 
   private generateChartOptions(data: any[]): Partial<ChartOptions> {
-    console.log(data);
     const dataArray: number[] = data.map(item => item.value);
     const dateArray: number[] = data.map(item => item.date);
-    console.log(dateArray)
-    console.log(dataArray);
+
     data = this.seriesData;
     
     return {

@@ -1,0 +1,41 @@
+<div class="modal-overlay" (click)="cancel()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="cancel()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h2>Add Camera</h2>
+      <form class="py-4" (ngSubmit)="saveChanges()">
+        <div>
+          <label for="camera_sn">Camera SN:</label>
+          <input type="text" id="camera_sn" name="camera_sn" [(ngModel)]="newCamera.camera_sn" required>
+        </div>
+        <div>
+          <label for="camera_url">Camera URL:</label>
+          <input type="text" id="camera_url" name="camera_url" [(ngModel)]="newCamera.camera_url" required>
+        </div>
+        <div>
+            <label for="camera_csn">Camera CSN:</label>
+            <input type="number" id="camera_csn" name="camera_csn" [(ngModel)]="newCamera.csn" required>
+          </div>
+        <div>
+          <label for="camera_port">Camera Port:</label>
+          <input type="number" id="camera_port" name="camera_port" [(ngModel)]="newCamera.camera_port" required>
+        </div>
+        <div>
+            <label for="camera_sid">Camera Port:</label>
+            <input type="number" id="camera_sid" name="camera_sid" [(ngModel)]="newCamera.sid" required>
+          </div>
+        <!-- Add other camera properties as needed -->
+        <div class="flex justify-end">
+          <div class="mr-4">
+            <button type="submit" class="btn-save">Save Changes</button>
+          </div>
+          <div class="mr-4">
+            <button type="button" (click)="cancel()" class="btn-cancel">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
