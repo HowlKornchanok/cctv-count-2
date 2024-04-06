@@ -14,7 +14,8 @@ interface newCamera {
   camera_port: number,
   camera_sn: number,
   camera_url: string,
-  station_id: number
+  station_id: number,
+  service_url: string
 }
 @Component({
   selector: '[crud-camera]',
@@ -39,7 +40,8 @@ export class CRUDCameraComponent implements OnInit{
     camera_port: '',
     camera_sn: '',
     camera_url: '',
-    station_id: ''
+    station_id: '',
+    service_url: '',
     
   };
   
@@ -72,7 +74,10 @@ export class CRUDCameraComponent implements OnInit{
           this.cameraDataService.getCameraList(stationId).subscribe((data) => {
             if (data.msg.length > 0) {
               // Merge or concatenate data instead of replacing
-              this.cameraData = this.cameraData.concat(data.msg); // Concatenating data
+              this.cameraData = this.cameraData.concat(data.msg);
+              console.log(data.msg)
+            
+              // Concatenating data
             } else {
               console.log(`No camera data available for station ${stationId}`);
             }
@@ -92,13 +97,21 @@ export class CRUDCameraComponent implements OnInit{
   }
   
   saveAdds(newCamera: any): void {
-    console.log(newCamera)
+    console.log(newCamera);
 
-    this.cameraDataService.addCameraService(newCamera.service_name, newCamera.camera_port, newCamera.camera_sn, newCamera.camera_url, newCamera.station_id);
-    this.showAddModal = false;
-    console.log('add');
-    
+    this.cameraDataService.addCameraService(newCamera.service_name, newCamera.camera_port, newCamera.camera_sn, newCamera.camera_url, newCamera.station_id, newCamera.service_url)
+      .subscribe(
+        () => {
+          console.log('Add Camera Service successful');
+          this.showAddModal = false;
+        },
+        error => {
+          console.error('Error adding camera service:', error);
+          // Handle error appropriately, e.g., show error message to user
+        }
+      );
   }
+  
   saveChanges(editedCamera: any): void {
     console.log(editedCamera)
     this.showEditModal = false;
@@ -155,6 +168,36 @@ export class CRUDCameraComponent implements OnInit{
     this.showAddModal = true;
   }
 
+  startCamera(camera: any){
+    this.selectedCamera = camera;
+    console.log(camera.service_name);
+    console.log(camera);
+    this.cameraDataService.startCameraService(camera.service_name).subscribe(
+      () => {
+        console.log('Add Camera Service successful');
+        this.showAddModal = false;
+      },
+      error => {
+        console.error('Error adding camera service:', error);
+        // Handle error appropriately, e.g., show error message to user
+      }
+    );
+  }
+  stopCamera(camera: any){
+    this.selectedCamera = camera;
+    console.log(camera.service_name);
+    console.log(camera);
+    this.cameraDataService.stopCameraService(camera.service_name).subscribe(
+      () => {
+        console.log('Add Camera Service successful');
+        this.showAddModal = false;
+      },
+      error => {
+        console.error('Error adding camera service:', error);
+        // Handle error appropriately, e.g., show error message to user
+      }
+    );
+  }
 
 
 }

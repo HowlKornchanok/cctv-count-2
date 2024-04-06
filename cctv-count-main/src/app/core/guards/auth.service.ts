@@ -42,7 +42,9 @@ export class AuthService {
     // Construct the message object with the required format
     const message = {
       transaction: btoa(payloadJsonString)
+    
     };
+    console.log(message);
 
     const userMessage = {
       transaction: btoa(UserPayloadJsonString)

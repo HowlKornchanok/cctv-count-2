@@ -12,20 +12,27 @@
           <input type="number" id="camera_sid" name="camera_sid" [(ngModel)]="newCamera.station_id" required>
         </div>
         <div>
-          <label for="camera_sn">Camera SN:</label>
+          <label for="camera_sn">Camera Service Name:</label>
           <input type="text" id="camera_sn" name="camera_sn" [(ngModel)]="newCamera.service_name" required>
         </div>
+     
         <div>
-          <label for="camera_url">Camera URL:</label>
-          <input type="text" id="camera_url" name="camera_url" [(ngModel)]="newCamera.camera_url" required>
-        </div>
-        <div>
-            <label for="camera_csn">Camera CSN:</label>
+            <label for="camera_csn">Camera Searial Number</label>
             <input type="text" id="camera_csn" name="camera_csn" [(ngModel)]="newCamera.camera_sn" required>
           </div>
         <div>
           <label for="camera_port">Camera Port:</label>
           <input type="number" id="camera_port" name="camera_port" [(ngModel)]="newCamera.camera_port" required>
+        </div>
+
+        <div>
+          <label for="camera_url">Camera URL:</label>
+          <input type="text" id="camera_url" name="camera_url" [(ngModel)]="newCamera.camera_url" required>
+        </div>
+
+        <div>
+          <label for="camera_port">Camera Service Url:</label>
+          <input type="text" id="camera_service_url" name="camera_service_url" [(ngModel)]="newCamera.service_url" required>
         </div>
 
         <!-- Add other camera properties as needed -->
