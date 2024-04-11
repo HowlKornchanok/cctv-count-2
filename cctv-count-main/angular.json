@@ -33,7 +33,6 @@
             "styles": [
               "src/styles.scss",
               "node_modules/ol/ol.css",
-              "node_modules/@videogular/ngx-videogular/fonts/videogular.css",
               "node_modules/font-awesome/css/font-awesome.min.css",
               {
                 "input": "node_modules/ol/ol.css",
