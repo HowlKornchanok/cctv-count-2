@@ -1,0 +1,64 @@
+<div class="max-w-md mx-auto" (click)="openModal()">
+  <div class="bg-white overflow-hidden shadow rounded-lg cursor-pointer">
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg font-medium leading-6 text-gray-900">Station Configuration</h3>
+    </div>
+    <div class="px-4 py-4 sm:p-6">
+      <p class="text-sm text-gray-500">Click on the card to configure station.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
+  <div class="bg-white dark:bg-night-800 rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+    <!-- Modal header -->
+    <div class="sticky top-0 flex justify-between items-center mb-4">
+        <div></div>
+        <button (click)="closeModal()" class="text-gray-600 hover:text-gray-800">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+    </div>
+    <!-- Table to display user data -->
+    <table class="min-w-full divide-y divide-gray-200">
+      <thead class="bg-gray-50 dark:bg-night-700">
+        <tr>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User ID</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Username</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Enable</th>
+          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="bg-white divide-y divide-gray-200 dark:bg-night-800 dark:divide-night-700">
+        <!-- Iterate through userList -->
+        <ng-container *ngFor="let userData of users">
+          <tr>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ userData.id }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ userData.user_name }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ userData.role }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ userData.is_enable }}</td>
+            <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+              <button (click)="openEditModal(userData)" class="text-indigo-600 hover:text-indigo-900">Edit</button>
+            </td>
+          </tr>
+        </ng-container>
+        <!-- If no users exist -->
+        <ng-container *ngIf="users.length === 0">
+          <tr>
+            <td colspan="5" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">No user data available.</td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+    <button (click)="openModalnew()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Add User</button>
+  </div>
+</div>
+
+
+<!-- Edit User Modal -->
+<app-user-edit-modal *ngIf="showEditModal" [user]="selectedUser" (saveChangesAction)="saveChanges($event)"  (cancelAction)="closeEditModal()"></app-user-edit-modal>
+<app-user-add-modal *ngIf="showAddModal" [newUser]="newUser" (saveChangesAction)="saveAdd($event)"  (cancelAction)="closeEditModal()"></app-user-add-modal>

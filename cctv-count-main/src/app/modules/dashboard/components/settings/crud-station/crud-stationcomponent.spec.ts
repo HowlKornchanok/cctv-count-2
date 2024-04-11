@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CameraTableComponent } from './camera-table.component';
+import { CrudStationComponent } from './crud-station.component';
 
-describe('CameraTableComponent', () => {
-  let component: CameraTableComponent;
-  let fixture: ComponentFixture<CameraTableComponent>;
+describe('CrudStationComponent', () => {
+  let component: CrudStationComponent;
+  let fixture: ComponentFixture<CrudStationComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CameraTableComponent]
+      imports: [CrudStationComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(CameraTableComponent);
+    fixture = TestBed.createComponent(CrudStationComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

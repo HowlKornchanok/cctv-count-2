@@ -1,28 +1,25 @@
 
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http'; // Import HttpHeaders
+import { HttpClient } from '@angular/common/http'; // Import HttpHeaders
 import { Observable, throwError } from 'rxjs';
 import { catchError, switchMap } from 'rxjs/operators';
-import { ValidateService } from './validate.service';
+import { tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
   private apiUrl = 'https://wrp-smarttraffic.com';
-  
+  public refreshToken!: [];
 
-  constructor(
-    private http: HttpClient,
-    private validateService: ValidateService) { }
+  constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<any> {
-    // Encode username and password to Base64
     const encodedUsername = btoa(username);
     const encodedPassword = btoa(password);
-    sessionStorage.setItem('bp',encodedPassword);
+    sessionStorage.setItem('bp', encodedPassword);
+    sessionStorage.setItem('Izjv', encodedUsername);
 
-    // Construct payload
     const payload = {
       auth_data: {
         uname: encodedUsername,
@@ -30,41 +27,55 @@ export class AuthService {
       }
     };
 
-    const UserPayload = {
-      auth_data:{
-        uname: encodedUsername
-      }
-    }
+    
+    
 
-    // Convert payload to JSON string
     const payloadJsonString = JSON.stringify(payload);
-    const UserPayloadJsonString = JSON.stringify(UserPayload);
-    // Construct the message object with the required format
+
     const message = {
       transaction: btoa(payloadJsonString)
-    
     };
-    console.log(message);
-
-    const userMessage = {
-      transaction: btoa(UserPayloadJsonString)
-    }
 
     
 
-    // Make HTTP POST request to login
     return this.http.post<any>(`${this.apiUrl}/api/auth/login`, message).pipe(
-      catchError(error => {
-        // Handle authentication failure
-        return throwError(error.error.msg || 'Authenticationsssss failed');
+      tap(response => {
+        console.log('Login successful:', response);
+        sessionStorage.setItem('accessToken', response.msg);
       }),
-     
+      catchError(error => {
+        console.error('Authentication failed:', error.error.msg);
+        return throwError(error.error.msg || 'Authentication failed');
+      })
     );
   }
 
+  tokenRefresh(): Observable<any> {
+    const userName = sessionStorage.getItem('uname');
+    console.log(sessionStorage.getItem('Izjv'));
+    console.log(sessionStorage.getItem('bp'));
 
+    const payload = {
+      auth_data: {
+        uname: sessionStorage.getItem('Izjv'),
+        ukey: sessionStorage.getItem('bp')
+      }
+    };
 
-  validateToken(token: string): Observable<any> {
-    return this.validateService.validateToken(token);
+    const payloadJsonString = JSON.stringify(payload);
+
+    const message = {
+      transaction: btoa(payloadJsonString)
+    };
+
+    return this.http.post<any>(`${this.apiUrl}/api/auth/login`, message).pipe(
+      tap(response => {
+        
+      }),
+      catchError(error => {
+        console.error('Token refresh failed:', error.error.msg);
+        return throwError(error.error.msg || 'Token refresh failed');
+      })
+    );
   }
 }

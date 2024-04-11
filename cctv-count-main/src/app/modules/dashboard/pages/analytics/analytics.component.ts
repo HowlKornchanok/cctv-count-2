@@ -13,9 +13,6 @@ import { APIDonutComponent } from '../../components/analytics/api-donut/api-donu
         PCUComponent,
         SpeedGaugeComponent,
         APIDonutComponent
-        
-
-
     ],
 })
 export class AnalyticsComponent {

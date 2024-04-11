@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UserEditModalComponent } from './modal/user-edit-modal/user-edit-modal.component';
 import { UserService } from 'src/app/core/guards/user.service';
 import { UserAddModalComponent } from './modal/user-add-modal/user-add-modal.component';
+
+
 interface user {
   user_name: string;
   id: number;
@@ -12,14 +13,14 @@ interface user {
   role: number;
 }
 @Component({
-  selector: '[crud-user]',
+  selector: '[crud-station]',
   standalone: true,
-  templateUrl: './crud-user.component.html',
-  styleUrls: ['./crud-user.component.scss'],
+  templateUrl: './crud-station.component.html',
+  styleUrls: ['./crud-station.component.scss'],
   imports: [CommonModule, FormsModule, UserEditModalComponent, UserAddModalComponent],
   providers: [UserService]
 })
-export class CrudUserComponent implements OnInit {
+export class CrudStationComponent implements OnInit {
   public users: user[] = [];
   public showModal: boolean = false;
   public selectedUser: any = {};
@@ -27,9 +28,6 @@ export class CrudUserComponent implements OnInit {
   public showEditModal: boolean = false;
   public showAddModal: boolean = false;
   public newUser: any = {
-    uname: '',
-    ukey: '',
-    role: '',
     fullName: '',
     lastName: '',
     address: '',
@@ -61,28 +59,7 @@ export class CrudUserComponent implements OnInit {
   
 
   saveAdd(newUser: any): void {
-    this.userService.addNewUser(
-      newUser.uname,
-      newUser.ukey,
-      newUser.role,
-      newUser.fullName,
-      newUser.lastName,
-      newUser.address,
-      newUser.email
-    )
-      .subscribe(
-        (response) => {
-          if (response && response.status === 200) {
-            this.loadData();
-            console.log('User added successfully');
-          } else {
-            console.error('Failed to add user:', response);
-          }
-        },
-        (error) => {
-          console.error('Error adding user:', error);
-        }
-      );
+   
     this.showAddModal = false;
   }
   saveChanges(editedCamera: any): void {

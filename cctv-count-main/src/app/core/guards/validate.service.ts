@@ -62,41 +62,6 @@ export class ValidateService {
       return null;
     }
   }
-  
-  
-  
-
-validateToken(token: string): Observable<any> {
-  const headers = new HttpHeaders({
-    'Content-Type': 'application/json',
-    'Authorization': `Bearer ${token}`
-  });
-
-  // Log remaining time before token expiry
-  this.showRemainingTime(token);
-
-  return this.http.post<any>('https://150.95.31.129/api/validate', {}, { headers }).pipe(
-    tap(response => {
-      console.log('Token Validation response:', response);
-      if (response.status === 200) {
-        console.log('Token is valid');
-        // Token is valid, you can proceed with your application logic here
-      } else if (response.status === 440) {
-        console.log('Token is expired');
-        // Token is expired, handle accordingly (e.g., show timeout message)
-        this.showTokenTimeoutMessage();
-      } else {
-        console.log('Token validation failed');
-        // Token validation failed, handle accordingly (e.g., logout user)
-      }
-    }),
-    catchError(error => {
-      console.error('Token validation error:', error);
-      // Handle error
-      return throwError(error.error.msg || 'Token validation failed');
-    })
-  );
-}
 
 
   showTokenTimeoutMessage() {

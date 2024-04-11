@@ -174,11 +174,10 @@ export class CRUDCameraComponent implements OnInit{
     console.log(camera);
     this.cameraDataService.startCameraService(camera.service_name).subscribe(
       () => {
-        console.log('Add Camera Service successful');
-        this.showAddModal = false;
+        console.log('Start Camera Service successful');
       },
       error => {
-        console.error('Error adding camera service:', error);
+        console.error('Error start camera service:', error);
         // Handle error appropriately, e.g., show error message to user
       }
     );
@@ -189,11 +188,26 @@ export class CRUDCameraComponent implements OnInit{
     console.log(camera);
     this.cameraDataService.stopCameraService(camera.service_name).subscribe(
       () => {
-        console.log('Add Camera Service successful');
+        console.log('Stop Camera Service successful');
+      },
+      error => {
+        console.error('Error stop camera service:', error);
+        // Handle error appropriately, e.g., show error message to user
+      }
+    );
+  }
+
+  DeleteCamera(camera: any){
+    this.selectedCamera = camera;
+    console.log(camera.service_name);
+    console.log(camera);
+    this.cameraDataService.deleteCameraService(camera.service_name).subscribe(
+      () => {
+        console.log('Delete Camera Service successful');
         this.showAddModal = false;
       },
       error => {
-        console.error('Error adding camera service:', error);
+        console.error('Error Delete camera service:', error);
         // Handle error appropriately, e.g., show error message to user
       }
     );

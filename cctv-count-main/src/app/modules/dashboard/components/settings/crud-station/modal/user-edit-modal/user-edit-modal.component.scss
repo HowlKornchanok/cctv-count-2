@@ -1,0 +1,54 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.close-button svg {
+  width: 24px;
+  height: 24px;
+  fill: #333; /* Adjust color as needed */
+}
+
+/* Adjust the width of the modal as needed */
+.modal-content {
+  width: 400px;
+}
+
+/* Center the modal vertically and horizontally */
+.modal-content {
+  position: relative;
+
+}
+.btn-save {
+  @apply bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-700;
+}
+
+.btn-cancel {
+  @apply bg-red-500 text-white px-4 py-2 rounded-md hover:bg-red-700;
+}
+
+
+/* Add other styles as needed */

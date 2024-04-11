@@ -14,3 +14,28 @@
   </div>
 
 </div>
+
+<div class="fixed top-0 left-0 w-full h-full flex items-center justify-center z-50" [ngClass]="{ 'hidden': !displayTokenRefreshModal }">
+  <div class="absolute top-0 left-0 w-full h-full bg-gray-900 opacity-50"></div>
+
+  <div class="relative bg-white rounded-lg shadow-lg w-96">
+    <div class="flex justify-between items-center p-4 bg-gray-800 text-white rounded-t-lg">
+      <h5 class="text-lg font-semibold">Token Expiry Warning</h5>
+      <button type="button" class="focus:outline-none" (click)="closeTokenRefreshModal()">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="p-4">
+      <p class="text-gray-800">Your session will expire soon. Would you like to refresh your session?</p>
+    </div>
+
+    <div class="flex justify-end p-4 bg-gray-100 rounded-b-lg">
+      <button type="button" class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none" (click)="refreshToken()">Refresh Session</button>
+      <button type="button" class="ml-2 px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500 focus:outline-none" (click)="logout()">Logout</button>
+    </div>
+  </div>
+</div>
+

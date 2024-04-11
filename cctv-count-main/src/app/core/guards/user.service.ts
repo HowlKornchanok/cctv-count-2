@@ -86,6 +86,9 @@ export class UserService {
   }
 
   addNewUser(
+    targetUname: string,
+    targetUkey: string,
+    targetRole: string,
     firstName: string,
     lastName: string,
     address: string,
@@ -96,8 +99,10 @@ export class UserService {
     const userName = sessionStorage.getItem('uname');
     const encodedUserId = userID ? btoa(userID) : '';
     const encodedUsername = userName ? btoa(userName) : '';
-    console.log(sessionStorage.getItem('bp'));
     const encodedPassword = sessionStorage.getItem('bota');
+    const encodeTargetUname = targetUname ? btoa(targetUname): '';
+    const encodeTargetUkey = targetUkey ? btoa(targetUkey): '';
+    const encodeTargetRole = targetRole ? btoa(targetRole): '';
     const encodedFirstName = firstName ? btoa(firstName) : '';
     const encodedLastName = lastName ? btoa(lastName) : '';
     const encodedAddress = address ? btoa(address) : '';
@@ -109,6 +114,9 @@ export class UserService {
         ukey: encodedPassword
       },
       detail: {
+        uname: encodeTargetUname,
+        ukey: encodeTargetUkey,
+        role: encodeTargetRole,
         fname: encodedFirstName,
         lname: encodedLastName,
         address: encodedAddress,

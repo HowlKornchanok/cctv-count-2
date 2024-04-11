@@ -2,7 +2,6 @@
   <div class="mb-4 flex items-center justify-between">
     <div class="flex-col col-span-1 items-center">
       <h3 class="text-lg font-semibold text-gray-900 dark:text-night-50">{{ translations[currentLanguage]['History Table'] }}</h3>
-      <span class="text-sm text-gray-600 dark:text-night-300">{{ translations[currentLanguage]['From JSON'] }}</span>
     </div>
     <div class="flex-none rounded-md py-2.5 text-sm font-semibold text-gray-600 dark:text-night-200">
       <label for="timeRange" class="flex-none px-2 py-1 text-sm font-semibold text-gray-600 hover:text-gray-700 dark:text-night-50">
@@ -44,7 +43,6 @@
         </tr>
       </tbody>
     </table>
-    <button class="export-button" (click)="exportToPDF()">Export to PDF</button>  
   </div>
   </div>
 </div>

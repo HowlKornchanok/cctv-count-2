@@ -304,7 +304,6 @@ export class PCUComponent implements OnInit, OnDestroy {
           inverseColors: true,
           opacityFrom: 1,
           opacityTo: 1,
-          stops: [50, 0, 100, 100]
         }
       },
       yaxis: {

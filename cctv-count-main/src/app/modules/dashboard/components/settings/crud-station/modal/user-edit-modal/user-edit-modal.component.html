@@ -1,0 +1,43 @@
+<div class="modal-overlay" (click)="cancel()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <button class="close-button" (click)="cancel()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <h2>Edit User</h2>
+      <form class="py-4" (ngSubmit)="saveChanges()">
+        <div>
+          <label for="user_id">User ID:</label>
+          <span>{{ editedUser.id }}</span>
+        </div>
+        <div>
+          <label for="username">Username:</label>
+          <span>{{ editedUser.user_name }}</span>
+        </div>
+        <div>
+          <label for="role">Role:</label>
+          <select id="role" name="role" [(ngModel)]="editedUser.role" required>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div>
+        <div>
+          <label for="is_enable">Is Enable:</label>
+          <input type="checkbox" id="is_enable" name="is_enable" [(ngModel)]="editedUser.is_enable">
+        </div>
+        <!-- Add other user properties as needed -->
+        <div class="flex justify-end">
+          <div class="mr-4">
+            <button type="submit" class="btn-save">Save Changes</button>
+          </div>
+          <div class="mr-4">
+            <button type="button" (click)="cancel()" class="btn-cancel">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+
+  
