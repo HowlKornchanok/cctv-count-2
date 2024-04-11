@@ -73,19 +73,13 @@ export class CRUDCameraComponent implements OnInit{
           
           this.cameraDataService.getCameraList(stationId).subscribe((data) => {
             if (data.msg.length > 0) {
-              // Merge or concatenate data instead of replacing
               this.cameraData = this.cameraData.concat(data.msg);
-              console.log(data.msg)
-            
-              // Concatenating data
             } else {
-              console.log(`No camera data available for station ${stationId}`);
             }
           });
         });
       },
       (error) => {
-        console.error('Error loading station data:', error);
       }
     );
   }
@@ -97,23 +91,17 @@ export class CRUDCameraComponent implements OnInit{
   }
   
   saveAdds(newCamera: any): void {
-    console.log(newCamera);
-
     this.cameraDataService.addCameraService(newCamera.service_name, newCamera.camera_port, newCamera.camera_sn, newCamera.camera_url, newCamera.station_id, newCamera.service_url)
       .subscribe(
         () => {
-          console.log('Add Camera Service successful');
           this.showAddModal = false;
         },
-        error => {
-          console.error('Error adding camera service:', error);
-          // Handle error appropriately, e.g., show error message to user
-        }
       );
+    this.loadData();
   }
   
   saveChanges(editedCamera: any): void {
-    console.log(editedCamera)
+    this.loadData();
     this.showEditModal = false;
   }
 
@@ -149,7 +137,6 @@ export class CRUDCameraComponent implements OnInit{
 
   // Method to update an existing camera
   updateCamera(updatedCamera: any): void {
-    console.log("Updating camera:", updatedCamera);
     const index = this.cameraData.findIndex(camera => camera.id === updatedCamera.id);
     if (index !== -1) {
       this.cameraData[index] = updatedCamera;
@@ -170,47 +157,16 @@ export class CRUDCameraComponent implements OnInit{
 
   startCamera(camera: any){
     this.selectedCamera = camera;
-    console.log(camera.service_name);
-    console.log(camera);
-    this.cameraDataService.startCameraService(camera.service_name).subscribe(
-      () => {
-        console.log('Start Camera Service successful');
-      },
-      error => {
-        console.error('Error start camera service:', error);
-        // Handle error appropriately, e.g., show error message to user
-      }
-    );
+    this.cameraDataService.startCameraService(camera.service_name).subscribe();
   }
   stopCamera(camera: any){
     this.selectedCamera = camera;
-    console.log(camera.service_name);
-    console.log(camera);
-    this.cameraDataService.stopCameraService(camera.service_name).subscribe(
-      () => {
-        console.log('Stop Camera Service successful');
-      },
-      error => {
-        console.error('Error stop camera service:', error);
-        // Handle error appropriately, e.g., show error message to user
-      }
-    );
+    this.cameraDataService.stopCameraService(camera.service_name).subscribe();
   }
 
   DeleteCamera(camera: any){
     this.selectedCamera = camera;
-    console.log(camera.service_name);
-    console.log(camera);
-    this.cameraDataService.deleteCameraService(camera.service_name).subscribe(
-      () => {
-        console.log('Delete Camera Service successful');
-        this.showAddModal = false;
-      },
-      error => {
-        console.error('Error Delete camera service:', error);
-        // Handle error appropriately, e.g., show error message to user
-      }
-    );
+    this.cameraDataService.deleteCameraService(camera.service_name).subscribe();
   }
 
 

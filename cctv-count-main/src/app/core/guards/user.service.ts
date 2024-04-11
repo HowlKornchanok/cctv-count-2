@@ -40,7 +40,6 @@ export class UserService {
 
       }),
       catchError(error => {
-        console.error('Error fetching user list:', error);
         return throwError(error.error.msg || 'Failed to get user list');
       })
     );
@@ -75,10 +74,8 @@ export class UserService {
 
     return this.http.post<any>(`${this.apiUrl}/get_user_list`, requestBody, { headers }).pipe(
       tap(response => {
-        console.log('User list response:', response);
       }),
       catchError(error => {
-        console.error('Error fetching user list:', error);
         return throwError(error.error.msg || 'Failed to get user list');
       })
     )

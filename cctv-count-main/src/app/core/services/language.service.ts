@@ -30,6 +30,5 @@ export class LanguageService {
     const newLanguage = this.getCurrentLanguage() === 'th' ? 'en' : 'th';
     this.currentLanguageSubject.next(newLanguage);
     localStorage.setItem('currentLanguage', newLanguage); // Save to localStorage
-    console.log('Current Language:', newLanguage);
   }
 }

@@ -40,11 +40,9 @@ export class AuthService {
 
     return this.http.post<any>(`${this.apiUrl}/api/auth/login`, message).pipe(
       tap(response => {
-        console.log('Login successful:', response);
         sessionStorage.setItem('accessToken', response.msg);
       }),
       catchError(error => {
-        console.error('Authentication failed:', error.error.msg);
         return throwError(error.error.msg || 'Authentication failed');
       })
     );
@@ -52,8 +50,6 @@ export class AuthService {
 
   tokenRefresh(): Observable<any> {
     const userName = sessionStorage.getItem('uname');
-    console.log(sessionStorage.getItem('Izjv'));
-    console.log(sessionStorage.getItem('bp'));
 
     const payload = {
       auth_data: {
@@ -73,7 +69,6 @@ export class AuthService {
         
       }),
       catchError(error => {
-        console.error('Token refresh failed:', error.error.msg);
         return throwError(error.error.msg || 'Token refresh failed');
       })
     );

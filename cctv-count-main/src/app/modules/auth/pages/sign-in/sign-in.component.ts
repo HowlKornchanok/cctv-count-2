@@ -70,7 +70,6 @@ export class SignInComponent implements OnInit {
             }
         },
         error => {
-            console.error('Login error', error);
             this.responseMsg = 'Error: ' + error.message;
         }
     );
@@ -87,7 +86,6 @@ export class SignInComponent implements OnInit {
             sessionStorage.setItem('role',filteredUserInfo[0].role);
         },
         error => {
-            console.error('Error fetching user info:', error);
         }
     );
   }

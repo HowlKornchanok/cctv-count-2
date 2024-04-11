@@ -54,15 +54,7 @@ export class CameraDataService {
     const transactionObject = this.createTransactionObject(requestData);
     const headers = this.getHeaders();
     
-    return this.http.post<any>(`${this.baseUrl}/get_camera_list`, transactionObject, { headers }).pipe(
-      tap(response => {
-        console.log('Camera List Response:', response);
-      }),
-      catchError(error => {
-        console.error('Error Camera user list:', error);
-        return throwError(error.error.msg || 'Failed to get camera list');
-      })
-    );
+    return this.http.post<any>(`${this.baseUrl}/get_camera_list`, transactionObject, { headers })
   }
 
   getUsedPort(): Observable<any> {

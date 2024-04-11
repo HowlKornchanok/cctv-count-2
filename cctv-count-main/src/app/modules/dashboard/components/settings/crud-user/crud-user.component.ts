@@ -48,12 +48,10 @@ export class CrudUserComponent implements OnInit {
         if (response && response.status === 200 && response.msg) {
           this.users = response.msg; // Assigning the array of users to the component property
         } else {
-          console.error('Invalid response format:', response);
           // Handle invalid response format
         }
       },
       (error) => {
-        console.error('Error loading user data:', error);
         // Handle error here
       }
     );
@@ -74,37 +72,17 @@ export class CrudUserComponent implements OnInit {
         (response) => {
           if (response && response.status === 200) {
             this.loadData();
-            console.log('User added successfully');
-          } else {
-            console.error('Failed to add user:', response);
-          }
-        },
-        (error) => {
-          console.error('Error adding user:', error);
+          } 
         }
       );
     this.showAddModal = false;
   }
 
   deleteUser(selectedUserId: number): void {
-    this.userService.deleteUser(selectedUserId)
-      .subscribe(
-        (response) => {
-          if (response && response.status === 200) {
-            this.loadData();
-            console.log('User deleted successfully');
-          } else {
-            console.error('Failed to delete user:', response);
-          }
-        },
-        (error) => {
-          console.error('Error deleting user:', error);
-        }
-      );
+    this.userService.deleteUser(selectedUserId).subscribe();
   }
 
-  saveChanges(editedCamera: any): void {
-    console.log(editedCamera)
+  saveChanges(editedUser: any): void {
     this.showEditModal = false;
   }
   

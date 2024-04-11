@@ -12,9 +12,7 @@ export class SignoutService {
     // Clear session storage
     sessionStorage.removeItem('accessToken');
     sessionStorage.removeItem('userData');
-    console.log(sessionStorage);
     // Redirect to the login page
     this.router.navigate(['/auth/sigh-in']);
-    console.log('User logged out');
   }
 }
