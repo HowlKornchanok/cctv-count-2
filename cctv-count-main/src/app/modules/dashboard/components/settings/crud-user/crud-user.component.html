@@ -43,7 +43,10 @@
             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ userData.is_enable }}</td>
             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
               <button (click)="openEditModal(userData)" class="text-indigo-600 hover:text-indigo-900">Edit</button>
+              <!-- Add delete button -->
+              <button (click)="deleteUser(userData.id)" class="text-red-600 hover:text-red-900 ml-2">Delete</button>
             </td>
+      
           </tr>
         </ng-container>
         <!-- If no users exist -->

@@ -14,7 +14,6 @@ export class UserService {
   getUserList(): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const username = sessionStorage.getItem('uname');
-    const userID = sessionStorage.getItem('userID');
     const encodedUsername = username ? btoa(username) : '';
 
     const payload = {
@@ -107,6 +106,7 @@ export class UserService {
     const encodedLastName = lastName ? btoa(lastName) : '';
     const encodedAddress = address ? btoa(address) : '';
     const encodedEmail = email ? btoa(email) : '';
+    const encodedEnable = btoa('True');
     const payload = {
       id: encodedUserId,
       auth_data: {
@@ -120,7 +120,8 @@ export class UserService {
         fname: encodedFirstName,
         lname: encodedLastName,
         address: encodedAddress,
-        email: encodedEmail
+        email: encodedEmail,
+        is_enable: encodedEnable,
       },
       created_by: encodedUserId
     };
@@ -141,5 +142,47 @@ export class UserService {
         return throwError(error.error.msg || 'Failed to add new user');
       })
     );
+  }
+
+  deleteUser(targetUserId: number): Observable<any> {
+    const userToken = sessionStorage.getItem('accessToken');
+    const userID = sessionStorage.getItem('userID');
+    const encodedUserId = userID ? btoa(userID) : '';
+    const encodedTargetUserId = targetUserId ? btoa(targetUserId.toString()) : '';
+    const userName = sessionStorage.getItem('uname');
+    const encodedUsername = userName ? btoa(userName) : '';
+    const encodedPassword = sessionStorage.getItem('bota');
+    
+  
+    const payload = {
+      id: encodedUserId,
+      auth_data: {
+        uname: encodedUsername,
+        ukey: encodedPassword
+      },
+      detail: {
+        user_id: encodedTargetUserId
+      }
+    };
+  
+    const jsonString = JSON.stringify(payload);
+    const encodedPayload = btoa(jsonString);
+    const requestBody = {
+      transaction: encodedPayload
+    };
+
+  
+  
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${userToken}`
+    });
+  
+    return this.http.delete<any>(`${this.apiUrl}/delete_user_data`, { headers, body: requestBody }).pipe(
+      catchError(error => {
+        return throwError(error.error.msg || 'Failed to delete user');
+      })
+    );
+    
   }
 }

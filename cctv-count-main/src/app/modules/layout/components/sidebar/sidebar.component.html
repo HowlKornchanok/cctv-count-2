@@ -5,12 +5,12 @@
     <!-- Logo -->
     <div class="relative h-10">
       <div class="flex items-center" *ngIf="menuService.showSideBar">
-        <a class="flex items-center justify-center rounded bg-primary-500 p-2 focus:outline-none focus:ring-1">
-          <svg-icon src="assets/icons/logo.svg"> </svg-icon>
+        <a class="flex items-center justify-center rounded p-2 focus:outline-none focus:ring-1">
+          <img src="\assets\logo.png" width="25" height="25"> 
+        </a>        
+        <a class="ml-1 pl-2 text-sm  dark:text-night-50">
+          Smart Traffic
         </a>
-        <b class="ml-1 pl-2 text-sm font-bold dark:text-night-50">
-          Traffic Monitor
-        </b>
       </div>
       <button
         (click)="toggleSidebar()"

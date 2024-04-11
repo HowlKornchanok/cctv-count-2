@@ -1,50 +1,48 @@
-<div class="mx-auto px-1 py-4 "  style="width: 90%;">
+<div class="mx-auto px-1 py-4" style="width: 90%;">
   <div *ngFor="let station of stationDataList" class="py-4 bg-whtite rounded-lg">
-      <h2 (click)="toggleCollapse(station)" class="cursor-pointer p-4 bg-white rounded-lg">
-        {{ station.station_name }}
-      </h2>
-      <div *ngIf="!station.collapsed" class="bg-white rounded-lg p-4 mt-2">
-        <div *ngIf="getCamerasForStation(station.id).length > 0; else noCameraData" class="mb-4">
+    <h2 (click)="toggleCollapse(station)" class="cursor-pointer p-4 bg-white rounded-lg">
+      {{ station.station_name }}
+    </h2>
+    <div *ngIf="!station.collapsed" class="bg-white rounded-lg p-4 mt-2">
+      <div *ngIf="getCamerasForStation(station.id).length > 0; else noCameraData" class="mb-4">
+        <div class="grid grid-cols-2 gap-4">
           <div *ngFor="let camera of getCamerasForStation(station.id)" class="mb-4">
             <!-- Display camera information -->
             <div class="mb-2">
               <span class="font-semibold">Camera ID:</span> {{ camera.id }}
             </div>
             <div class="mb-2">
-              <span class="font-semibold">Camera URL:</span> {{ camera.camera_url }}
+              <!-- Update the click event here -->
+              <img [src]="camera.service_url" alt="Camera Image" class=" min-w-[200px] object-cover w-full rounded-md shadow-md cursor-pointer" (click)="openModal(camera)">
             </div>
-            <!-- Add other camera properties as needed -->
-            <button (click)="openModal(camera)" class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Camera M</button>
           </div>
         </div>
-        <ng-template #noCameraData>
-          <p class="text-gray-500">No camera data available for this station.</p>
-        </ng-template>
       </div>
+      <ng-template #noCameraData>
+        <p class="text-gray-500">No camera data available for this station.</p>
+      </ng-template>
     </div>
   </div>
+</div>
 
-  
-  <!-- Modal -->
-  <div *ngIf="showModal" class="modal-overlay">
-    <div class="sticky top-0 flex justify-between items-center mb-4">
-      <div></div>
-      <button (click)="closeModal()" class="text-gray-600 hover:text-gray-800">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+<!-- Modal -->
+<div *ngIf="showModal" class="modal-overlay">
+  <div class="sticky top-0 flex justify-between items-center mb-4">
+    <div></div>
+    <button (click)="closeModal()" class="text-gray-600 hover:text-gray-800">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
   </div>
-    <div class="modal-content">
-      <h2>Camera Modal</h2>
-      <div>
-        Camera ID: {{ selectedCamera?.id }}
-      </div>
-      <div>
-        Camera URL: {{ selectedCamera?.camera_url }}
-      </div>
-      <!-- Add other camera details as needed -->
-      <button (click)="closeModal()" class="close-button">Close</button>
+  <div class="modal-content">
+    <h2>Camera Modal</h2>
+    <div>
+      Camera ID: {{ selectedCamera?.id }}
     </div>
+    <div>
+      <img [src]="selectedCamera.service_url" alt="Camera Image" class=" max-h-[1000px]  object-cover w-full rounded-md shadow-md">
+    </div>
+    <button (click)="closeModal()" class="close-button">Close</button>
   </div>
-  
+</div>

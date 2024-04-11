@@ -85,6 +85,24 @@ export class CrudUserComponent implements OnInit {
       );
     this.showAddModal = false;
   }
+
+  deleteUser(selectedUserId: number): void {
+    this.userService.deleteUser(selectedUserId)
+      .subscribe(
+        (response) => {
+          if (response && response.status === 200) {
+            this.loadData();
+            console.log('User deleted successfully');
+          } else {
+            console.error('Failed to delete user:', response);
+          }
+        },
+        (error) => {
+          console.error('Error deleting user:', error);
+        }
+      );
+  }
+
   saveChanges(editedCamera: any): void {
     console.log(editedCamera)
     this.showEditModal = false;
