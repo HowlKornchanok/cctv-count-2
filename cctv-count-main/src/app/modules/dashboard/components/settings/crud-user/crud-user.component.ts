@@ -1,16 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { UserEditModalComponent } from './modal/user-edit-modal/user-edit-modal.component';
 import { UserService } from 'src/app/core/guards/user.service';
 import { UserAddModalComponent } from './modal/user-add-modal/user-add-modal.component';
-interface user {
-  user_name: string;
-  id: number;
-  is_enable: boolean;
-  role: number;
-}
+import { UserData,NewUserData } from 'src/app/core/interfaces/user-data.interface';
 @Component({
   selector: '[crud-user]',
   standalone: true,
@@ -19,22 +13,26 @@ interface user {
   imports: [CommonModule, FormsModule, UserEditModalComponent, UserAddModalComponent],
   providers: [UserService]
 })
+
 export class CrudUserComponent implements OnInit {
-  public users: user[] = [];
+  public users: UserData[] = [];
   public showModal: boolean = false;
   public selectedUser: any = {};
   public isNewUser: boolean = false;
   public showEditModal: boolean = false;
   public showAddModal: boolean = false;
-  public newUser: any = {
+  public newUser: NewUserData = {
     uname: '',
     ukey: '',
     role: '',
-    fullName: '',
+    firstName: '',
     lastName: '',
     address: '',
     email: '',
+    is_enable: 'true',
   };
+  private loggedInUser = sessionStorage.getItem('uname');
+  private loggedInID = sessionStorage.getItem('userID');
   
   constructor(private userService: UserService) { }
   
@@ -58,32 +56,53 @@ export class CrudUserComponent implements OnInit {
   }
   
 
-  saveAdd(newUser: any): void {
-    this.userService.addNewUser(
-      newUser.uname,
-      newUser.ukey,
-      newUser.role,
-      newUser.fullName,
-      newUser.lastName,
-      newUser.address,
-      newUser.email
-    )
+  saveAdd(newUser: NewUserData): void {
+    this.userService.addNewUser(newUser)
       .subscribe(
         (response) => {
-          if (response && response.status === 200) {
+          if (response) {
             this.loadData();
-          } 
+            this.showAddModal = false; // Close the modal after successful addition
+          } else {
+
+            this.loadData();
+            this.showAddModal = false;
+          }
+        },
+        (error) => {
+          this.showAddModal = false;
         }
       );
-    this.showAddModal = false;
+      this.showAddModal = false;
   }
+  
 
-  deleteUser(selectedUserId: number): void {
-    this.userService.deleteUser(selectedUserId).subscribe();
+  deleteUser(selectedUserId: number, selectedUserName: string): void {
+    if (selectedUserName !== this.loggedInUser && selectedUserName !== this.loggedInID ){
+      this.userService.deleteUser(selectedUserId,selectedUserName).subscribe();
+    }else{
+      alert("You can't delete yourself");
+    }
+    this.loadData();
   }
 
   saveChanges(editedUser: any): void {
-    this.showEditModal = false;
+    this.userService.updateUser(editedUser).subscribe(
+      (response) => {
+        if (response) {
+          this.loadData();
+          this.showEditModal = false; 
+        } else {
+
+          this.loadData();
+          this.showEditModal = false;
+        }
+      },
+      (error) => {
+        this.showEditModal = false;
+      }
+    );
+    this.showAddModal = false;
   }
   
 
@@ -95,8 +114,7 @@ export class CrudUserComponent implements OnInit {
   closeEditModal(): void {
     this.showEditModal = false;
     this.showAddModal = false;
-    // Reload data after closing modal, if needed
-    // this.loadData();
+    this.loadData();
   }
 
   openModal(): void {
@@ -105,6 +123,7 @@ export class CrudUserComponent implements OnInit {
 
   closeModal(): void {
     this.showModal = false;
+    this.loadData();
     
   }
 

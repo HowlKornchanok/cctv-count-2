@@ -9,49 +9,56 @@
   </div>
 </div>
 
-
 <!-- Modal -->
 <div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
-  <div class="bg-white dark:bg-night-800 rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+  <div class="bg-white rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 ">
     <!-- Modal header -->
     <div class="sticky top-0 flex justify-between items-center mb-4">
-        <div></div>
-        <button (click)="closeModal()" class="text-gray-600 hover:text-gray-800">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
+      <div></div>
+      <button (click)="closeModal()" class="text-gray-600 hover:text-gray-800">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </div>
-    <!-- Table to display user data -->
-    <table class="min-w-full divide-y divide-gray-200">
-      <thead class="bg-gray-50 dark:bg-night-700">
-        <tr>
-        
-          <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-        </tr>
-      </thead>
-      <tbody class="bg-white divide-y divide-gray-200 dark:bg-night-800 dark:divide-night-700">
-        <!-- Iterate through userList -->
-        <ng-container *ngFor="let userData of users">
-          <tr>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
-              <button (click)="openEditModal(userData)" class="text-indigo-600 hover:text-indigo-900">Edit</button>
-            </td>
-          </tr>
-        </ng-container>
-        <!-- If no users exist -->
-        <ng-container *ngIf="users.length === 0">
-          <tr>
-            <td colspan="5" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">No user data available.</td>
-          </tr>
-        </ng-container>
-      </tbody>
-    </table>
-    <button (click)="openModalnew()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Add Stationg</button>
+    <!-- Table to display station data -->
+   <!-- Table to display station data -->
+<table class="min-w-full divide-y divide-gray-200">
+  <thead class="bg-gray-50">
+    <tr>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Latitude</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Longitude</th>
+      <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+    </tr>
+  </thead>
+  <tbody class="bg-white divide-y divide-gray-200">
+    <!-- Iterate through stationData -->
+    <ng-container *ngFor="let stationData of stationData">
+      <tr>
+        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ stationData.id }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ stationData.station_name }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ stationData.lat }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ stationData.lon }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-sm">
+          <button (click)="openEditModal(stationData)" class="text-indigo-600 hover:text-indigo-900 px-3 py-1 rounded-md bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:bg-indigo-200 mr-2">Edit</button>
+        </td>
+      </tr>
+    </ng-container>
+    <!-- If no stations exist -->
+    <ng-container *ngIf="stationData.length === 0">
+      <tr>
+        <td colspan="5" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">No station data available.</td>
+      </tr>
+    </ng-container>
+  </tbody>
+</table>
+
+    <button (click)="openModalnew()" class="bg-blue-500 text-white px-4 py-2 rounded-md">Add Station</button>
   </div>
 </div>
 
-
-<!-- Edit User Modal -->
-<app-user-edit-modal *ngIf="showEditModal" [user]="selectedUser" (saveChangesAction)="saveChanges($event)"  (cancelAction)="closeEditModal()"></app-user-edit-modal>
-<app-user-add-modal *ngIf="showAddModal" [newUser]="newUser" (saveChangesAction)="saveAdd($event)"  (cancelAction)="closeEditModal()"></app-user-add-modal>
+<!-- Edit Station Modal -->
+<app-station-edit-modal *ngIf="showEditModal" [station]="selectedStation" (saveChangesAction)="saveChanges($event)" (cancelAction)="closeEditModal()"></app-station-edit-modal>
+<app-station-add-modal *ngIf="showAddModal" [newStation]="newStation" (saveChangesAction)="saveAdd($event)" (cancelAction)="closeEditModal()"></app-station-add-modal>

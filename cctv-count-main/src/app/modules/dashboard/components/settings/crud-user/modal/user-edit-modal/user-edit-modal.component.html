@@ -18,15 +18,15 @@
         <div>
           <label for="role">Role:</label>
           <select id="role" name="role" [(ngModel)]="editedUser.role" required>
-            <option value="1">1</option>
-            <option value="2">2</option>
+            <option value="1">Admin</option>
+            <option value="2">User</option>
           </select>
         </div>
         <div>
           <label for="is_enable">Is Enable:</label>
           <input type="checkbox" id="is_enable" name="is_enable" [(ngModel)]="editedUser.is_enable">
         </div>
-        <!-- Add other user properties as needed -->
+        <div style="margin-bottom: 1rem;"></div>
         <div class="flex justify-end">
           <div class="mr-4">
             <button type="submit" class="btn-save">Save Changes</button>

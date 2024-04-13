@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-
+import { UserData,NewUserData } from '../interfaces/user-data.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -82,13 +82,7 @@ export class UserService {
   }
 
   addNewUser(
-    targetUname: string,
-    targetUkey: string,
-    targetRole: string,
-    firstName: string,
-    lastName: string,
-    address: string,
-    email: string
+    newUser:NewUserData
   ): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const userID = sessionStorage.getItem('userID');
@@ -96,14 +90,14 @@ export class UserService {
     const encodedUserId = userID ? btoa(userID) : '';
     const encodedUsername = userName ? btoa(userName) : '';
     const encodedPassword = sessionStorage.getItem('bota');
-    const encodeTargetUname = targetUname ? btoa(targetUname): '';
-    const encodeTargetUkey = targetUkey ? btoa(targetUkey): '';
-    const encodeTargetRole = targetRole ? btoa(targetRole): '';
-    const encodedFirstName = firstName ? btoa(firstName) : '';
-    const encodedLastName = lastName ? btoa(lastName) : '';
-    const encodedAddress = address ? btoa(address) : '';
-    const encodedEmail = email ? btoa(email) : '';
-    const encodedEnable = btoa('True');
+    const encodeTargetUname = newUser.uname ? btoa(newUser.uname): '';
+    const encodeTargetUkey = newUser.ukey ? btoa(newUser.ukey): '';
+    const encodeTargetRole = newUser.role ? btoa(newUser.role): '';
+    const encodedFirstName = newUser.firstName ? btoa(newUser.firstName) : '';
+    const encodedLastName = newUser.lastName ? btoa(newUser.lastName) : '';
+    const encodedAddress = newUser.address ? btoa(newUser.address) : '';
+    const encodedEmail = newUser.email ? btoa(newUser.email) : '';
+    const encodedEnable = 'true';
     const payload = {
       id: encodedUserId,
       auth_data: {
@@ -141,24 +135,26 @@ export class UserService {
     );
   }
 
-  deleteUser(targetUserId: number): Observable<any> {
+  deleteUser(targetUserId: number, targetUname: string): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
-    const userID = sessionStorage.getItem('userID');
-    const encodedUserId = userID ? btoa(userID) : '';
+    const loggedInUserId = sessionStorage.getItem('userID');
+    const loggedInUserName = sessionStorage.getItem('uname');
+    const encodedLoggedInUserId = loggedInUserId ? btoa(loggedInUserId) : '';
+    const encodedLoggedInUsername = loggedInUserName ? btoa(loggedInUserName) : '';
     const encodedTargetUserId = targetUserId ? btoa(targetUserId.toString()) : '';
-    const userName = sessionStorage.getItem('uname');
-    const encodedUsername = userName ? btoa(userName) : '';
-    const encodedPassword = sessionStorage.getItem('bota');
-    
+    const encodeTargetUname = targetUname ? btoa(targetUname): '';
+  
+    if (encodedLoggedInUserId === encodedTargetUserId) {
+      return throwError("You cannot delete yourself.");
+    }
   
     const payload = {
-      id: encodedUserId,
+      id: encodedLoggedInUserId,
       auth_data: {
-        uname: encodedUsername,
-        ukey: encodedPassword
+        uname: encodedLoggedInUsername,
       },
       detail: {
-        user_id: encodedTargetUserId
+        user_id: encodedTargetUserId,
       }
     };
   
@@ -167,19 +163,58 @@ export class UserService {
     const requestBody = {
       transaction: encodedPayload
     };
-
-  
   
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
   
-    return this.http.delete<any>(`${this.apiUrl}/delete_user_data`, { headers, body: requestBody }).pipe(
-      catchError(error => {
-        return throwError(error.error.msg || 'Failed to delete user');
+
+    return this.http.request('delete', `${this.apiUrl}/delete_user_data`, { body: requestBody, headers }).pipe(
+      tap(response => {
+        console.log('Delete Camera Service Response:', response);
       })
     );
-    
   }
+  
+
+  updateUser(updatedUser: UserData): Observable<any> {
+    const userToken = sessionStorage.getItem('accessToken');
+    const userID = sessionStorage.getItem('userID');
+    const encodedUserId = userID ? btoa(userID) : '';
+    const userName = sessionStorage.getItem('uname');
+    const encodedUsername = userName ? btoa(userName) : '';
+  
+    const payload = {
+      id: encodedUserId,
+      auth_data: {
+        uname: encodedUsername,
+        ukey: sessionStorage.getItem('bota')
+      },
+      detail: {
+        user_id: updatedUser.id,
+        role: updatedUser.role,
+        is_enable: updatedUser.is_enable
+      }
+    };
+  
+    const jsonString = JSON.stringify(payload);
+    const encodedPayload = btoa(jsonString);
+    const requestBody = {
+      transaction: encodedPayload
+    };
+  
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${userToken}`
+    });
+  
+    return this.http.put<any>(`${this.apiUrl}/update_user_data`, requestBody, { headers }).pipe(
+      catchError(error => {
+        return throwError(error.error.msg || 'Failed to update user');
+      })
+    );
+  }
+  
+  
 }

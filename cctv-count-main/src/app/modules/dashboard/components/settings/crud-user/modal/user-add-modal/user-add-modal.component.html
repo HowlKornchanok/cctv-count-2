@@ -17,8 +17,11 @@
       </div>
       <div>
         <label for="role">Role:</label>
-        <input type="text" id="role" name="role" [(ngModel)]="newUser.role" required>
-      </div>
+        <select id="role" name="role" [(ngModel)]="newUser.role" required>
+          <option value="1">Admin</option>
+          <option value="2">User</option>
+        </select>
+      </div>      
       <div>
         <label for="full_name">Full Name:</label>
         <input type="text" id="full_name" name="full_name" [(ngModel)]="newUser.fullName" required>
@@ -35,6 +38,7 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" [(ngModel)]="newUser.email" required>
       </div>
+      <div style="margin-bottom: 1rem;"></div>
       <div class="flex justify-end">
         <div class="mr-4">
           <button type="submit" class="btn-save">Save Changes</button>

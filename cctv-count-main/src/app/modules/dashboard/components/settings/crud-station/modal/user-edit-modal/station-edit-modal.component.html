@@ -5,21 +5,29 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
       </svg>
     </button>
-    <h2>Edit Camera</h2>
+    <h2>Edit Station</h2>
     <form class="py-4" (ngSubmit)="saveChanges()">
       <div>
-        <label for="camera_sn">Camera SN:</label>
-        <input type="text" id="camera_sn" name="camera_sn" [(ngModel)]="camera.camera_sn" required>
+        <label for="station_id">Station ID:</label>
+        <span>{{ selectStation.st_id }}</span>
       </div>
       <div>
-        <label for="camera_url">Camera URL:</label>
-        <input type="text" id="camera_url" name="camera_url" [(ngModel)]="camera.camera_url" required>
+        <label for="st_name">Station Name:</label>
+        <input type="text" id="st_name" name="st_name" [(ngModel)]="selectStation.station_name" required>
       </div>
       <div>
-        <label for="camera_port">Camera Port:</label>
-        <input type="number" id="camera_port" name="camera_port" [(ngModel)]="camera.camera_port" required>
+        <label for="lat">Latitude:</label>
+        <input type="text" id="lat" name="lat" [(ngModel)]="selectStation.lat" required>
       </div>
+      <div>
+        <label for="lon">Longitude:</label>
+        <input type="text" id="lon" name="lon" [(ngModel)]="selectStation.lon" required>
+      </div>
+      <!-- Add other station properties as needed -->
+      
+      <!-- Add space here -->
       <div style="margin-bottom: 1rem;"></div>
+      
       <div class="flex justify-end">
         <div class="mr-4">
           <button type="submit" class="btn-save">Save Changes</button>

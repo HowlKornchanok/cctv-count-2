@@ -12,7 +12,7 @@
 
 <!-- Modal -->
 <div *ngIf="showModal" class="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-60 backdrop-blur-md">
-  <div class="bg-white dark:bg-night-800 rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 dark:scrollbar-thumb-night-700 dark:scrollbar-track-night-800">
+  <div class="bg-white rounded-lg p-8 max-h-[80%] overflow-y-auto scrollbar-thumb-rounded scrollbar-track-rounded overflow-auto scrollbar-thin scrollbar-thumb-white scrollbar-track-gray-100 ">
     <!-- Modal header -->
     <div class="sticky top-0 flex justify-between items-center mb-4">
         <div></div>
@@ -24,7 +24,7 @@
     </div>
     <!-- Table to display camera data -->
     <table class="min-w-full divide-y divide-gray-200">
-      <thead class="bg-gray-50 dark:bg-night-700">
+      <thead class="bg-gray-50">
         <tr>
           <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Station ID</th>
           <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Camera ID</th>
@@ -34,7 +34,7 @@
           <!-- Add other camera properties you want to display -->
         </tr>
       </thead>
-      <tbody class="bg-white divide-y divide-gray-200 dark:bg-night-800 dark:divide-night-700">
+      <tbody class="bg-white divide-y divide-gray-200 ">
         <!-- Iterate through stationDataList -->
         <ng-container *ngFor="let stationData of stationDataList">
           <!-- Get cameras for the current station -->
@@ -43,10 +43,10 @@
             <ng-container *ngFor="let camera of getCamerasForStation(stationData.id)">
               <tr>
                 <!-- Display station ID for the first camera only -->
-                <td *ngIf="getCamerasForStation(stationData.id).indexOf(camera) === 0" [attr.rowspan]="getCameraCount(stationData.id)" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ stationData.id }}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ camera.id }}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ camera.camera_port }}</td>
-                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">{{ camera.camera_sn }}</td>
+                <td *ngIf="getCamerasForStation(stationData.id).indexOf(camera) === 0" [attr.rowspan]="getCameraCount(stationData.id)" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 ">{{ stationData.id }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 ">{{ camera.id }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 ">{{ camera.camera_port }}</td>
+                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 ">{{ camera.camera_sn }}</td>
                 <!-- Add other camera properties you want to display -->
                 <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                   <button (click)="editCamera(camera)" class="text-indigo-600 hover:text-indigo-900 px-3 py-1 rounded-md bg-indigo-100 hover:bg-indigo-200 focus:outline-none focus:bg-indigo-200 mr-2">Edit</button>
@@ -62,7 +62,7 @@
           <ng-container *ngIf="getCamerasForStation(stationData.id).length === 0">
             <tr>
               <td>{{ stationData.id }}</td>
-              <td colspan="4" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900 dark:text-white">No camera data available for this station.</td>
+              <td colspan="4" class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">No camera data available for this station.</td>
             </tr>
           </ng-container>
         </ng-container>
