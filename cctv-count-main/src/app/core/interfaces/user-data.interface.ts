@@ -1,6 +1,6 @@
 export interface  UserData{
     user_name: string;
-    id: number;
+    id: string;
     is_enable: boolean;
     role: number;
   }

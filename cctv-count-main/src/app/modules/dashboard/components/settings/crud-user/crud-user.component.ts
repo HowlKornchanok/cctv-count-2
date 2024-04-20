@@ -77,7 +77,7 @@ export class CrudUserComponent implements OnInit {
   }
   
 
-  deleteUser(selectedUserId: number, selectedUserName: string): void {
+  deleteUser(selectedUserId: string, selectedUserName: string): void {
     if (selectedUserName !== this.loggedInUser && selectedUserName !== this.loggedInID ){
       this.userService.deleteUser(selectedUserId,selectedUserName).subscribe();
     }else{

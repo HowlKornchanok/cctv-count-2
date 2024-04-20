@@ -65,7 +65,7 @@ export class MapComponent implements OnInit,OnDestroy {
             target: 'map',
             view: new View({
               center: fromLonLat(this.getCenterCoordinates(stationData)),
-              zoom: 12.6,
+              zoom: 15,
               maxZoom: 20,
             }),
           });

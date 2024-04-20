@@ -11,6 +11,21 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
+  private getAccessTokenFromSessionStorage(): string | null {
+    return sessionStorage.getItem('accessToken');
+  }
+
+  private getHeaders(): HttpHeaders {
+    const accessToken = this.getAccessTokenFromSessionStorage();
+    if (!accessToken) {
+      throw new Error('Access token not found in session storage');
+    }
+    return new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${accessToken}`
+    });
+  }
+  
   getUserList(): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const username = sessionStorage.getItem('uname');
@@ -45,19 +60,21 @@ export class UserService {
     );
   }
 
-  getUserInfo(userId: string): Observable<any> {
+  getUserInfo(targetUserId: string): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const username = sessionStorage.getItem('uname');
     const encodedUsername = username ? btoa(username) : '';
-    const encodedUserId = userId ? btoa(userId) : '';
-
+    const userID = sessionStorage.getItem('userID');
+    const encodedUserId = userID ? btoa(userID) : '';
+    const encodedTargetUserId = targetUserId ? btoa(targetUserId): '';
+    console.log(targetUserId);
     const payload = {
       id: encodedUserId,
       auth_data: {
         uname: encodedUsername
       },
       detail: {
-        user_id: encodedUserId
+        user_id: encodedTargetUserId
       }
     };
 
@@ -66,13 +83,13 @@ export class UserService {
     const requestBody = {
       transaction: encodedPayload
     };
-
+    console.log(requestBody);
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
 
-    return this.http.post<any>(`${this.apiUrl}/get_user_list`, requestBody, { headers }).pipe(
+    return this.http.post<any>(`${this.apiUrl}/get_user_info`, requestBody, { headers }).pipe(
       tap(response => {
       }),
       catchError(error => {
@@ -97,7 +114,7 @@ export class UserService {
     const encodedLastName = newUser.lastName ? btoa(newUser.lastName) : '';
     const encodedAddress = newUser.address ? btoa(newUser.address) : '';
     const encodedEmail = newUser.email ? btoa(newUser.email) : '';
-    const encodedEnable = 'true';
+    const encodedEnable = btoa('true');
     const payload = {
       id: encodedUserId,
       auth_data: {
@@ -112,7 +129,7 @@ export class UserService {
         lname: encodedLastName,
         address: encodedAddress,
         email: encodedEmail,
-        is_enable: encodedEnable,
+        status: encodedEnable,
       },
       created_by: encodedUserId
     };
@@ -135,7 +152,7 @@ export class UserService {
     );
   }
 
-  deleteUser(targetUserId: number, targetUname: string): Observable<any> {
+  deleteUser(targetUserId: string, targetUname: string): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const loggedInUserId = sessionStorage.getItem('userID');
     const loggedInUserName = sessionStorage.getItem('uname');
@@ -168,11 +185,11 @@ export class UserService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
-  
+    console.log(requestBody);
 
-    return this.http.request('delete', `${this.apiUrl}/delete_user_data`, { body: requestBody, headers }).pipe(
+    return this.http.request('delete', `https://wrp-smarttraffic.com/api/auth/remove_user  `, { body: requestBody, headers }).pipe(
       tap(response => {
-        console.log('Delete Camera Service Response:', response);
+        console.log('Delete user Response:', response);
       })
     );
   }
@@ -209,7 +226,7 @@ export class UserService {
       'Authorization': `Bearer ${userToken}`
     });
   
-    return this.http.put<any>(`${this.apiUrl}/update_user_data`, requestBody, { headers }).pipe(
+    return this.http.put<any>(`https://wrp-smarttraffic.com/api/auth/update_user_info`, requestBody, { headers }).pipe(
       catchError(error => {
         return throwError(error.error.msg || 'Failed to update user');
       })

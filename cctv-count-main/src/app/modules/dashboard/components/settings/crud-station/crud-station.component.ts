@@ -68,11 +68,20 @@ export class CrudStationComponent implements OnInit {
     this.showAddModal = false;
 }
   
-  saveChanges(editedStation: StationData): void {
-    // Implement your logic to save edited station data
-    console.log(editedStation);
-    this.showEditModal = false;
-  }
+saveChanges(editedStation: StationData): void {
+  this.stationDataService.updateStationData(editedStation).subscribe(
+    (response) => {
+      console.log("Station data updated successfully:", response);
+      // Implement any additional logic if needed
+      this.showEditModal = false; // Close the edit modal after successful update
+    },
+    (error) => {
+      console.error("Failed to update station data:", error);
+      // Handle error if needed
+    }
+  );
+}
+
 
   openEditModal(station: StationData): void {
     this.selectedStation = station;
@@ -97,4 +106,18 @@ export class CrudStationComponent implements OnInit {
     this.selectedStation = this.newStation;
     this.showAddModal = true;
   }
+
+  deleteStation(station: StationData): void {
+    if (confirm("Are you sure you want to delete this station?")) {
+      this.stationDataService.deleteStationData(station).subscribe(
+        (response) => {
+          console.log(response);
+        },
+        (error) => {
+          console.error("Failed to delete station:", error);
+        }
+      );
+    }
+  }
+  
 }

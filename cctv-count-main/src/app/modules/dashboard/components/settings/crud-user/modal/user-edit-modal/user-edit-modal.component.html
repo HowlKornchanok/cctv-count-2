@@ -16,6 +16,10 @@
           <span>{{ editedUser.user_name }}</span>
         </div>
         <div>
+          <label for="username">Username:</label>
+          <span>{{ editedUser.user_name }}</span>
+        </div>
+        <div>
           <label for="role">Role:</label>
           <select id="role" name="role" [(ngModel)]="editedUser.role" required>
             <option value="1">Admin</option>

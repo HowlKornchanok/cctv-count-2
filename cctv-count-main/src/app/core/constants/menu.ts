@@ -4,7 +4,7 @@ export class Menu {
   public static pages: MenuItem[] = [
     {
       group: 'Menu',
-      separator: false,
+      separator: true,
       icon: 'assets/icons/chart-pie.svg',
       
       items: [
@@ -29,11 +29,15 @@ export class Menu {
           label: 'Cameras',
           route: '/dashboard/cameras',
           
-        }
-        
-      ],
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/cog.svg',
+          label: 'Settings',
+          route: '/dashboard/setting',
+        },
+      ]        
+      
+      
     },
-    
-
   ];
 }

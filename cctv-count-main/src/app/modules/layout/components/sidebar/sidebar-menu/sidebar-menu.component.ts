@@ -6,7 +6,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { AngularSvgIconModule } from 'angular-svg-icon';
 import { NgFor, NgClass, NgTemplateOutlet, NgIf } from '@angular/common';
 import { LanguageService } from 'src/app/core/services/language.service';
-
+import { Router } from '@angular/router';
+import { Menu2Service } from '../../../services/menu2.service';
+import { ThemeService } from 'src/app/core/services/theme.service';
 @Component({
     selector: 'app-sidebar-menu',
     templateUrl: './sidebar-menu.component.html',
@@ -30,7 +32,12 @@ export class SidebarMenuComponent implements OnInit {
   translations = this.languageService.translations
   
 
-  constructor(public menuService: MenuService,private languageService: LanguageService) {}
+  constructor(
+    public menuService: MenuService,
+    private languageService: LanguageService,
+    public menu2Service: Menu2Service,
+    private router: Router,
+    public themeService: ThemeService) {}
 
   public toggleMenu(subMenu: SubMenuItem) {
     this.menuService.toggleMenu(subMenu);
@@ -41,5 +48,19 @@ export class SidebarMenuComponent implements OnInit {
     this.languageService.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
     });
+  }
+
+  toggleLanguage() {
+    this.languageService.toggleLanguage();
+    
+  }
+
+  logout(): void {
+    this.router.navigate(['/auth/sign-in']);
+    console.log('User logged out'); 
+  }
+
+  toggleTheme() {
+    this.themeService.theme = !this.themeService.isDark ? 'dark' : 'light';
   }
 }

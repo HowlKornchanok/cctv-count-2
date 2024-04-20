@@ -23,6 +23,7 @@ export class UserEditModalComponent implements OnInit{
   ngOnInit() {
     // Initialize editedUser with a copy of the original user data
     this.editedUser = { ...this.user }; // Updated property name
+    console.log(this.user);
   }
 
   saveChanges() {

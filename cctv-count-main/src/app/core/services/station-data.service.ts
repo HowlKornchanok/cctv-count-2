@@ -71,7 +71,7 @@ export class StationDataService {
     const requestBody = {
       transaction: encodedPayload
     };
-  
+    console.log(requestBody);
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
@@ -87,21 +87,21 @@ export class StationDataService {
   
 
 
-  updateStationData(updatedStationData: StationData): Observable<any> {
+  updateStationData(updatedStationData: any): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const userID = sessionStorage.getItem('userID');
     const encodedUserId = userID ? btoa(userID) : '';
     const username = sessionStorage.getItem('uname');
     const encodedUsername = username ? btoa(username) : '';
-  
+    console.log(updatedStationData);
     const payload = {
       id: encodedUserId,
       auth_data: {
         uname: encodedUsername
       },
       detail: {
-        st_id: btoa(updatedStationData.st_id),
-        st_name: btoa(updatedStationData.st_name),
+        st_id: btoa(updatedStationData.id),
+        st_name: btoa(updatedStationData.station_name),
         lat: btoa(updatedStationData.lat),
         lon: btoa(updatedStationData.lon)
       }
@@ -117,7 +117,7 @@ export class StationDataService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
-  
+    console.log(requestBody)
     return this.http.put<any>(`${this.apiUrl}/update_station_data`, requestBody, { headers }).pipe(
       catchError(error => {
         return throwError(error.error.msg || 'Failed to update station data');
@@ -125,13 +125,13 @@ export class StationDataService {
     );
   }
 
-  deleteStationData(stationId: string): Observable<any> {
+  deleteStationData(stationData: any): Observable<any> {
     const userToken = sessionStorage.getItem('accessToken');
     const userID = sessionStorage.getItem('userID');
     const encodedUserId = userID ? btoa(userID) : '';
     const username = sessionStorage.getItem('uname');
     const encodedUsername = username ? btoa(username) : '';
-    const encodedStationId = stationId ? btoa(stationId) : '';
+
   
     const payload = {
       id: encodedUserId,
@@ -139,7 +139,7 @@ export class StationDataService {
         uname: encodedUsername
       },
       detail: {
-        st_id: encodedStationId
+        st_id: btoa(stationData.id),
       }
     };
   
@@ -153,15 +153,16 @@ export class StationDataService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${userToken}`
     });
-  
+    console.log(requestBody)
     return this.http.delete<any>(`${this.apiUrl}/delete_station_data`, { headers, body: requestBody }).pipe(
+      tap(response => {
+      }),
       catchError(error => {
+        // Handle error
         return throwError(error.error.msg || 'Failed to delete station data');
       })
     );
   }
-  
-  
   
 }
 

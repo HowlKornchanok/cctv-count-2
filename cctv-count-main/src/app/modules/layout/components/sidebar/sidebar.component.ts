@@ -24,7 +24,7 @@ import { LanguageService } from 'src/app/core/services/language.service';
     ],
 })
 export class SidebarComponent implements OnInit {
-  public appJson: any = packageJson;
+
   currentLanguage: string = 'th';
   translations = this.languageService.translations
 
@@ -33,8 +33,11 @@ export class SidebarComponent implements OnInit {
       this.currentLanguage = language;
     });
   }
-  constructor( public menuService: MenuService ,public menu2Service: Menu2Service , private router: Router, private languageService: LanguageService) {}
-
+  constructor( public menuService: MenuService ,public menu2Service: Menu2Service , private languageService: LanguageService) {}
+  toggleLanguage() {
+    this.languageService.toggleLanguage();
+    
+  }
 
 
   public toggleSidebar() {
