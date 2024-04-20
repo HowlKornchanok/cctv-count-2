@@ -23,7 +23,7 @@ const routes: Routes = [
         data: { roles: ['admin'] } // Optionally, you can provide role data
       },
       { path: 'cameras', component: CamerasComponent },
-      { path: '**', redirectTo: 'error/404' },
+      { path: '**', redirectTo: 'main' },
     ],
   },
 ];
